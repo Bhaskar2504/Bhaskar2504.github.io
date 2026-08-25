@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From Thresholds to Intelligence | Bhaskar Anand</title>
+  <meta name="description" content="A learner-friendly guide to the transition from threshold-based DCS alarms to AI-driven asset monitoring, predictive maintenance, anomaly detection and failure-mode diagnosis." />
+  <meta name="author" content="Bhaskar Anand" />
+  <meta property="og:title" content="From Thresholds to Intelligence: A Learner’s Guide to AI-Driven Asset Monitoring" />
+  <meta property="og:description" content="How industrial monitoring evolves from static thresholds to learned multivariable behavior, early detection and proactive maintenance." />
+  <meta property="og:type" content="article" />
+  <link rel="stylesheet" href="../styles-v4.css?v=20260825d" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html#home">Bhaskar Anand</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#insights">Insights</a>
+        <a href="../index.html#research">Research</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <div class="article-hero-inner">
+          <p class="eyebrow">Industrial AI · Predictive Maintenance · Learning Guide</p>
+          <h1>From Thresholds to Intelligence</h1>
+          <p class="article-deck">A learner’s guide to how industrial asset monitoring moves from fixed DCS limits toward multivariable, AI-driven detection and earlier failure-mode diagnosis.</p>
+          <div class="article-meta">
+            <span>Bhaskar Anand</span>
+            <span>Industrial AI & Asset Performance</span>
+            <span>Technical learning note</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-main">
+      <div class="container article-layout">
+        <article class="article-content">
+          <div class="article-callout">
+            <p><strong>Core idea:</strong> Traditional alarms ask, “Has a value crossed a limit?” AI-driven monitoring asks a broader question: “Is the current combination of plant behavior still consistent with what healthy operation normally looks like?”</p>
+          </div>
+
+          <h2 id="nervous-system">1. The industrial nervous system</h2>
+          <p>A useful way to understand a modern power or process plant is to think of it as a living system. Thousands of sensors act like nerves, continuously reporting temperature, pressure, flow, current, vibration and other operating conditions.</p>
+          <p>The challenge is not collecting those signals. The challenge is interpreting them early enough to support action. A conventional monitoring system is very good at telling us when an individual measurement has crossed a predefined limit. The next step is to understand how multiple measurements behave together and whether that relationship is beginning to change.</p>
+          <div class="article-quote">Early prediction of reliability and performance issues through failure-mode diagnosis.</div>
+          <p>That shift—from limit breach to behavioral deviation—is the foundation of AI-driven asset monitoring.</p>
+
+          <h2 id="thresholds">2. What threshold-based DCS alarms do well—and where they stop</h2>
+          <p>Distributed Control Systems remain essential for safe plant operation. Their alarm logic is typically based on engineered upper and lower limits. These limits are transparent, deterministic and easy for operators to understand.</p>
+          <div class="concept-grid">
+            <div class="concept-box">
+              <h4>Upper threshold</h4>
+              <p>The maximum permitted or warning value for a monitored parameter.</p>
+            </div>
+            <div class="concept-box">
+              <h4>Lower threshold</h4>
+              <p>The minimum permitted or warning value for a monitored parameter.</p>
+            </div>
+            <div class="concept-box">
+              <h4>Alarm decision</h4>
+              <p>A signal crossing the configured limit causes a defined alarm response.</p>
+            </div>
+          </div>
+
+          <div class="threshold-visual" aria-label="Illustration of a changing signal remaining within upper and lower thresholds">
+            <span class="threshold-text upper">Upper threshold</span>
+            <span class="threshold-text lower">Lower threshold</span>
+            <div class="threshold-line upper"></div>
+            <div class="threshold-line lower"></div>
+            <svg class="threshold-svg" viewBox="0 0 900 170" preserveAspectRatio="none" role="img" aria-label="Erratic signal moving within fixed alarm boundaries">
+              <polyline points="0,90 65,87 120,96 180,70 235,105 290,55 345,115 400,75 455,100 510,45 565,116 620,67 675,106 735,54 790,112 845,78 900,91" fill="none" stroke="#0f6d78" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="threshold-note">Behavior can change before a limit is crossed</span>
+          </div>
+
+          <p>The limitation is not that thresholds are wrong. The limitation is that a threshold is usually evaluating one signal against one fixed boundary. A machine can begin behaving abnormally while every individual signal is still technically inside its allowable range.</p>
+
+          <h3>Three practical gaps</h3>
+          <ol>
+            <li><strong>Detection can be late.</strong> The alarm may appear only after the parameter has moved far enough to cross its limit.</li>
+            <li><strong>Variables are often evaluated independently.</strong> Relationships between flow, current, pressure, temperature and load may contain useful diagnostic information before any single parameter becomes critical.</li>
+            <li><strong>Static limits can create nuisance alarms.</strong> Operating mode, ambient conditions and load can change what “normal” looks like, while a fixed threshold remains unchanged.</li>
+          </ol>
+
+          <h2 id="ai-monitoring">3. The shift to AI-driven monitoring</h2>
+          <p>For many industrial assets, major failures are too rare to provide large labelled datasets of every possible fault. A practical alternative is to learn the asset’s normal multivariable behavior from historical operating data and then detect deviations from that learned baseline.</p>
+          <p>This is where unsupervised or normal-behavior modelling becomes useful. The model is not simply asking whether one sensor is high or low. It is evaluating whether the observed relationship between multiple signals remains consistent with historical healthy operation.</p>
+
+          <div class="article-callout">
+            <p><strong>Example:</strong> If motor current rises while flow remains unchanged and the surrounding operating context does not justify the increase, the important signal may be the <em>relationship</em> between those measurements—not the absolute value of current alone.</p>
+          </div>
+
+          <h3>Anomaly score</h3>
+          <p>The source material describes a normalized anomaly score from 0 to 1 to represent how strongly current behavior deviates from the learned baseline. The exact interpretation depends on the model and deployment configuration; the ranges below are presented as the example used in the source material.</p>
+          <div class="score-band" aria-label="Illustrative anomaly score ranges">
+            <div class="score-track">
+              <div class="score-segment score-low"></div>
+              <div class="score-segment score-mid"></div>
+              <div class="score-segment score-high"></div>
+            </div>
+            <div class="score-labels">
+              <span>0.1–0.3: minor deviation</span>
+              <span></span>
+              <span>0.7–0.9: high-probability deviation</span>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Traditional condition monitoring</th>
+                  <th>AI-driven monitoring</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Primary logic</td>
+                  <td>Human-defined static rules and limits</td>
+                  <td>Machine-learned behavioral baseline</td>
+                </tr>
+                <tr>
+                  <td>Data view</td>
+                  <td>Often evaluates signals independently</td>
+                  <td>Evaluates multiple signals and their relationships</td>
+                </tr>
+                <tr>
+                  <td>Detection basis</td>
+                  <td>Limit breach</td>
+                  <td>Deviation from learned normal behavior</td>
+                </tr>
+                <tr>
+                  <td>Typical value</td>
+                  <td>Clear alarm once a configured condition is met</td>
+                  <td>Potentially earlier indication of developing abnormal behavior</td>
+                </tr>
+                <tr>
+                  <td>Configuration</td>
+                  <td>Threshold engineering and periodic tuning</td>
+                  <td>Historical data, model training, validation and ongoing feedback</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="maintenance">4. Why earlier detection changes maintenance</h2>
+          <p>The practical value of predictive monitoring is the additional decision window it can create. Earlier awareness does not automatically solve the problem; it gives engineering and maintenance teams more time to diagnose, plan and intervene.</p>
+
+          <div class="workflow-grid">
+            <div class="workflow-step">
+              <span class="workflow-number">1</span>
+              <h4>Deviation detected</h4>
+              <p>AI identifies behavior that no longer matches the learned normal pattern.</p>
+            </div>
+            <div class="workflow-step">
+              <span class="workflow-number">2</span>
+              <h4>Diagnosis</h4>
+              <p>Engineers review the affected signals, operating context and possible failure modes.</p>
+            </div>
+            <div class="workflow-step">
+              <span class="workflow-number">3</span>
+              <h4>Planned response</h4>
+              <p>Inspection, parts and maintenance can be scheduled instead of initiated only after breakdown.</p>
+            </div>
+            <div class="workflow-step">
+              <span class="workflow-number">4</span>
+              <h4>Avoided disruption</h4>
+              <p>A planned intervention can reduce the probability or impact of an unplanned outage.</p>
+            </div>
+          </div>
+
+          <p>This “time difference” between the AI indication and the eventual equipment consequence is often the most valuable output of the monitoring system.</p>
+
+          <h2 id="cases">5. Two examples from the source material</h2>
+          <p>The following cases are presented as provided in the underlying material. The financial values are reported potential impacts, not independently verified savings.</p>
+
+          <div class="case-grid">
+            <div class="case-box">
+              <span class="project-label">Asset Reliability</span>
+              <h4>BFP 2B vibration</h4>
+              <p><strong>Detection:</strong> March 1, 2023 — high vibration behavior identified on the DE and NDE sides of the pump.</p>
+              <p><strong>Action:</strong> Pump taken out of service on March 19 for planned repair.</p>
+              <span class="case-impact">Reported potential impact: ₹3.375 lakh</span>
+            </div>
+            <div class="case-box">
+              <span class="project-label">Correlation</span>
+              <h4>H₂ cooler outlet pressure</h4>
+              <p><strong>Detection:</strong> March 9, 2023 — outlet-pressure reduction observed together with a cooling-water outlet-temperature change.</p>
+              <p><strong>Interpretation:</strong> The correlated behavior pointed toward a bypass-valve change that may not have been obvious from a single threshold alone.</p>
+              <span class="case-impact">Reported potential impact: ₹1.62 crore</span>
+            </div>
+          </div>
+
+          <h2 id="data">6. The foundation: data quality and context</h2>
+          <p>AI monitoring is only as useful as the data and engineering context behind it. The source material describes a typical historical-data requirement of approximately six months to one year for learning normal operating behavior.</p>
+          <p>That history must represent meaningful operating conditions. Sensor quality, shutdown periods, operating modes, maintenance changes and tag relationships all influence what the model learns.</p>
+
+          <div class="concept-grid">
+            <div class="concept-box">
+              <h4>Historical depth</h4>
+              <p>Sufficient operating history is needed to represent normal behavior across relevant conditions.</p>
+            </div>
+            <div class="concept-box">
+              <h4>Data quality</h4>
+              <p>Bad, flat-lined, delayed or incorrectly mapped signals can produce misleading model behavior.</p>
+            </div>
+            <div class="concept-box">
+              <h4>Engineering context</h4>
+              <p>Operating mode, equipment state and process relationships are essential for interpreting deviations correctly.</p>
+            </div>
+          </div>
+
+          <p>For performance monitoring, the same data foundation can support engineering parameters such as unit heat rate, turbine-cycle heat rate, boiler efficiency and HP/IP efficiency.</p>
+
+          <h2 id="features">7. What makes the system useful to engineers</h2>
+          <p>Detection is only one part of the workflow. A practical monitoring system must also help people understand, communicate and act on what the model has found.</p>
+          <ul>
+            <li><strong>Notifications:</strong> move relevant alerts from the control-room screen to the responsible engineer.</li>
+            <li><strong>Escalation:</strong> ensure persistent or important conditions reach the correct decision level.</li>
+            <li><strong>Failure timeline:</strong> show how the abnormal behavior developed over time.</li>
+            <li><strong>Dashboards:</strong> bring reliability, efficiency and performance views together for plant-level interpretation.</li>
+          </ul>
+
+          <h2 id="takeaway">8. The key takeaway</h2>
+          <p>The transition from threshold-based alarms to AI-driven monitoring is not a replacement of basic plant protection or DCS alarming. It is an additional layer of intelligence.</p>
+          <p>Thresholds remain valuable for clear operating limits. AI adds value by learning how multiple parameters normally behave together and identifying subtle deviations earlier. That additional lead time can help convert some emergency maintenance situations into planned engineering actions.</p>
+          <div class="article-quote">The real advantage is not simply detecting an abnormal value. It is recognizing an abnormal relationship early enough for someone to do something useful about it.</div>
+
+          <div class="article-note">
+            <strong>Note on the examples:</strong> This article was developed from supplied learning material. Dates, anomaly-score ranges, case-study values and potential financial impacts are retained from that material. Where a statement could otherwise sound universal, it has been framed as an example or source-specific claim rather than as a general industry fact.
+          </div>
+
+          <div class="article-footer-cta">
+            <h3>More industrial AI and reliability notes</h3>
+            <p>This article is part of my technical learning series on Industrial AI, predictive maintenance, reliability engineering and engineering data.</p>
+            <a href="../index.html#insights">← Back to Insights</a>
+          </div>
+        </article>
+
+        <aside class="article-toc" aria-label="Article contents">
+          <strong>In this guide</strong>
+          <a href="#nervous-system">Industrial nervous system</a>
+          <a href="#thresholds">DCS thresholds</a>
+          <a href="#ai-monitoring">AI monitoring</a>
+          <a href="#maintenance">Maintenance workflow</a>
+          <a href="#cases">Case examples</a>
+          <a href="#data">Data foundation</a>
+          <a href="#features">Engineer workflow</a>
+          <a href="#takeaway">Key takeaway</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div>
+  </footer>
+</body>
+</html>
