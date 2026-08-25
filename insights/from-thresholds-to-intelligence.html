@@ -185,22 +185,33 @@
 
           <p>This “time difference” between an early indication and the eventual equipment consequence is often the most valuable output of a predictive monitoring system.</p>
 
-          <h2 id="examples">5. What correlation can reveal</h2>
-          <p>The principle becomes clearer when we look at generic equipment behavior rather than a named site or asset.</p>
+          <h2 id="examples">5. Two realistic monitoring stories</h2>
+          <p>The value of correlation is easier to understand as a story. The following are intentionally generic scenarios: they describe how such a situation <em>could</em> develop, what an AI system might notice, and why the additional warning time could matter.</p>
 
           <div class="case-grid">
             <div class="case-box">
-              <span class="project-label">Rotating Equipment</span>
-              <h4>Developing vibration problem</h4>
-              <p>A vibration signal can begin deviating from its normal relationship with load, speed and other operating variables before it reaches a conventional alarm limit.</p>
-              <p><strong>Why it matters:</strong> Earlier recognition creates time for inspection, confirmation and planned maintenance rather than waiting for a hard limit breach.</p>
+              <span class="project-label">Story 01 · Boiler Feed Pump</span>
+              <h4>The vibration that was still “within limit”</h4>
+              <p>Imagine a boiler feed pump running at a familiar operating load. Its vibration is slowly increasing, but the value is still below the conventional alarm limit. From the control room, nothing appears urgent.</p>
+              <p>An AI model, however, is not looking at vibration alone. It has learned how vibration normally behaves at similar load, speed and process conditions. It notices that the pump is now vibrating more than expected for the way it is operating, and that this deviation is persisting.</p>
+              <p>An engineer reviews the trend and decides to inspect the pump rather than wait for the vibration to cross a hard limit. The inspection may reveal a developing bearing, alignment or other mechanical issue while there is still time to plan the response.</p>
+              <p><strong>If the condition were allowed to progress:</strong> the consequence could move from a relatively manageable maintenance job to bearing or seal damage, an emergency pump changeover, loss of pump availability, or—depending on plant configuration—a larger operational disruption.</p>
+              <p><strong>Why early detection matters:</strong> the value is not that AI “predicts a failure date.” The value is that it may create enough time to confirm the problem, arrange parts and maintenance, and intervene before the condition becomes an emergency.</p>
             </div>
+
             <div class="case-box">
-              <span class="project-label">Process Correlation</span>
-              <h4>Pressure and temperature relationship</h4>
-              <p>A pressure change may become more meaningful when it occurs together with a related temperature, flow or valve-position change.</p>
-              <p><strong>Why it matters:</strong> The relationship between signals can point toward a developing process or equipment issue even when no single measurement is yet critical.</p>
+              <span class="project-label">Story 02 · Cooling Process</span>
+              <h4>When two ordinary signals tell an unusual story</h4>
+              <p>Now imagine a cooling circuit in which outlet pressure begins to fall slightly. The pressure is still within its permitted operating range, so a normal low-pressure alarm does not activate.</p>
+              <p>At almost the same time, the related outlet temperature also begins moving in a direction that is unusual for the current load and cooling demand. Neither value is alarming by itself. The important clue is that they are changing <em>together</em> in a way the system has rarely seen during healthy operation.</p>
+              <p>The AI flags the relationship. An engineer follows the process path and checks the associated valve positions, bypass path, flow behavior and cooling conditions. That investigation may identify a developing valve, flow-distribution or cooling-path problem before it becomes severe enough to trigger a conventional alarm.</p>
+              <p><strong>If the condition were allowed to progress:</strong> cooling effectiveness could continue to deteriorate, temperatures could rise elsewhere in the system, equipment performance could reduce, and in a severe case the plant may need to derate or trip protective equipment.</p>
+              <p><strong>Why correlation matters:</strong> pressure did not have to become “low” and temperature did not have to become “high.” The abnormal information was contained in their relationship. That is the kind of weak early signal multivariable monitoring is designed to surface.</p>
             </div>
+          </div>
+
+          <div class="article-callout">
+            <p><strong>The common pattern:</strong> nothing dramatic has happened yet. Individual measurements can still look acceptable. The opportunity comes from noticing that the asset or process is no longer behaving the way it normally does—and using that extra time for engineering action.</p>
           </div>
 
           <h2 id="data">6. The foundation: data quality and context</h2>
@@ -239,7 +250,7 @@
           <div class="article-quote">The real advantage is not simply detecting an abnormal value. It is recognizing an abnormal relationship early enough for someone to do something useful about it.</div>
 
           <div class="article-note">
-            <strong>Scope:</strong> This is a vendor-neutral learning article. It intentionally avoids customer names, product names, proprietary system names and customer-specific performance or financial claims.
+            <strong>Scope:</strong> This is a vendor-neutral learning article. It intentionally avoids customer names, product names, proprietary system names and customer-specific performance or financial claims. The two stories above are illustrative scenarios, not claims about a specific plant or event.
           </div>
 
           <div class="article-footer-cta">
@@ -255,7 +266,7 @@
           <a href="#thresholds">DCS thresholds</a>
           <a href="#ai-monitoring">AI monitoring</a>
           <a href="#maintenance">Maintenance workflow</a>
-          <a href="#examples">Correlation examples</a>
+          <a href="#examples">Monitoring stories</a>
           <a href="#data">Data foundation</a>
           <a href="#features">Engineer workflow</a>
           <a href="#takeaway">Key takeaway</a>
