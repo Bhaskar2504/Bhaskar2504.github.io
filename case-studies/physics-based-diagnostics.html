@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Stories: Physics-Based Diagnostics | Bhaskar Anand</title>
+  <meta name="description" content="Vendor-neutral engineering stories showing how multi-signal correlation, physics and predictive diagnostics can reveal developing problems in thermal power assets." />
+  <meta name="author" content="Bhaskar Anand" />
+  <meta property="og:title" content="Engineering Stories: Physics-Based Diagnostics" />
+  <meta property="og:description" content="Anonymized learning stories connecting multi-signal anomalies to physical failure mechanisms, operational risk and earlier engineering action." />
+  <meta property="og:type" content="article" />
+  <link rel="stylesheet" href="../styles-v4.css?v=20260825f" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html#home">Bhaskar Anand</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#insights">Insights</a>
+        <a href="../index.html#research">Research</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <div class="article-hero-inner">
+          <p class="eyebrow">Reliability · Physics · Multi-Signal Diagnostics</p>
+          <h1>Engineering Stories: When Signals Begin to Tell a Different Story</h1>
+          <p class="article-deck">Five anonymized learning stories showing how engineering physics and signal relationships can reveal a developing problem before a single parameter tells the whole story.</p>
+          <div class="article-meta">
+            <span>Bhaskar Anand</span>
+            <span>Industrial AI & Asset Performance</span>
+            <span>Vendor-neutral engineering case stories</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-main">
+      <div class="container article-layout">
+        <article class="article-content">
+          <div class="article-callout">
+            <p><strong>How to read these stories:</strong> Each scenario is deliberately anonymized and generalized. The focus is the engineering reasoning: what changed, which signals moved together, what physical mechanism could explain the pattern, and what risk might develop if the condition were allowed to progress.</p>
+          </div>
+
+          <h2 id="turbine">1. The turbine vibration that followed load</h2>
+          <p>A steam turbine can operate for long periods with a familiar vibration pattern. The absolute vibration may move slightly with load, steam conditions and operating state, but the relationship remains repeatable enough that engineers learn what “normal” looks like.</p>
+          <p>Now imagine that the vibration is still below the conventional alarm limit, yet something has changed. Each time unit load or steam pressure changes, the rotor vibration responds more strongly than it used to. At steady conditions the machine may still look acceptable, but the response to operating changes is becoming progressively larger.</p>
+
+          <div class="threshold-visual" aria-label="Illustrative relationship between unit load and rotor vibration">
+            <span class="threshold-text upper">Expected operating response</span>
+            <span class="threshold-text lower">Time →</span>
+            <svg class="threshold-svg" viewBox="0 0 900 170" preserveAspectRatio="none" role="img" aria-label="Two signals changing together with vibration response gradually increasing">
+              <polyline points="0,55 100,55 170,38 260,38 330,70 420,70 500,42 590,42 670,62 760,62 900,35" fill="none" stroke="#8093a0" stroke-width="4" stroke-linecap="round" />
+              <polyline points="0,110 100,108 170,99 260,98 330,117 420,114 500,89 590,84 670,108 760,101 900,67" fill="none" stroke="#0f6d78" stroke-width="5" stroke-linecap="round" />
+            </svg>
+            <span class="threshold-note">The relationship changes before a hard limit is reached</span>
+          </div>
+
+          <p>The engineering question is no longer simply, “Is vibration high?” It becomes, “Why has the rotor become more sensitive to load and steam-condition changes?” A plausible explanation is developing mechanical unbalance or another rotor-dynamic condition whose effect becomes more visible when the machine is thermally or mechanically disturbed.</p>
+          <div class="case-grid">
+            <div class="case-box">
+              <span class="project-label">If ignored</span>
+              <h4>The risk can compound</h4>
+              <p>Continued unbalance can increase dynamic bearing loading, accelerate bearing-surface damage, increase rotor excursion and eventually create conditions that may force a turbine trip.</p>
+            </div>
+            <div class="case-box">
+              <span class="project-label">Why early detection matters</span>
+              <h4>Time to confirm before acting</h4>
+              <p>Engineers can compare load, steam pressure and vibration together, inspect the trend, verify the mechanical hypothesis and plan balancing or inspection during an available maintenance window.</p>
+            </div>
+          </div>
+
+          <h2 id="aph">2. The air preheater that quietly changed the boiler</h2>
+          <p>An air preheater does not usually announce seal deterioration with one dramatic signal. The story is spread across the boiler. Heat transfer starts weakening. Primary or secondary air outlet temperature begins to fall. Flue-gas oxygen may rise. The induced-draft system may gradually work harder to move the additional gas volume.</p>
+          <p>Each parameter on its own may still look explainable. Together, however, they tell a thermodynamic story: air may be leaking across the preheater instead of participating in the heat-recovery process as intended.</p>
+
+          <div class="concept-grid">
+            <div class="concept-box"><h4>Heat transfer</h4><p>Air outlet temperature trends lower than expected for the operating condition.</p></div>
+            <div class="concept-box"><h4>Gas chemistry</h4><p>Flue-gas oxygen can rise as additional air enters the gas path.</p></div>
+            <div class="concept-box"><h4>Draft load</h4><p>ID fan loading may increase because the system is handling more gas volume.</p></div>
+          </div>
+
+          <p>If the pattern is consistent, seal degradation or air ingress becomes a credible physical hypothesis. The operational consequence is not limited to the preheater itself. Poor heat recovery can degrade boiler efficiency, worsen heat rate and increase auxiliary loading on the draft system.</p>
+          <div class="article-quote">A thermal problem often becomes visible first as a relationship between temperature, oxygen and fan loading—not as one isolated bad value.</div>
+
+          <h2 id="cooling">3. When pressure and temperature fall together</h2>
+          <p>Consider a generator cooling-water loop operating steadily. Outlet pressure is stable. Cooling-water temperature behaves predictably. Then both change at almost the same time: pressure drops and temperature also moves downward.</p>
+          <p>A single pressure drop could have many explanations. A single temperature change could also be dismissed as operating variation. But when the two move together, the flow path becomes the more interesting question.</p>
+          <p>One plausible story is a valve or bypass path moving away from its intended position. That changes the hydraulic resistance and redistributes flow through the cooling circuit. The temperature response then provides a second piece of evidence that the pressure change is not merely an instrument fluctuation.</p>
+
+          <div class="workflow-grid">
+            <div class="workflow-step"><span class="workflow-number">1</span><h4>Pressure changes</h4><p>The cooling loop no longer follows its established hydraulic baseline.</p></div>
+            <div class="workflow-step"><span class="workflow-number">2</span><h4>Temperature confirms context</h4><p>A simultaneous thermal response suggests that real flow distribution has changed.</p></div>
+            <div class="workflow-step"><span class="workflow-number">3</span><h4>Flow path is checked</h4><p>Valves, bypasses and restrictions become the logical inspection targets.</p></div>
+            <div class="workflow-step"><span class="workflow-number">4</span><h4>Cooling risk is contained</h4><p>Correcting the flow path early reduces the chance of cooling degradation progressing toward a thermal limitation or trip.</p></div>
+          </div>
+
+          <h2 id="pump">4. The feedwater pump that asked for more current</h2>
+          <p>A high-pressure feedwater pump is expected to draw current in a repeatable relationship with flow, head and operating condition. Imagine the motor current beginning to creep upward while useful flow gradually weakens. At the same time, the suction-side differential pressure across a strainer or restriction increases.</p>
+          <p>The motor is not necessarily the source of the problem. It may simply be working harder because the pump is being starved at the suction side. The hydraulic restriction changes the pump operating point, reduces available suction conditions and can move the machine closer to cavitation.</p>
+
+          <div class="case-grid">
+            <div class="case-box">
+              <span class="project-label">The misleading view</span>
+              <h4>“Motor current is high”</h4>
+              <p>Looking only at current can send the investigation toward the electrical system or motor condition.</p>
+            </div>
+            <div class="case-box">
+              <span class="project-label">The engineering view</span>
+              <h4>Current + flow + suction restriction</h4>
+              <p>When rising current is paired with degrading flow and increasing suction restriction, the more credible story is hydraulic choking and deteriorating pump suction conditions.</p>
+            </div>
+          </div>
+
+          <p>If allowed to progress, the consequences may include cavitation, reduced pump performance, unnecessary energy consumption and additional mechanical or thermal stress. Detecting the pattern early gives the team time to inspect and clean the restriction before the pump is forced into a more damaging operating condition.</p>
+
+          <h2 id="sensor">5. The temperature that looked dangerous—but was alone</h2>
+          <p>Not every abnormal signal represents an abnormal machine. Suppose one generator winding temperature indication suddenly rises well above its usual operating band. Taken alone, it looks serious enough to justify immediate concern.</p>
+          <p>But the surrounding evidence does not agree. Nearby temperature measurements remain stable. Cooling-gas temperature remains normal. Electrical loading has not changed in a way that would explain a real localized thermal event.</p>
+          <p>That disagreement is itself diagnostic information. If a genuine thermal problem were developing, engineers would normally expect at least some supporting response elsewhere in the thermal system. When one sensor moves sharply while the rest of the physical picture stays coherent, instrument drift or sensor failure becomes a credible hypothesis.</p>
+
+          <div class="article-callout">
+            <p><strong>The important point:</strong> Multi-signal monitoring is useful not only for finding equipment faults. It can also prevent engineers from treating a bad measurement as a bad machine.</p>
+          </div>
+
+          <p>Verification is still essential. The sensor must be checked, and safety cannot be based on a statistical assumption. But the correlation gives the engineer a rational path for deciding what to inspect first and whether the evidence supports an immediate shutdown or a controlled maintenance response.</p>
+
+          <h2 id="pattern">6. The common pattern behind all five stories</h2>
+          <p>Although the assets are different, the diagnostic reasoning follows the same sequence.</p>
+          <div class="workflow-grid">
+            <div class="workflow-step"><span class="workflow-number">1</span><h4>Learn the normal relationship</h4><p>Understand how related measurements move together during healthy operation.</p></div>
+            <div class="workflow-step"><span class="workflow-number">2</span><h4>Find the disagreement</h4><p>Identify a relationship that no longer behaves as expected, even if individual signals remain within limits.</p></div>
+            <div class="workflow-step"><span class="workflow-number">3</span><h4>Translate it into physics</h4><p>Ask which mechanical, hydraulic, thermal, electrical or instrumentation mechanism could create that exact pattern.</p></div>
+            <div class="workflow-step"><span class="workflow-number">4</span><h4>Use the time gained</h4><p>Validate the diagnosis and act before the developing condition becomes an operating constraint or failure.</p></div>
+          </div>
+
+          <div class="article-quote">The value of predictive diagnostics is not the anomaly itself. It is the engineering time created between the first credible deviation and the point at which the plant is forced to react.</div>
+
+          <div class="article-note">
+            <strong>Scope:</strong> These stories are anonymized, generalized engineering learning scenarios. They intentionally omit customer identities, site names, vendor or application names, proprietary details and monetary claims. They are written to explain diagnostic reasoning, not to attribute a specific event to a specific organization.
+          </div>
+
+          <div class="article-footer-cta">
+            <h3>Related learning guide</h3>
+            <p>For the underlying monitoring concept, read how industrial monitoring evolves from fixed thresholds toward multivariable behavior and earlier diagnosis.</p>
+            <a href="../insights/from-thresholds-to-intelligence.html">Read “From Thresholds to Intelligence” →</a>
+          </div>
+        </article>
+
+        <aside class="article-toc" aria-label="Case study contents">
+          <strong>Engineering stories</strong>
+          <a href="#turbine">Turbine vibration & load</a>
+          <a href="#aph">Air preheater & air ingress</a>
+          <a href="#cooling">Cooling-loop correlation</a>
+          <a href="#pump">Feedwater pump hydraulics</a>
+          <a href="#sensor">Temperature sensor verification</a>
+          <a href="#pattern">Common diagnostic pattern</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div>
+  </footer>
+</body>
+</html>
