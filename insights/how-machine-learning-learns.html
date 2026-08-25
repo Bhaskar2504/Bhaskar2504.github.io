@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Machine Learning Actually Learns | Bhaskar Anand</title>
+  <meta name="description" content="An engineer-friendly explanation of how machine learning moves from raw industrial data to features, training, validation, testing and predictions on new data." />
+  <meta name="author" content="Bhaskar Anand" />
+  <meta property="og:title" content="How Machine Learning Actually Learns — An Engineer's View" />
+  <meta property="og:description" content="A practical, industrial explanation of the machine-learning workflow without unnecessary jargon." />
+  <meta property="og:type" content="article" />
+  <link rel="stylesheet" href="../styles-v4.css?v=20260825g" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html#home">Bhaskar Anand</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#insights">Insights</a>
+        <a href="../index.html#research">Research</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <div class="article-hero-inner">
+          <p class="eyebrow">AI/ML Foundations for Engineers · Learning Note</p>
+          <h1>How Machine Learning Actually Learns</h1>
+          <p class="article-deck">An engineer’s view of how raw plant data becomes a model that can make predictions on data it has never seen before.</p>
+          <div class="article-meta">
+            <span>Bhaskar Anand</span>
+            <span>Industrial AI & Asset Performance</span>
+            <span>AI/ML Foundations — 01</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-main">
+      <div class="container article-layout">
+        <article class="article-content">
+          <div class="article-callout">
+            <p><strong>Core idea:</strong> Machine learning does not “understand” a plant the way an engineer does. It learns mathematical patterns from historical data and uses those learned patterns to infer something about new data.</p>
+          </div>
+
+          <h2 id="what-is-learning">1. What does “learning” actually mean?</h2>
+          <p>At its simplest, machine learning uses algorithms to extract information from raw data and represent that information in a model. The model is then used to make an inference or prediction about data that was not part of the original learning process.</p>
+          <p>A useful engineering way to think about this is that the model is an approximation of one part of reality. It does not contain the whole pump, turbine, boiler or process. It contains mathematical relationships learned from the data that we chose to show it.</p>
+
+          <div class="article-quote">A machine-learning model is not the plant. It is a learned representation of patterns in plant data.</div>
+
+          <h2 id="example">2. Start with a simple industrial example</h2>
+          <p>Imagine a pump operating across different process conditions. You have historical measurements such as flow, suction pressure, discharge pressure, motor current and temperature.</p>
+          <p>An engineer already expects these parameters to be related. Higher flow may require a different hydraulic head. Motor current should respond to the mechanical load. Suction conditions influence how comfortably the pump can operate.</p>
+          <p>A machine-learning model is given examples of these operating conditions. During training, it searches for mathematical relationships that help it reproduce the behaviour represented by the historical data.</p>
+          <p>Later, when new measurements arrive, the model applies what it learned. Depending on the task, it might predict an expected value, classify an operating state, or indicate that the new combination of measurements differs from the patterns seen during training.</p>
+
+          <h2 id="workflow">3. The learning workflow</h2>
+          <p>The basic machine-learning workflow is easier to understand when treated like an engineering process rather than a software problem.</p>
+
+          <div class="workflow-grid">
+            <div class="workflow-step">
+              <span class="workflow-number">1</span>
+              <h4>Define the problem</h4>
+              <p>Decide what you want the model to learn or predict. The engineering question comes before the algorithm.</p>
+            </div>
+            <div class="workflow-step">
+              <span class="workflow-number">2</span>
+              <h4>Collect data</h4>
+              <p>Gather historical measurements that represent the operating behaviour relevant to the problem.</p>
+            </div>
+            <div class="workflow-step">
+              <span class="workflow-number">3</span>
+              <h4>Prepare the data</h4>
+              <p>Clean missing, noisy or unsuitable data and transform measurements into a form suitable for modelling.</p>
+            </div>
+            <div class="workflow-step">
+              <span class="workflow-number">4</span>
+              <h4>Create features</h4>
+              <p>Select or derive the information that the model will actually use to learn.</p>
+            </div>
+            <div class="workflow-step">
+              <span class="workflow-number">5</span>
+              <h4>Train</h4>
+              <p>The algorithm adjusts model parameters so that the model fits patterns in the training data.</p>
+            </div>
+            <div class="workflow-step">
+              <span class="workflow-number">6</span>
+              <h4>Validate & test</h4>
+              <p>Check whether the learned pattern still works on data that was not used to fit the model.</p>
+            </div>
+            <div class="workflow-step">
+              <span class="workflow-number">7</span>
+              <h4>Use new data</h4>
+              <p>Once accepted, the model receives new measurements and produces the intended prediction or inference.</p>
+            </div>
+          </div>
+
+          <h2 id="features">4. Why features matter so much</h2>
+          <p>Raw sensor tags are not always the best description of an engineering problem. Machine learning distinguishes several ways of working with features:</p>
+
+          <div class="concept-grid">
+            <div class="concept-box">
+              <h4>Feature selection</h4>
+              <p>Choose a useful subset from the measurements already available.</p>
+            </div>
+            <div class="concept-box">
+              <h4>Feature extraction</h4>
+              <p>Create a new representation when the raw variables themselves are not directly suitable.</p>
+            </div>
+            <div class="concept-box">
+              <h4>Feature engineering</h4>
+              <p>Create useful derived information even though the original raw variables could also have been used.</p>
+            </div>
+            <div class="concept-box">
+              <h4>Feature learning</h4>
+              <p>Allow the learning method to construct useful representations automatically.</p>
+            </div>
+          </div>
+
+          <p>For an industrial engineer, feature engineering is where domain knowledge can become especially valuable. Instead of asking the model to interpret every raw tag independently, we can sometimes provide information that represents the physics more directly—for example a pressure difference, temperature rise, efficiency indicator or load-normalized quantity.</p>
+
+          <div class="article-callout">
+            <p><strong>Engineering translation:</strong> Better data is important, but a better representation of the engineering problem can be just as important.</p>
+          </div>
+
+          <h2 id="training">5. What happens during training?</h2>
+          <p>A model contains parameters that are learned from data. In linear regression these may be coefficients. In a neural network they include weights. During training, an optimization process adjusts these parameters so that the model’s output better matches the learning objective.</p>
+          <p>This is different from a <em>hyperparameter</em>. Hyperparameters control how the learning process is performed or how the model is structured—for example learning rate, batch size, the number of layers or the value of <em>K</em> in K-means clustering.</p>
+          <p>The detailed difference between parameters and hyperparameters deserves its own article. For now, the important distinction is:</p>
+
+          <div class="case-grid">
+            <div class="case-box">
+              <span class="project-label">Parameters</span>
+              <h4>What the model learns</h4>
+              <p>Values estimated from the training data that directly influence the model’s predictions.</p>
+            </div>
+            <div class="case-box">
+              <span class="project-label">Hyperparameters</span>
+              <h4>How we control learning</h4>
+              <p>Settings selected before or around training that influence the learning process and model structure.</p>
+            </div>
+          </div>
+
+          <h2 id="validation">6. Training performance is not enough</h2>
+          <p>A model can fit its training data very well and still fail when new operating data arrives. This is why model development includes validation and testing.</p>
+          <p>The objective is not to prove that the model remembers historical examples. The objective is to determine whether it can generalize—whether the learned relationship remains useful on data it did not use for fitting.</p>
+          <p>This is also where common machine-learning problems such as prediction error, bias, variance, overfitting and underfitting become important.</p>
+
+          <div class="article-quote">A model that explains yesterday perfectly but cannot handle tomorrow is not a useful predictive model.</div>
+
+          <h2 id="new-data">7. What happens after training?</h2>
+          <p>Once a model has been trained, evaluated and accepted, it can be applied to new data. The same type of data preparation and feature construction used during development must be applied consistently before the new measurements are passed to the model.</p>
+          <p>The model then uses the relationships represented by its learned parameters to generate an output. That output might be a numerical prediction, a class, a probability, a cluster assignment or another model-specific result.</p>
+
+          <h2 id="industrial-reality">8. Why industrial machine learning is more than “give data to AI”</h2>
+          <p>The workflow shows why an industrial AI project cannot be reduced to choosing an algorithm. Data preparation, feature representation, training, evaluation and interpretation are all part of the system.</p>
+          <p>In industrial applications there is an additional layer: engineering context. A statistically strong pattern still needs to make sense against equipment behaviour, operating state and process physics before it becomes an engineering decision.</p>
+
+          <div class="workflow-grid">
+            <div class="workflow-step"><span class="workflow-number">1</span><h4>Plant data</h4><p>Measurements describe what the equipment and process are doing.</p></div>
+            <div class="workflow-step"><span class="workflow-number">2</span><h4>Representation</h4><p>Features define what information is presented to the model.</p></div>
+            <div class="workflow-step"><span class="workflow-number">3</span><h4>Learning</h4><p>The model identifies mathematical structure in the historical examples.</p></div>
+            <div class="workflow-step"><span class="workflow-number">4</span><h4>Engineering validation</h4><p>The output is interpreted against real equipment behaviour before action.</p></div>
+          </div>
+
+          <h2 id="takeaway">9. The key takeaway</h2>
+          <p>Machine learning is a structured process of learning patterns from historical data and applying those patterns to new data. The algorithm matters, but it is only one part of the workflow.</p>
+          <p>For engineers, the most useful mental model is:</p>
+
+          <div class="article-quote">Engineering question → Data → Features → Training → Validation → New data → Prediction → Engineering interpretation.</div>
+
+          <p>Once this workflow is clear, concepts such as supervised learning, unsupervised learning, neural networks, hyperparameters, overfitting and anomaly detection become much easier to place in context.</p>
+
+          <div class="article-note">
+            <strong>Scope:</strong> This learning note explains standard machine-learning concepts through industrial examples. The industrial examples are illustrative and are not descriptions of a specific customer, site, vendor or application.
+          </div>
+
+          <div class="article-footer-cta">
+            <h3>AI/ML Foundations for Engineers</h3>
+            <p>This is the first note in a series that connects core machine-learning concepts with engineering and industrial applications.</p>
+            <a href="../index.html#insights">← Back to Insights</a>
+          </div>
+        </article>
+
+        <aside class="article-toc" aria-label="Article contents">
+          <strong>In this guide</strong>
+          <a href="#what-is-learning">What learning means</a>
+          <a href="#example">Industrial example</a>
+          <a href="#workflow">ML workflow</a>
+          <a href="#features">Features</a>
+          <a href="#training">Training</a>
+          <a href="#validation">Validation & testing</a>
+          <a href="#new-data">New data</a>
+          <a href="#industrial-reality">Industrial context</a>
+          <a href="#takeaway">Key takeaway</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div>
+  </footer>
+</body>
+</html>
