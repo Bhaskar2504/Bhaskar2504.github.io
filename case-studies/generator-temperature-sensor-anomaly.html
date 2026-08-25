@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>The Temperature That Looked Dangerous — But Was Alone | Bhaskar Anand</title><meta name="description" content="An anonymized engineering story about generator temperature measurement, sensor validation and multi-signal fault verification."/><link rel="stylesheet" href="../styles-v4.css?v=20260825g"/></head>
+<body>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html#home">Bhaskar Anand</a><nav class="nav"><a href="index.html">Case Studies</a><a href="../index.html#insights">Insights</a><a href="../index.html#contact">Contact</a></nav></div></header>
+<main>
+<section class="article-hero"><div class="container"><div class="article-hero-inner"><p class="eyebrow">Instrumentation · Fault Verification</p><h1>The Temperature That Looked Dangerous — But Was Alone</h1><p class="article-deck">One temperature signal moved sharply upward. The rest of the machine did not agree.</p></div></div></section>
+<section class="article-main"><div class="container article-layout"><article class="article-content">
+<p>A sudden rise in a generator temperature indication deserves attention. If the value is interpreted in isolation, the safest first reaction may be to assume that a real hotspot is developing.</p>
+<h2>The contradiction</h2>
+<p>Now imagine that nearby temperature measurements remain steady. Cooling conditions have not changed. Electrical loading is stable. Other thermal indicators continue following their normal pattern. Only one measurement has moved.</p>
+<div class="concept-grid"><div class="concept-box"><h4>One sensor</h4><p>Sharp upward step.</p></div><div class="concept-box"><h4>Nearby temperatures</h4><p>No supporting rise.</p></div><div class="concept-box"><h4>Cooling context</h4><p>Still behaving normally.</p></div></div>
+<h2>Why disagreement is useful information</h2>
+<p>A genuine localized thermal problem can exist, so the signal must never be dismissed casually. But a real physical event usually has consequences somewhere else in the thermal system. If the surrounding evidence remains coherent while one sensor separates dramatically from the rest, instrument drift, connection issues or sensor failure become credible competing hypotheses.</p>
+<h2>What good diagnostics change</h2>
+<p>The objective is not to let an algorithm declare the machine healthy. The objective is to help the engineer decide what evidence to verify first. Instead of treating one measurement as unquestionable truth, the signal is tested against the physical context of the machine.</p>
+<div class="case-grid"><div class="case-box"><span class="project-label">If assumed real immediately</span><h4>Unnecessary intervention</h4><p>A questionable measurement can drive a highly conservative operational response before the instrument itself has been checked.</p></div><div class="case-box"><span class="project-label">If dismissed immediately</span><h4>Real risk could be missed</h4><p>Correlation is not proof. Independent verification remains essential whenever equipment protection is involved.</p></div></div>
+<h2>The engineering response</h2>
+<p>Check the sensor against adjacent measurements, operating load, cooling conditions and any available redundant indication. If the physical system remains consistent while the suspect measurement does not, the investigation can move toward the instrumentation chain with much stronger justification.</p>
+<div class="article-quote">Multi-signal diagnostics can identify bad machines — and can also stop a bad measurement from being mistaken for a bad machine.</div>
+<div class="article-note"><strong>Scope:</strong> An anonymized engineering learning scenario. No customer, site, vendor, application or monetary information is represented.</div>
+<div class="article-footer-cta"><h3>Return to the case study library</h3><p>Explore the other independent stories across rotor dynamics, thermodynamics, hydraulics and cooling systems.</p><a href="index.html">View all engineering case studies →</a></div>
+</article><aside class="article-toc"><strong>Case study</strong><a href="index.html">All case studies</a></aside></div></section>
+</main><footer class="site-footer"><div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div></footer>
+</body></html>
