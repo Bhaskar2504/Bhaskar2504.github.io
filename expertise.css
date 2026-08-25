@@ -1,0 +1,27 @@
+/* Expertise cards + detail pages */
+.expertise-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(18px,2.2vw,26px)}
+.expertise-card{position:relative;display:flex;min-height:100%;flex-direction:column;padding:clamp(26px,3vw,36px);overflow:hidden;border:1px solid var(--border);border-radius:24px;background:rgba(255,255,255,.94);box-shadow:var(--shadow-soft);text-decoration:none;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.expertise-card:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent-2));transform:scaleX(0);transform-origin:left;transition:transform .22s ease}
+.expertise-card:hover,.expertise-card:focus-visible{transform:translateY(-6px);border-color:#bcd4d8;box-shadow:var(--shadow);outline:none}
+.expertise-card:hover:before,.expertise-card:focus-visible:before{transform:scaleX(1)}
+.expertise-card h3{margin:0 0 13px;color:var(--navy);font-size:clamp(1.2rem,1.55vw,1.42rem);line-height:1.35;letter-spacing:-.02em}
+.expertise-card p{margin:0;color:var(--muted);font-size:1rem;line-height:1.7}
+.expertise-card .card-link{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:auto;padding-top:26px;color:var(--accent);font-size:.9rem;font-weight:600}
+.expertise-card .card-link span:last-child{display:grid;width:34px;height:34px;place-items:center;border-radius:50%;background:var(--accent-soft);transition:transform .2s ease}
+.expertise-card:hover .card-link span:last-child{transform:translateX(3px)}
+
+.detail-back{display:inline-flex;align-items:center;gap:8px;margin-bottom:24px;color:#86d5d0;font-weight:600;text-decoration:none}
+.detail-back:hover{text-decoration:underline}
+.expertise-detail{width:min(100%,900px)}
+.expertise-detail .intro{margin:0 0 36px;color:#425463;font-size:clamp(1.08rem,1.35vw,1.2rem);line-height:1.8}
+.detail-section{margin-top:48px;padding-top:8px}
+.detail-section h2{margin:0 0 18px;color:var(--navy);font-size:clamp(1.6rem,2.6vw,2.3rem);font-weight:500;letter-spacing:-.03em}
+.detail-section p,.detail-section li{color:#536372;font-size:1.02rem;line-height:1.78}
+.detail-section ul{padding-left:22px}
+.detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px;margin-top:24px}
+.detail-box{padding:22px;border:1px solid var(--border);border-radius:18px;background:var(--surface-2)}
+.detail-box h3{margin:0 0 8px;color:var(--navy);font-size:1rem}
+.detail-box p{margin:0;color:var(--muted);font-size:.94rem;line-height:1.65}
+.detail-footer{display:flex;flex-wrap:wrap;gap:12px;margin-top:54px;padding-top:28px;border-top:1px solid var(--border)}
+.detail-footer .button.secondary{background:#fff}
+@media(max-width:720px){.expertise-card{padding:24px}.detail-footer .button{width:100%}}
