@@ -10,6 +10,7 @@
   <meta property="og:description" content="Industrial AI and asset performance professional combining plant engineering, reliability, industrial data, and AI." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="styles-v4.css?v=20260825f" />
+  <link rel="stylesheet" href="insights-hub.css?v=20260825a" />
 </head>
 <body>
   <header class="site-header">
@@ -20,7 +21,7 @@
         <a href="#expertise">Expertise</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#insights">Insights</a>
+        <a href="insights/index.html">Insights</a>
         <a href="#research">Research</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -221,55 +222,65 @@
           <p>Practical explanations that connect plant engineering, reliability and industrial AI.</p>
         </div>
 
-        <article class="featured-insight">
-          <div>
+        <div class="insights-home-grid">
+          <article class="insight-panel featured">
             <span class="project-label">Featured Learning Guide</span>
             <h3>From Thresholds to Intelligence</h3>
             <p>A learner-friendly guide to the shift from fixed DCS alarm limits toward multivariable AI monitoring, anomaly detection, failure-mode diagnosis and proactive maintenance.</p>
-            <a class="button" href="insights/from-thresholds-to-intelligence.html">Read the Guide</a>
-          </div>
-          <div class="mini-monitor" aria-label="Illustration showing a changing signal inside static thresholds">
-            <span class="monitor-label top">Upper threshold</span>
-            <span class="monitor-label bottom">Lower threshold</span>
-            <svg class="monitor-wave" viewBox="0 0 700 160" preserveAspectRatio="none" role="img" aria-label="Changing signal pattern">
-              <polyline points="0,85 50,82 100,91 145,68 190,104 235,52 280,112 325,72 370,99 415,44 460,115 505,64 550,104 600,57 650,108 700,83" fill="none" stroke="#0f6d78" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            <span class="monitor-caption">Behavior can change before a limit is crossed</span>
-          </div>
-        </article>
+            <div class="mini-monitor" aria-label="Illustration showing a changing signal inside static thresholds" style="margin-top:22px;min-height:190px;">
+              <span class="monitor-label top">Upper threshold</span>
+              <span class="monitor-label bottom">Lower threshold</span>
+              <svg class="monitor-wave" viewBox="0 0 700 160" preserveAspectRatio="none" role="img" aria-label="Changing signal pattern">
+                <polyline points="0,85 50,82 100,91 145,68 190,104 235,52 280,112 325,72 370,99 415,44 460,115 505,64 550,104 600,57 650,108 700,83" fill="none" stroke="#0f6d78" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="monitor-caption">Behavior can change before a limit is crossed</span>
+            </div>
+            <div class="panel-actions">
+              <a class="button" href="insights/from-thresholds-to-intelligence.html">Read the Guide</a>
+            </div>
+          </article>
 
-        <div class="section-heading" style="margin-top: 42px;">
-          <p class="eyebrow">AI/ML Foundations for Engineers</p>
-          <h2>Machine learning explained through engineering thinking.</h2>
-          <p>A growing series that connects core ML concepts to plant data, equipment behaviour and industrial decision-making.</p>
+          <article class="insight-panel series">
+            <span class="project-label">AI/ML Foundations for Engineers</span>
+            <h3>Machine learning explained through engineering thinking.</h3>
+            <p>A growing series that connects core ML concepts to plant data, equipment behaviour and industrial decision-making.</p>
+            <div class="learning-path" aria-label="Nine-part AI and machine learning learning path">
+              <span class="learning-node live">01</span>
+              <span class="learning-node live">02</span>
+              <span class="learning-node">03</span>
+              <span class="learning-node">04</span>
+              <span class="learning-node">05</span>
+              <span class="learning-node">06</span>
+              <span class="learning-node">07</span>
+              <span class="learning-node">08</span>
+              <span class="learning-node">09</span>
+            </div>
+            <div class="series-status">2 articles available · 9-part learning path</div>
+            <div class="panel-actions">
+              <a class="button" href="insights/ml-foundations.html">Browse the Series</a>
+              <a class="button secondary" href="insights/index.html">All Insights</a>
+            </div>
+          </article>
         </div>
 
-        <div class="grid-3">
-          <article class="card project-card">
-            <span class="project-label">Foundation 01</span>
-            <h3>How Machine Learning Actually Learns</h3>
+        <div class="section-subheading">
+          <h3>Latest in AI/ML Foundations</h3>
+          <a href="insights/index.html">Browse all insights →</a>
+        </div>
+
+        <div class="article-link-grid">
+          <article class="article-tile">
+            <span class="tile-number">01</span>
+            <h4>How Machine Learning Actually Learns</h4>
             <p>An engineer’s view of the full path from raw plant data and features to training, validation, prediction and engineering interpretation.</p>
             <a href="insights/how-machine-learning-learns.html">Read article →</a>
           </article>
-          <article class="card">
-            <h3>Industrial AI & Predictive Maintenance</h3>
-            <ul>
-              <li>Predictive maintenance</li>
-              <li>Anomaly detection</li>
-              <li>Physics + AI approaches</li>
-              <li>GenAI and Agentic AI</li>
-              <li>Industrial AI deployment lessons</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Reliability & Asset Performance</h3>
-            <ul>
-              <li>FMEA and RCA</li>
-              <li>Failure signatures</li>
-              <li>Equipment diagnostics</li>
-              <li>Reliability engineering</li>
-              <li>Asset Performance Management</li>
-            </ul>
+
+          <article class="article-tile">
+            <span class="tile-number">02</span>
+            <h4>Supervised vs Unsupervised Learning in a Plant</h4>
+            <p>Failure classification vs learning normal operating behaviour.</p>
+            <a href="insights/supervised-vs-unsupervised.html">Read article →</a>
           </article>
         </div>
       </div>
