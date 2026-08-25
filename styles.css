@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap");
+
 :root {
   --bg: #f5f7fb;
   --surface: #ffffff;
@@ -22,7 +24,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.65;
@@ -55,8 +57,9 @@ a {
 }
 
 .brand {
+  font-family: "Manrope", sans-serif;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
   text-decoration: none;
   color: var(--navy);
 }
@@ -70,8 +73,8 @@ a {
 
 .nav a {
   color: var(--muted);
-  font-size: 0.93rem;
-  font-weight: 650;
+  font-size: 0.95rem;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -89,19 +92,22 @@ a {
 .eyebrow {
   margin: 0 0 16px;
   color: var(--accent);
-  font-size: 0.83rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.81rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .hero h1 {
-  max-width: 880px;
+  max-width: 930px;
   margin: 0;
   color: var(--navy);
-  font-size: clamp(2.7rem, 7vw, 5.2rem);
-  line-height: 0.98;
-  letter-spacing: -0.055em;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 700;
+  line-height: 1.03;
+  letter-spacing: -0.038em;
 }
 
 .hero-subtitle {
@@ -128,7 +134,8 @@ a {
   border-radius: 8px;
   background: var(--navy);
   color: #fff;
-  font-weight: 750;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -157,9 +164,11 @@ section:nth-of-type(even) {
 .section-heading h2 {
   margin: 0;
   color: var(--navy);
+  font-family: "Manrope", sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.08;
-  letter-spacing: -0.04em;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
 }
 
 .section-heading p {
@@ -198,7 +207,9 @@ section:nth-of-type(even) {
 .card h3 {
   margin: 0 0 10px;
   color: var(--navy);
-  font-size: 1.18rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.16rem;
+  font-weight: 700;
 }
 
 .card p,
@@ -246,13 +257,16 @@ section:nth-of-type(even) {
 
 .timeline-date {
   color: var(--accent);
-  font-size: 0.92rem;
-  font-weight: 800;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .timeline-item h3 {
   margin: 0 0 5px;
   color: var(--navy);
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
 }
 
 .timeline-item h4 {
@@ -275,7 +289,8 @@ section:nth-of-type(even) {
   display: inline-block;
   margin-bottom: 16px;
   color: var(--accent);
-  font-size: 0.8rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -300,8 +315,11 @@ section:nth-of-type(even) {
 
 .contact-box h2 {
   margin-top: 0;
+  font-family: "Manrope", sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
-  letter-spacing: -0.04em;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
 }
 
 .contact-box p {
@@ -321,6 +339,7 @@ section:nth-of-type(even) {
   border: 1px solid rgba(255,255,255,0.35);
   border-radius: 8px;
   color: #fff;
+  font-family: "Manrope", sans-serif;
   font-weight: 700;
   text-decoration: none;
 }
