@@ -9,7 +9,8 @@
   <meta property="og:title" content="How Machine Learning Actually Learns — An Engineer's View" />
   <meta property="og:description" content="A practical, industrial explanation of the machine-learning workflow without unnecessary jargon." />
   <meta property="og:type" content="article" />
-  <link rel="stylesheet" href="../styles-v4.css?v=20260825g" />
+  <link rel="stylesheet" href="../styles-v4.css?v=20260825h" />
+  <link rel="stylesheet" href="ml-story.css?v=20260825a" />
 </head>
 <body>
   <header class="site-header">
@@ -66,70 +67,28 @@
           <p>The basic machine-learning workflow is easier to understand when treated like an engineering process rather than a software problem.</p>
 
           <div class="workflow-grid">
-            <div class="workflow-step">
-              <span class="workflow-number">1</span>
-              <h4>Define the problem</h4>
-              <p>Decide what you want the model to learn or predict. The engineering question comes before the algorithm.</p>
-            </div>
-            <div class="workflow-step">
-              <span class="workflow-number">2</span>
-              <h4>Collect data</h4>
-              <p>Gather historical measurements that represent the operating behaviour relevant to the problem.</p>
-            </div>
-            <div class="workflow-step">
-              <span class="workflow-number">3</span>
-              <h4>Prepare the data</h4>
-              <p>Clean missing, noisy or unsuitable data and transform measurements into a form suitable for modelling.</p>
-            </div>
-            <div class="workflow-step">
-              <span class="workflow-number">4</span>
-              <h4>Create features</h4>
-              <p>Select or derive the information that the model will actually use to learn.</p>
-            </div>
-            <div class="workflow-step">
-              <span class="workflow-number">5</span>
-              <h4>Train</h4>
-              <p>The algorithm adjusts model parameters so that the model fits patterns in the training data.</p>
-            </div>
-            <div class="workflow-step">
-              <span class="workflow-number">6</span>
-              <h4>Validate & test</h4>
-              <p>Check whether the learned pattern still works on data that was not used to fit the model.</p>
-            </div>
-            <div class="workflow-step">
-              <span class="workflow-number">7</span>
-              <h4>Use new data</h4>
-              <p>Once accepted, the model receives new measurements and produces the intended prediction or inference.</p>
-            </div>
+            <div class="workflow-step"><span class="workflow-number">1</span><h4>Define the problem</h4><p>Decide what you want the model to learn or predict. The engineering question comes before the algorithm.</p></div>
+            <div class="workflow-step"><span class="workflow-number">2</span><h4>Collect data</h4><p>Gather historical measurements that represent the operating behaviour relevant to the problem.</p></div>
+            <div class="workflow-step"><span class="workflow-number">3</span><h4>Prepare the data</h4><p>Clean missing, noisy or unsuitable data and transform measurements into a form suitable for modelling.</p></div>
+            <div class="workflow-step"><span class="workflow-number">4</span><h4>Create features</h4><p>Select or derive the information that the model will actually use to learn.</p></div>
+            <div class="workflow-step"><span class="workflow-number">5</span><h4>Train</h4><p>The algorithm adjusts model parameters so that the model fits patterns in the training data.</p></div>
+            <div class="workflow-step"><span class="workflow-number">6</span><h4>Validate & test</h4><p>Check whether the learned pattern still works on data that was not used to fit the model.</p></div>
+            <div class="workflow-step"><span class="workflow-number">7</span><h4>Use new data</h4><p>Once accepted, the model receives new measurements and produces the intended prediction or inference.</p></div>
           </div>
 
           <h2 id="features">4. Why features matter so much</h2>
           <p>Raw sensor tags are not always the best description of an engineering problem. Machine learning distinguishes several ways of working with features:</p>
 
           <div class="concept-grid">
-            <div class="concept-box">
-              <h4>Feature selection</h4>
-              <p>Choose a useful subset from the measurements already available.</p>
-            </div>
-            <div class="concept-box">
-              <h4>Feature extraction</h4>
-              <p>Create a new representation when the raw variables themselves are not directly suitable.</p>
-            </div>
-            <div class="concept-box">
-              <h4>Feature engineering</h4>
-              <p>Create useful derived information even though the original raw variables could also have been used.</p>
-            </div>
-            <div class="concept-box">
-              <h4>Feature learning</h4>
-              <p>Allow the learning method to construct useful representations automatically.</p>
-            </div>
+            <div class="concept-box"><h4>Feature selection</h4><p>Choose a useful subset from the measurements already available.</p></div>
+            <div class="concept-box"><h4>Feature extraction</h4><p>Create a new representation when the raw variables themselves are not directly suitable.</p></div>
+            <div class="concept-box"><h4>Feature engineering</h4><p>Create useful derived information even though the original raw variables could also have been used.</p></div>
+            <div class="concept-box"><h4>Feature learning</h4><p>Allow the learning method to construct useful representations automatically.</p></div>
           </div>
 
           <p>For an industrial engineer, feature engineering is where domain knowledge can become especially valuable. Instead of asking the model to interpret every raw tag independently, we can sometimes provide information that represents the physics more directly—for example a pressure difference, temperature rise, efficiency indicator or load-normalized quantity.</p>
 
-          <div class="article-callout">
-            <p><strong>Engineering translation:</strong> Better data is important, but a better representation of the engineering problem can be just as important.</p>
-          </div>
+          <div class="article-callout"><p><strong>Engineering translation:</strong> Better data is important, but a better representation of the engineering problem can be just as important.</p></div>
 
           <h2 id="training">5. What happens during training?</h2>
           <p>A model contains parameters that are learned from data. In linear regression these may be coefficients. In a neural network they include weights. During training, an optimization process adjusts these parameters so that the model’s output better matches the learning objective.</p>
@@ -137,16 +96,8 @@
           <p>The detailed difference between parameters and hyperparameters deserves its own article. For now, the important distinction is:</p>
 
           <div class="case-grid">
-            <div class="case-box">
-              <span class="project-label">Parameters</span>
-              <h4>What the model learns</h4>
-              <p>Values estimated from the training data that directly influence the model’s predictions.</p>
-            </div>
-            <div class="case-box">
-              <span class="project-label">Hyperparameters</span>
-              <h4>How we control learning</h4>
-              <p>Settings selected before or around training that influence the learning process and model structure.</p>
-            </div>
+            <div class="case-box"><span class="project-label">Parameters</span><h4>What the model learns</h4><p>Values estimated from the training data that directly influence the model’s predictions.</p></div>
+            <div class="case-box"><span class="project-label">Hyperparameters</span><h4>How we control learning</h4><p>Settings selected before or around training that influence the learning process and model structure.</p></div>
           </div>
 
           <h2 id="validation">6. Training performance is not enough</h2>
@@ -179,14 +130,11 @@
 
           <p>Once this workflow is clear, concepts such as supervised learning, unsupervised learning, neural networks, hyperparameters, overfitting and anomaly detection become much easier to place in context.</p>
 
-          <div class="article-note">
-            <strong>Scope:</strong> This learning note explains standard machine-learning concepts through industrial examples. The industrial examples are illustrative and are not descriptions of a specific customer, site, vendor or application.
-          </div>
+          <div class="article-note"><strong>Scope:</strong> This learning note explains standard machine-learning concepts through industrial examples. The industrial examples are illustrative and are not descriptions of a specific customer, site, vendor or application.</div>
 
-          <div class="article-footer-cta">
-            <h3>AI/ML Foundations for Engineers</h3>
-            <p>This is the first note in a series that connects core machine-learning concepts with engineering and industrial applications.</p>
-            <a href="../index.html#insights">← Back to Insights</a>
+          <div class="article-navigation">
+            <a href="ml-foundations.html">Series index</a>
+            <a href="supervised-vs-unsupervised.html">Article 02: Supervised vs Unsupervised →</a>
           </div>
         </article>
 
@@ -206,8 +154,6 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div>
-  </footer>
+  <footer class="site-footer"><div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div></footer>
 </body>
 </html>
