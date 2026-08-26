@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects & Case Studies | Bhaskar Anand</title>
-  <meta name="description" content="Selected projects and anonymized engineering case studies focused on operating physics, predictive diagnostics, and industrial reliability." />
+  <meta name="description" content="Selected projects and anonymized engineering case studies focused on operating physics, predictive diagnostics, Industrial GenAI, and industrial reliability." />
   <link rel="stylesheet" href="styles-v4.css?v=20260825i" />
   <link rel="stylesheet" href="page-content.css?v=20260825a" />
 </head>
@@ -12,16 +12,49 @@
   <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html">Bhaskar Anand</a><nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="expertise.html">Expertise</a><a href="experience.html">Experience</a><a href="projects.html" aria-current="page">Projects</a><a href="insights/index.html">Insights</a><a href="research.html">Research</a><a href="contact.html">Contact</a></nav></div></header>
 
   <main>
-    <section class="article-hero"><div class="container"><div class="article-hero-inner"><p class="eyebrow">Selected Projects & Case Studies</p><h1>Engineering stories built around operating physics.</h1><p class="article-deck">Anonymized learning cases focused on what the signals are saying, what physical mechanisms could explain them, and how earlier engineering attention can change the response.</p></div></div></section>
+    <section class="article-hero"><div class="container"><div class="article-hero-inner"><p class="eyebrow">Selected Projects & Case Studies</p><h1>Engineering ideas turned into working technical projects.</h1><p class="article-deck">Flagship projects demonstrate how plant engineering, reliability, data and AI can be translated into testable systems. The case-study library separately focuses on evidence-led engineering diagnosis.</p></div></div></section>
 
     <section class="article-main"><div class="container"><div class="page-shell">
       <div class="page-intro">
         <div>
-          <p class="lead">The case studies on this site are deliberately separated from customer, site, vendor, application and monetary details. The purpose is to show the engineering reasoning—not to expose a specific implementation.</p>
-          <p class="lead">Each story begins with a realistic plant pattern and then asks the questions an engineer would need to answer: what changed, which signals support the change, what physics could explain it, what contradicting evidence exists, and what should be checked next?</p>
+          <p class="lead">The work on this page is designed to demonstrate engineering reasoning and implementation capability without exposing employer or customer information.</p>
+          <p class="lead">Technical projects use synthetic or clearly public information. Diagnostic cases are deliberately separated from customer, site, vendor, application and monetary details.</p>
         </div>
-        <aside class="context-card"><span class="project-label">Case-study method</span><h3>Signal → Relationship → Physical interpretation → Engineering action</h3><p>The cases are not presented as automatic root-cause claims. They are structured as evidence-led engineering investigations.</p></aside>
+        <aside class="context-card"><span class="project-label">Project principle</span><h3>Engineering usefulness before technology novelty.</h3><p>The goal is to show what the system can support, how its outputs are tested, where it can fail, and when a human engineer must remain in control.</p></aside>
       </div>
+
+      <section class="content-section">
+        <p class="eyebrow">Flagship Technical Project</p>
+        <h2>Industrial GenAI Reliability Copilot</h2>
+        <article class="featured-insight">
+          <div>
+            <span class="project-label">GenAI · Reliability Engineering · v0.1</span>
+            <h3>Turning reliability expertise into a safe, testable GenAI workflow.</h3>
+            <p>A public engineering project showing how Industrial AI, Asset Performance Management and reliability reasoning can be converted into structured diagnostic outputs with prompt versioning, schemas, synthetic evidence, safety checks, human escalation and automated tests.</p>
+            <p><strong>Current stage:</strong> v0.1 — Structured Prompting. Later releases will add evaluation baselines, RAG with citations, engineering tool calling, stronger guardrails, observability and an integrated demonstration.</p>
+            <div class="hero-actions">
+              <a class="button" href="https://github.com/Bhaskar2504/industrial-genai-reliability-copilot" target="_blank" rel="noreferrer">View GitHub Repository</a>
+              <a class="button secondary" href="expertise/engineering-to-ai-translation.html">Related Expertise</a>
+            </div>
+          </div>
+          <div class="mini-monitor" aria-label="Illustration of evidence moving through an engineering AI workflow">
+            <span class="monitor-label top">Engineering evidence</span>
+            <span class="monitor-label bottom">Structured diagnostic output</span>
+            <svg class="monitor-wave" viewBox="0 0 700 160" preserveAspectRatio="none" role="img" aria-label="Evidence-grounded workflow illustration">
+              <polyline points="0,42 95,42 145,62 225,62 280,36 360,36 420,56 505,56 565,31 700,31" fill="none" stroke="#8a9aa4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+              <polyline points="0,120 95,120 145,100 225,100 280,112 360,112 420,87 505,87 565,103 700,72" fill="none" stroke="#0f6d78" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="monitor-caption">Evidence → reasoning → validation → escalation</span>
+          </div>
+        </article>
+
+        <div class="content-grid">
+          <article class="content-card"><h3>Engineering reasoning</h3><p>Frames troubleshooting around failure modes, operating context, supporting evidence, contradicting evidence and justified next actions.</p></article>
+          <article class="content-card"><h3>Structured & testable</h3><p>Uses versioned prompts and machine-validatable schemas so outputs can be evaluated rather than judged only by how fluent they sound.</p></article>
+          <article class="content-card"><h3>Safety & governance</h3><p>Includes abstention and escalation concepts so insufficient evidence does not become an overconfident engineering recommendation.</p></article>
+          <article class="content-card"><h3>Public-safe data</h3><p>Uses synthetic or clearly licensed public engineering information and contains no employer, customer, plant or proprietary operational data.</p></article>
+        </div>
+      </section>
 
       <article class="featured-insight">
         <div><span class="project-label">Case Study Library</span><h3>Physics-Based Diagnostic Stories</h3><p>Five independent stories across rotor dynamics, heat transfer, cooling-water behaviour, pump suction hydraulics and instrumentation verification.</p><a class="button" href="case-studies/index.html">Browse Case Study Library</a></div>
@@ -57,15 +90,16 @@
 
       <section class="content-section">
         <p class="eyebrow">Related Technical Work</p>
-        <h2>The cases connect to the wider knowledge library.</h2>
+        <h2>The projects connect to the wider knowledge library.</h2>
         <div class="content-grid">
+          <article class="content-card"><h3>Engineering-to-AI Translation</h3><p>How plant-domain requirements become structured inputs, outputs, constraints and validation criteria for AI systems.</p><p><a href="expertise/engineering-to-ai-translation.html">Explore expertise →</a></p></article>
           <article class="content-card"><h3>Predictive Maintenance</h3><p>How changing behaviour can be identified before individual alarm limits are exceeded.</p><p><a href="expertise/industrial-predictive-maintenance.html">Explore expertise →</a></p></article>
           <article class="content-card"><h3>Engineering-Driven Diagnostics</h3><p>Why anomaly detection is only evidence and how physical reasoning narrows the investigation.</p><p><a href="expertise/engineering-driven-ai-diagnostics.html">Explore diagnostics →</a></p></article>
           <article class="content-card"><h3>From Thresholds to Intelligence</h3><p>A longer learning guide on the movement from fixed limits to multivariable monitoring and engineering interpretation.</p><p><a href="insights/from-thresholds-to-intelligence.html">Read guide →</a></p></article>
         </div>
       </section>
 
-      <div class="page-cta"><a class="button" href="case-studies/index.html">All Case Studies</a><a class="button secondary" href="insights/index.html">Explore Insights</a></div>
+      <div class="page-cta"><a class="button" href="https://github.com/Bhaskar2504/industrial-genai-reliability-copilot" target="_blank" rel="noreferrer">Flagship GitHub Project</a><a class="button secondary" href="case-studies/index.html">All Case Studies</a><a class="button secondary" href="insights/index.html">Explore Insights</a></div>
     </div></div></section>
   </main>
   <footer class="site-footer"><div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div></footer>
