@@ -28,32 +28,32 @@
         <h2>Industrial GenAI Reliability Copilot</h2>
         <article class="featured-insight">
           <div>
-            <span class="project-label">GenAI · Reliability Engineering · v0.2</span>
+            <span class="project-label">GenAI · Reliability Engineering · v0.3</span>
             <h3>Turning reliability expertise into a safe, testable GenAI workflow.</h3>
-            <p>A public engineering project showing how Industrial AI, Asset Performance Management and reliability reasoning can be converted into structured diagnostic outputs with versioned prompts, schemas, synthetic evidence, automated evaluation, safety checks and human escalation.</p>
-            <p><strong>Current stage:</strong> v0.2 — Evaluation Baseline. The reproducible synthetic baseline contains 8 cases: 7 pass and 1 deliberately retained failure that exposes a contradiction-handling weakness. Structured-output validity and evidence citation-ID accuracy are 100%; abstention and human-escalation accuracy are 87.5%. RAG with citations remains planned for v0.3.</p>
+            <p>A public engineering project showing how Industrial AI, Asset Performance Management and reliability reasoning can be converted into evidence-grounded troubleshooting with structured outputs, versioned prompts, deterministic RAG, traceable citations, automated evaluation, safety controls and human escalation.</p>
+            <p><strong>Current stage:</strong> v0.3 — RAG and Citations. The retrieval baseline contains 7 targeted cases: 6 pass and 1 deliberately retained ambiguous-query failure. Retrieval precision@1 is 85.7%; citation-ID accuracy, source-locator completeness and repeated retrieval consistency are 100%.</p>
             <div class="hero-actions">
-              <a class="button" href="https://github.com/Bhaskar2504/industrial-genai-reliability-copilot" target="_blank" rel="noreferrer">View GitHub Repository</a>
-              <a class="button secondary" href="https://github.com/Bhaskar2504/industrial-genai-reliability-copilot/blob/main/evaluation/reports/v0.2-baseline.md" target="_blank" rel="noreferrer">View Evaluation Report</a>
+              <a class="button" href="projects/industrial-genai-reliability-copilot.html">Explore Project</a>
+              <a class="button secondary" href="projects/industrial-genai-reliability-copilot.html#evaluation">Evaluation Results</a>
               <a class="button secondary" href="expertise/engineering-to-ai-translation.html">Related Expertise</a>
             </div>
           </div>
           <div class="mini-monitor" aria-label="Illustration of evidence moving through an engineering AI workflow">
-            <span class="monitor-label top">Engineering evidence</span>
-            <span class="monitor-label bottom">Structured diagnostic output</span>
+            <span class="monitor-label top">Retrieved engineering evidence</span>
+            <span class="monitor-label bottom">Validated diagnostic output</span>
             <svg class="monitor-wave" viewBox="0 0 700 160" preserveAspectRatio="none" role="img" aria-label="Evidence-grounded workflow illustration">
               <polyline points="0,42 95,42 145,62 225,62 280,36 360,36 420,56 505,56 565,31 700,31" fill="none" stroke="#8a9aa4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
               <polyline points="0,120 95,120 145,100 225,100 280,112 360,112 420,87 505,87 565,103 700,72" fill="none" stroke="#0f6d78" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            <span class="monitor-caption">Evidence → reasoning → validation → escalation</span>
+            <span class="monitor-caption">Question → retrieval → evidence → reasoning → validation</span>
           </div>
         </article>
 
         <div class="content-grid">
           <article class="content-card"><h3>Engineering reasoning</h3><p>Frames troubleshooting around failure modes, operating context, supporting evidence, contradicting evidence and justified next actions.</p></article>
-          <article class="content-card"><h3>Structured & testable</h3><p>Uses versioned prompts, machine-validatable schemas and a reproducible evaluation harness so outputs can be measured rather than judged only by fluency.</p></article>
-          <article class="content-card"><h3>Safety & governance</h3><p>Includes abstention and escalation concepts so insufficient evidence does not become an overconfident engineering recommendation.</p></article>
-          <article class="content-card"><h3>Public-safe data</h3><p>Uses synthetic or clearly licensed public engineering information and contains no employer, customer, plant or proprietary operational data.</p></article>
+          <article class="content-card"><h3>RAG & citations</h3><p>Retrieves synthetic engineering notes into stable evidence records with source locators before diagnostic generation.</p></article>
+          <article class="content-card"><h3>Structured & testable</h3><p>Uses versioned prompts, machine-validatable schemas and reproducible evaluation so outputs can be measured rather than judged only by fluency.</p></article>
+          <article class="content-card"><h3>Safety & governance</h3><p>Includes abstention, citation validation and escalation so weak evidence does not become an overconfident engineering recommendation.</p></article>
         </div>
       </section>
 
@@ -67,13 +67,9 @@
         <h2>Five different engineering problems.</h2>
         <div class="case-library-grid">
           <a class="case-link-card" href="case-studies/turbine-vibration-load-correlation.html"><span class="case-no">01</span><span class="project-label">Rotor Dynamics</span><h3>The turbine vibration that followed load</h3><p>Absolute vibration remains inside its alarm limit, but the rotor becomes more sensitive to load and steam-condition changes. The story explores why the changing relationship matters and which rotor-dynamic mechanisms should be investigated.</p><span class="case-arrow">Read case →</span></a>
-
           <a class="case-link-card" href="case-studies/air-preheater-air-ingress.html"><span class="case-no">02</span><span class="project-label">Thermodynamics</span><h3>The air preheater that quietly changed the boiler</h3><p>Air outlet temperature, flue-gas oxygen and draft behaviour begin telling a common thermal story. The case separates heat-recovery deterioration and air-ingress reasoning from a simple isolated temperature alarm.</p><span class="case-arrow">Read case →</span></a>
-
           <a class="case-link-card" href="case-studies/cooling-loop-valve-drift.html"><span class="case-no">03</span><span class="project-label">Cooling & Flow</span><h3>When pressure and temperature fall together</h3><p>A cooling-water loop shows a coordinated change in pressure and temperature. The case uses the relationship to investigate a possible change in flow path rather than treating either measurement independently.</p><span class="case-arrow">Read case →</span></a>
-
           <a class="case-link-card" href="case-studies/feedwater-pump-suction-restriction.html"><span class="case-no">04</span><span class="project-label">Pump Hydraulics</span><h3>The feedwater pump and a changing suction path</h3><p>Increasing suction-side restriction and deteriorating hydraulic performance shift attention toward the suction system. Motor current is treated as a supporting signal whose behaviour must be interpreted at the actual pump operating point.</p><span class="case-arrow">Read case →</span></a>
-
           <a class="case-link-card" href="case-studies/generator-temperature-sensor-anomaly.html"><span class="case-no">05</span><span class="project-label">Instrumentation</span><h3>The temperature that looked dangerous—but was alone</h3><p>One winding-temperature indication moves sharply while peer measurements, cooling conditions and electrical loading remain stable. The disagreement becomes evidence for an instrumentation hypothesis that still requires engineering verification.</p><span class="case-arrow">Read case →</span></a>
         </div>
       </section>
@@ -100,7 +96,7 @@
         </div>
       </section>
 
-      <div class="page-cta"><a class="button" href="https://github.com/Bhaskar2504/industrial-genai-reliability-copilot" target="_blank" rel="noreferrer">Flagship GitHub Project</a><a class="button secondary" href="case-studies/index.html">All Case Studies</a><a class="button secondary" href="insights/index.html">Explore Insights</a></div>
+      <div class="page-cta"><a class="button" href="projects/industrial-genai-reliability-copilot.html">Explore Flagship Project</a><a class="button secondary" href="case-studies/index.html">All Case Studies</a><a class="button secondary" href="insights/index.html">Explore Insights</a></div>
     </div></div></section>
   </main>
   <footer class="site-footer"><div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div></footer>
