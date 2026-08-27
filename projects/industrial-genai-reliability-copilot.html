@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Industrial GenAI Reliability Copilot | Bhaskar Anand</title>
   <meta name="description" content="A public Industrial GenAI reliability project demonstrating structured diagnostics, RAG, citations, evaluation, safety controls and human review using synthetic engineering information." />
-  <link rel="stylesheet" href="../styles-v4.css?v=20260825i" />
+  <link rel="stylesheet" href="../styles-v4.css?v=20260827a" />
   <link rel="stylesheet" href="../page-content.css?v=20260825a" />
   <link rel="stylesheet" href="project-detail.css?v=20260826a" />
 </head>
@@ -31,7 +31,28 @@
         <aside class="context-card"><span class="project-label">Current Capability</span><h3>v0.3 — RAG and Citations</h3><p>The project now retrieves traceable engineering evidence from a synthetic knowledge base before producing a structured diagnostic response.</p></aside>
       </div>
 
-      <section class="content-section">
+            <nav class="page-map" aria-label="On this page">
+        <div class="page-map-head">
+          <div>
+            <p class="eyebrow">Page Guide</p>
+            <h2 class="page-map-title">What is on this page?</h2>
+            <p class="page-map-copy">Industrial GenAI Reliability Copilot is organized into the sections below. Use this map to understand the flow first or jump directly to the part you need.</p>
+          </div>
+          <div class="page-map-summary"><span>8 sections</span><span>Quick navigation</span><span>Engineering-first structure</span></div>
+        </div>
+        <div class="page-map-grid">
+          <a class="page-map-link" href="#the-problem"><span class="page-map-number">01</span><span><strong>The Problem</strong><small>Why a reliability copilot needs stronger controls than a normal chatbot.</small></span></a>
+          <a class="page-map-link" href="#architecture"><span class="page-map-number">02</span><span><strong>Architecture</strong><small>From question to traceable engineering response.</small></span></a>
+          <a class="page-map-link" href="#what-v0-3-implements"><span class="page-map-number">03</span><span><strong>What v0.3 Implements</strong><small>RAG that can be inspected and tested.</small></span></a>
+          <a class="page-map-link" href="#evaluation"><span class="page-map-number">04</span><span><strong>Evaluation</strong><small>Published results include the failure.</small></span></a>
+          <a class="page-map-link" href="#safety-governance"><span class="page-map-number">05</span><span><strong>Safety & Governance</strong><small>The system is designed as decision support.</small></span></a>
+          <a class="page-map-link" href="#research-direction"><span class="page-map-number">06</span><span><strong>Research Direction</strong><small>Adding a symbolic reasoning layer.</small></span></a>
+          <a class="page-map-link" href="#development-history"><span class="page-map-number">07</span><span><strong>Development History</strong><small>Capability is added in testable stages.</small></span></a>
+          <a class="page-map-link" href="#current-limitations"><span class="page-map-number">08</span><span><strong>Current Limitations</strong><small>What the project does not pretend to solve yet.</small></span></a>
+        </div>
+      </nav>
+
+<section class="content-section" id="the-problem">
         <p class="eyebrow">The Problem</p>
         <h2>Why a reliability copilot needs stronger controls than a normal chatbot.</h2>
         <div class="content-grid">
@@ -42,7 +63,7 @@
         </div>
       </section>
 
-      <section class="content-section">
+      <section class="content-section" id="architecture">
         <p class="eyebrow">Architecture</p>
         <h2>From question to traceable engineering response.</h2>
         <div class="architecture-flow">
@@ -57,7 +78,7 @@
         </div>
       </section>
 
-      <section class="content-section">
+      <section class="content-section" id="what-v0-3-implements">
         <p class="eyebrow">What v0.3 Implements</p>
         <h2>RAG that can be inspected and tested.</h2>
         <div class="content-grid">
@@ -87,7 +108,7 @@
         <div class="callout"><strong>Important:</strong> citation validation in v0.3 is structural. The application verifies that cited evidence IDs came from the retrieved set. It does not yet claim semantic entailment scoring for every generated sentence.</div>
       </section>
 
-      <section class="content-section">
+      <section class="content-section" id="safety-governance">
         <p class="eyebrow">Safety & Governance</p>
         <h2>The system is designed as decision support.</h2>
         <div class="principle-list">
@@ -100,7 +121,7 @@
         </div>
       </section>
 
-      <section class="content-section">
+      <section class="content-section" id="research-direction">
         <p class="eyebrow">Research Direction</p>
         <h2>Adding a symbolic reasoning layer.</h2>
         <p class="lead">The current project uses retrieval, structured outputs and validation. A future extension is to evaluate whether explicit logic programming can strengthen failure-mode reasoning where hard rules, exclusions and traceability matter.</p>
@@ -113,7 +134,7 @@
         <div class="callout"><strong>Status:</strong> this neuro-symbolic extension is a research direction, not a capability claimed by the current v0.3 release. <a href="../insights/logic-programming-neurosymbolic-reliability.html">Read the reasoning behind it →</a></div>
       </section>
 
-      <section class="content-section">
+      <section class="content-section" id="development-history">
         <p class="eyebrow">Development History</p>
         <h2>Capability is added in testable stages.</h2>
         <div class="release-track">
@@ -127,7 +148,7 @@
         </div>
       </section>
 
-      <section class="content-section">
+      <section class="content-section" id="current-limitations">
         <p class="eyebrow">Current Limitations</p>
         <h2>What the project does not pretend to solve yet.</h2>
         <div class="content-grid">
