@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logic Programming & Neuro-Symbolic AI for Reliability | Bhaskar Anand</title>
+  <meta name="description" content="Why Prolog and symbolic reasoning can strengthen Industrial GenAI reliability systems by adding deterministic rules, logical consistency, traceable inference and explicit engineering constraints." />
+  <link rel="stylesheet" href="../styles-v4.css?v=20260825i" />
+  <link rel="stylesheet" href="../page-content.css?v=20260825a" />
+  <link rel="stylesheet" href="../insights-hub.css?v=20260826b" />
+</head>
+<body>
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav" aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../expertise.html">Expertise</a><a href="../experience.html">Experience</a><a href="../projects.html">Projects</a><a href="index.html" aria-current="page">Insights</a><a href="../resources.html">Resources</a><a href="../research.html">Research</a><a href="../contact.html">Contact</a></nav></div></header>
+
+  <main>
+    <section class="article-hero"><div class="container"><div class="article-hero-inner">
+      <p class="eyebrow">Industrial AI Architecture</p>
+      <h1>Logic Programming & Neuro-Symbolic AI for Reliability</h1>
+      <p class="article-deck">LLMs are excellent at language, synthesis and working with unstructured information. Reliability engineering also needs something different: explicit rules, deterministic inference, constraints, contradiction checks and reasoning that can be inspected.</p>
+    </div></div></section>
+
+    <section class="article-main"><div class="container"><div class="page-shell">
+      <p><a href="industrial-ai-predictive-maintenance.html">← Back to Industrial AI & Predictive Maintenance</a></p>
+
+      <div class="page-intro">
+        <div>
+          <p class="lead">Prolog is a logic-programming language built around <strong>facts, rules and queries</strong>. Instead of programming every procedural step, we describe relationships and allow the inference engine to deduce answers from them.</p>
+          <p class="lead">That makes logic programming especially interesting for knowledge-rich engineering problems where the rules are known, the reasoning should be reproducible, and the path from evidence to conclusion must remain visible.</p>
+        </div>
+        <aside class="context-card"><span class="project-label">Core idea</span><h3>Use the LLM for language. Use logic for rules.</h3><p>The strongest architecture is often hybrid: neural models interpret messy information; symbolic logic evaluates explicit engineering knowledge.</p></aside>
+      </div>
+
+      <section class="content-section">
+        <p class="eyebrow">Why Prolog?</p>
+        <h2>Facts + rules + queries create explicit engineering reasoning.</h2>
+        <div class="content-grid">
+          <article class="content-card"><h3>Facts</h3><p>Represent known conditions: equipment state, observed symptoms, configuration, confirmed measurements, maintenance findings or engineering classifications.</p></article>
+          <article class="content-card"><h3>Rules</h3><p>Represent relationships such as: a failure mechanism is plausible only when required evidence is present and contradicting evidence is absent.</p></article>
+          <article class="content-card"><h3>Queries</h3><p>Ask the knowledge base questions: which failure modes are consistent with the evidence? Which hypotheses are ruled out? Which checks are still required?</p></article>
+          <article class="content-card"><h3>Inference</h3><p>The result follows from the encoded facts and rules rather than being generated because a continuation merely sounds plausible.</p></article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">LLM-only vs Symbolic Reasoning</p>
+        <h2>What a logic layer adds that an LLM alone cannot reliably guarantee.</h2>
+        <div class="article-table-wrap">
+          <table>
+            <thead><tr><th>Engineering need</th><th>LLM-only system</th><th>Logic / Prolog layer</th></tr></thead>
+            <tbody>
+              <tr><td>Natural-language understanding</td><td>Strong: handles ambiguous questions, documents and explanations.</td><td>Weak by itself; expects structured facts and rules.</td></tr>
+              <tr><td>Exact rule application</td><td>Can follow rules, but behavior remains probabilistic and may vary with wording or context.</td><td>Applies encoded rules deterministically for the same knowledge state and query.</td></tr>
+              <tr><td>Logical consistency</td><td>Can produce contradictions across prompts or reasoning steps.</td><td>Queries the same explicit rule base, making consistency constraints inspectable.</td></tr>
+              <tr><td>Multi-step deduction</td><td>Can reason, but rigorous logical correctness is not guaranteed.</td><td>Performs formal inference over facts and rules.</td></tr>
+              <tr><td>Exhaustive search over known rules</td><td>May stop after a plausible answer or omit alternatives.</td><td>Can enumerate solutions supported by the encoded knowledge base.</td></tr>
+              <tr><td>Why was this conclusion reached?</td><td>Generated explanations may not exactly reflect the model's internal reasoning.</td><td>The rules and matched facts can be recorded as an explicit inference trace.</td></tr>
+              <tr><td>Constraint enforcement</td><td>Prompt instructions reduce errors but do not provide a hard logical guarantee.</td><td>Constraints can be encoded as rules that must be satisfied before a conclusion is accepted.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout"><strong>Important distinction:</strong> modern LLMs can perform many reasoning tasks very well. The issue is not that they are incapable of reasoning; it is that an LLM-only architecture does not provide the same deterministic, auditable guarantee that an explicit rule engine provides for encoded knowledge.</div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">Industrial Reliability Problems</p>
+        <h2>Where symbolic reasoning can materially improve a reliability copilot.</h2>
+        <div class="content-grid">
+          <article class="content-card"><h3>Failure-mode reasoning</h3><p>Encode which observations support a failure mode, which conditions are required, and which evidence should weaken or exclude it. The engine can return all hypotheses that satisfy the rules.</p></article>
+          <article class="content-card"><h3>Operating-state logic</h3><p>Prevent a diagnostic rule from firing during startup, shutdown, standby, changeover or another state where the same signal behaviour is normal.</p></article>
+          <article class="content-card"><h3>Contradiction handling</h3><p>If a suspected mechanism requires low suction pressure but the validated suction measurement is normal, the rule base can explicitly weaken or reject that hypothesis instead of explaining around the contradiction.</p></article>
+          <article class="content-card"><h3>Diagnostic exclusion</h3><p>Represent evidence used to distinguish sensor failure, process disturbance and equipment degradation when several explanations share the same symptom.</p></article>
+          <article class="content-card"><h3>Safety and escalation rules</h3><p>Hard-code conditions that require human review, prohibit automatic recommendations, or route the case to a qualified engineer.</p></article>
+          <article class="content-card"><h3>Knowledge-base queries</h3><p>Ask structured questions such as: which failure modes affect this parameter? Which evidence is still missing? Which rules depend on this tag? Which hypotheses remain after exclusions?</p></article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">Hybrid Architecture</p>
+        <h2>LLM + RAG + tools + Prolog + engineer.</h2>
+        <div class="content-grid">
+          <article class="content-card"><h3>1. LLM interprets the question</h3><p>Convert operator or engineer language into a structured diagnostic request.</p></article>
+          <article class="content-card"><h3>2. RAG retrieves evidence</h3><p>Bring relevant manuals, engineering notes, public references or synthetic knowledge into the context with citations.</p></article>
+          <article class="content-card"><h3>3. Deterministic tools calculate</h3><p>Trend statistics, engineering equations and signal checks should be executed rather than improvised in prose.</p></article>
+          <article class="content-card"><h3>4. Prolog evaluates rules</h3><p>Convert validated observations into facts and query the rule base for supported, contradicted and unresolved hypotheses.</p></article>
+          <article class="content-card"><h3>5. LLM explains the result</h3><p>Translate symbolic results and retrieved evidence into clear engineering language with citations and uncertainty.</p></article>
+          <article class="content-card"><h3>6. Engineer reviews</h3><p>The human validates physical plausibility, site context and maintenance action before the result is treated as a decision.</p></article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">Example</p>
+        <h2>A simple rule-based diagnostic pattern.</h2>
+        <div class="callout">
+          <strong>Observed facts:</strong><br>
+          equipment is running steadily;<br>
+          suction pressure is persistently lower than its comparable-condition baseline;<br>
+          flow has decreased;<br>
+          discharge valve position has not materially changed.<br><br>
+          <strong>Rule:</strong><br>
+          if the pump is in a valid running state, suction pressure is low, flow is low, and the downstream valve state does not explain the reduction, then a suction-side restriction becomes a plausible hypothesis.<br><br>
+          <strong>Exclusion rule:</strong><br>
+          if the suction-pressure sensor disagrees strongly with a validated redundant or physically related measurement, require instrument validation before accepting the hydraulic hypothesis.
+        </div>
+        <p class="lead">An LLM can explain this reasoning. A symbolic layer makes the conditions explicit, reusable, testable and independently inspectable.</p>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">Where Prolog Does Not Help</p>
+        <h2>Symbolic AI also has clear limitations.</h2>
+        <div class="content-grid">
+          <article class="content-card"><h3>Rules must be engineered</h3><p>The system cannot infer a reliable industrial knowledge base simply because Prolog is present. Domain experts still have to define, review and maintain the rules.</p></article>
+          <article class="content-card"><h3>Noisy raw signals need other methods</h3><p>Trend learning, anomaly detection, image interpretation and high-dimensional pattern recognition are usually better handled by statistical or neural models.</p></article>
+          <article class="content-card"><h3>Incomplete knowledge limits deduction</h3><p>A rule engine can only reason over the facts and relationships available to it. Missing instrumentation or incomplete rules remain real limitations.</p></article>
+          <article class="content-card"><h3>Rule interaction can become complex</h3><p>Large knowledge bases need careful structure, testing, termination control, versioning and governance.</p></article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">Learning Resource</p>
+        <h2>Learn Prolog Now!</h2>
+        <p class="lead"><em>Learn Prolog Now!</em> by Patrick Blackburn, Johan Bos and Kristina Striegnitz is a self-study introduction to Prolog. It covers facts, rules, queries, unification, proof search, recursion, lists and other foundations of logic programming.</p>
+        <div class="page-cta" style="justify-content:flex-start">
+          <a class="button" href="https://www.let.rug.nl/bos/lpn/" target="_blank" rel="noreferrer">Open Learn Prolog Now!</a>
+          <a class="button secondary" href="https://lpn.swi-prolog.org/lpnpage.php?pageid=online" target="_blank" rel="noreferrer">Interactive SWI-Prolog Version</a>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">Further Reading</p>
+        <h2>Why hybrid neuro-symbolic systems are interesting.</h2>
+        <div class="content-grid">
+          <article class="content-card"><h3>Logical reasoning in LLMs</h3><p>Recent surveys continue to identify rigorous logical reasoning and consistency as open challenges for LLMs.</p><p><a href="https://www.ijcai.org/proceedings/2025/1155" target="_blank" rel="noreferrer">IJCAI 2025 survey →</a></p></article>
+          <article class="content-card"><h3>Neuro-symbolic AI</h3><p>Neuro-symbolic research combines neural learning and pattern recognition with symbolic inference and explicit knowledge representation.</p><p><a href="https://doi.org/10.1016/j.artint.2023.104062" target="_blank" rel="noreferrer">Artificial Intelligence survey →</a></p></article>
+          <article class="content-card"><h3>Hallucination and faithfulness</h3><p>LLM hallucination research distinguishes factuality failures from faithfulness and logical-consistency failures, reinforcing the value of external grounding and verification.</p><p><a href="https://doi.org/10.1145/3703155" target="_blank" rel="noreferrer">ACM survey →</a></p></article>
+        </div>
+      </section>
+
+      <div class="page-cta"><a class="button" href="industrial-ai-predictive-maintenance.html">Back to Industrial AI</a><a class="button secondary" href="../projects/industrial-genai-reliability-copilot.html">Reliability Copilot Project →</a></div>
+    </div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div></footer>
+</body>
+</html>
