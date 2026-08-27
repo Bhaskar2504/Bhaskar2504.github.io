@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thermodynamic Performance & Cycle Diagnostics | Bhaskar Anand</title>
+  <meta name="description" content="A practical engineering guide to steam-cycle performance, boiler losses, turbine diagnostics, condenser performance, feedwater heaters and plant-wide thermodynamic interactions." />
+  <link rel="stylesheet" href="../styles-v4.css?v=20260825i" />
+  <link rel="stylesheet" href="../page-content.css?v=20260825a" />
+  <link rel="stylesheet" href="../insights-hub.css?v=20260826b" />
+</head>
+<body>
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav" aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../expertise.html">Expertise</a><a href="../experience.html">Experience</a><a href="../projects.html">Projects</a><a href="index.html" aria-current="page">Insights</a><a href="../resources.html">Resources</a><a href="../research.html">Research</a><a href="../contact.html">Contact</a></nav></div></header>
+
+  <main>
+    <section class="article-hero"><div class="container"><div class="article-hero-inner">
+      <p class="eyebrow">Power & Process Engineering</p>
+      <h1>Thermodynamic Performance & Cycle Diagnostics</h1>
+      <p class="article-deck">A practical view of how boiler, turbine, condenser and regenerative feedwater heating interact—and why plant performance should be diagnosed as one connected thermodynamic system.</p>
+    </div></div></section>
+
+    <section class="article-main"><div class="container"><div class="page-shell">
+      <p><a href="engineering-data-power-process.html">← Back to Engineering Data & Power/Process</a></p>
+
+      <div class="page-intro">
+        <div>
+          <p class="lead">A steam-cycle plant does not contain isolated efficiency problems. A change in one component can shift pressure, temperature, extraction flow, cooling demand, auxiliary power and fuel demand elsewhere in the cycle.</p>
+          <p class="lead">The useful diagnostic question is therefore not only <strong>“Which parameter moved?”</strong> but <strong>“How did that movement propagate through the thermodynamic loop?”</strong></p>
+        </div>
+        <aside class="context-card"><span class="project-label">Core principle</span><h3>Optimize the cycle, not a single parameter.</h3><p>Higher vacuum, more excess air, more spray, or bypassing a heater may solve a local operating problem while increasing loss somewhere else. The plant-level effect matters.</p></aside>
+      </div>
+
+      <section class="content-section">
+        <p class="eyebrow">01</p>
+        <h2>The steam cycle as an energy balance</h2>
+        <p class="lead">The simplified Rankine-cycle view connects heat addition, turbine work, pump work and condenser heat rejection.</p>
+        <div class="callout">
+          <strong>Net thermal efficiency:</strong><br><br>
+          η = (W<sub>T</sub> − W<sub>P</sub>) / Q<sub>in</sub><br><br>
+          <strong>η</strong> = net thermal efficiency of the cycle<br>
+          <strong>W<sub>T</sub></strong> = work produced by the steam turbine<br>
+          <strong>W<sub>P</sub></strong> = work consumed by the feedwater/condensate pumping process<br>
+          <strong>Q<sub>in</sub></strong> = heat supplied to the working fluid in the boiler and associated heat-addition stages
+        </div>
+        <div class="content-grid">
+          <article class="content-card"><h3>Boiler</h3><p>Adds heat to feedwater and steam. The engineering objective is not simply maximum firing; it is high heat-transfer effectiveness with controlled combustion and minimum avoidable heat loss.</p></article>
+          <article class="content-card"><h3>Turbine</h3><p>Converts steam enthalpy drop into shaft work. Internal leakage, erosion, deposit build-up and changing stage pressure relationships reduce the useful work recovered from the same steam conditions.</p></article>
+          <article class="content-card"><h3>Condenser</h3><p>Rejects heat and establishes turbine exhaust pressure. Lower back pressure can improve turbine work, but cooling-water pumping and cooling-system constraints create a plant-level trade-off.</p></article>
+          <article class="content-card"><h3>Feedwater heating</h3><p>Uses extraction steam to raise feedwater temperature before it returns to the boiler. This sacrifices some turbine work locally but reduces the heat that the boiler must add.</p></article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">02</p>
+        <h2>How the practical Rankine cycle is improved</h2>
+        <div class="content-grid">
+          <article class="content-card"><h3>Superheating</h3><p>Raises steam temperature before expansion, increasing the available heat-drop potential and helping limit excessive moisture during later expansion stages.</p></article>
+          <article class="content-card"><h3>Reheating</h3><p>Returns partially expanded steam for additional heat input before later turbine expansion. The purpose is both thermodynamic—recovering additional work—and mechanical—controlling exhaust wetness.</p></article>
+          <article class="content-card"><h3>Regeneration</h3><p>Uses extraction steam to preheat feedwater. This increases the average temperature at which heat is added to the cycle and reduces boiler heat input for a given feedwater condition.</p></article>
+          <article class="content-card"><h3>Supercritical operation</h3><p>At pressures above the critical point, the working fluid does not pass through the familiar subcritical boiling plateau. The process becomes more sensitive to coordinated feedwater, firing and temperature control.</p></article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">03</p>
+        <h2>Boiler efficiency: diagnose the losses</h2>
+        <p class="lead">A useful boiler-performance view is to start with fuel energy and account for the routes by which useful heat is not transferred to steam.</p>
+        <div class="content-grid">
+          <article class="content-card"><h3>Dry flue-gas loss</h3><p>Energy leaves with hot dry combustion gas. Higher exit-gas temperature or unnecessary excess air can increase this loss.</p></article>
+          <article class="content-card"><h3>Moisture / wet-gas loss</h3><p>Energy is consumed in heating and carrying water vapour through the boiler and stack. Fuel moisture and hydrogen-derived water contribute to this term.</p></article>
+          <article class="content-card"><h3>Unburnt-carbon / combustion loss</h3><p>Incomplete combustion leaves chemical energy unrecovered. Low effective combustion air, poor mixing or combustion problems can increase this loss.</p></article>
+          <article class="content-card"><h3>Radiation and unaccounted losses</h3><p>Heat also leaves through surfaces, casing and smaller unmeasured paths. Loss-based efficiency methods help separate these mechanisms rather than hiding them inside one gross efficiency number.</p></article>
+        </div>
+        <div class="callout"><strong>Excess-air trade-off:</strong> too little effective air can increase CO and unburnt losses; too much air increases the mass of hot gas leaving the stack. Air ingress can also raise measured oxygen without contributing useful combustion air, so O₂ alone should not be interpreted without process context.</div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">04</p>
+        <h2>Turbine performance: use heat drop and pressure relationships</h2>
+        <div class="callout">
+          <strong>Isentropic efficiency:</strong><br><br>
+          η<sub>iso</sub> = Actual heat drop / Isentropic heat drop<br><br>
+          <strong>η<sub>iso</sub></strong> = turbine isentropic efficiency<br>
+          <strong>Actual heat drop</strong> = actual decrease in steam enthalpy between turbine inlet and measured outlet condition<br>
+          <strong>Isentropic heat drop</strong> = ideal enthalpy decrease for expansion to the same outlet pressure with no entropy increase
+        </div>
+        <div class="content-grid">
+          <article class="content-card"><h3>Internal leakage</h3><p>Seal, gland or diaphragm leakage allows steam to bypass intended working stages, reducing useful expansion through the blades.</p></article>
+          <article class="content-card"><h3>Blade/nozzle deterioration</h3><p>Erosion, deposits and profile changes alter the flow path and can reduce stage efficiency or shift pressure distribution.</p></article>
+          <article class="content-card"><h3>Stage-pressure survey</h3><p>Plotting stage pressure against turbine output provides a baseline relationship. A broad parallel shift can suggest a distributed flow-path change, while a localized kink can focus investigation around a specific stage or restriction.</p></article>
+          <article class="content-card"><h3>Trend the relationship, not only the value</h3><p>Pressure, load, steam flow and temperature should be reviewed together. A stage-pressure deviation becomes more meaningful when it persists at comparable operating conditions.</p></article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">05</p>
+        <h2>Condenser performance: vacuum must be optimized</h2>
+        <div class="callout">
+          <strong>Condenser terminal temperature difference:</strong><br><br>
+          TTD<sub>cond</sub> = T<sub>sat</sub> − T<sub>CW,out</sub><br><br>
+          <strong>TTD<sub>cond</sub></strong> = condenser terminal temperature difference<br>
+          <strong>T<sub>sat</sub></strong> = saturation temperature corresponding to condenser pressure<br>
+          <strong>T<sub>CW,out</sub></strong> = cooling-water outlet temperature
+        </div>
+        <div class="content-grid">
+          <article class="content-card"><h3>Tube fouling / scaling</h3><p>Degraded heat transfer can increase condenser approach/TTD. Cooling-water temperature rise and flow context help distinguish fouling from other causes.</p></article>
+          <article class="content-card"><h3>Low cooling-water flow</h3><p>Insufficient flow reduces heat-removal capacity. Pump condition, valve position, strainers and flow-path restrictions should be checked before assuming a condenser-surface problem.</p></article>
+          <article class="content-card"><h3>Air ingress</h3><p>Non-condensable gas reduces effective heat transfer and worsens vacuum. Air-ejector/vacuum-system behaviour and leak checks provide supporting evidence.</p></article>
+          <article class="content-card"><h3>High cooling-water inlet temperature</h3><p>Warm inlet water reduces the available temperature driving force even if condenser tubes and water flow are healthy.</p></article>
+        </div>
+        <div class="callout"><strong>Plant-level trade-off:</strong> additional cooling-water pumping can improve condenser pressure, but the recovered turbine output should be compared with the extra auxiliary power required. “Maximum vacuum” is not automatically the economic optimum.</div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">06</p>
+        <h2>Regenerative feedwater heating: TTD and DCA as diagnostics</h2>
+        <div class="content-grid">
+          <article class="content-card">
+            <h3>Terminal Temperature Difference (TTD)</h3>
+            <p><strong>TTD = T<sub>shell,sat</sub> − T<sub>FW,out</sub></strong></p>
+            <p><strong>T<sub>shell,sat</sub></strong> = saturation temperature corresponding to feedwater-heater shell pressure.<br><strong>T<sub>FW,out</sub></strong> = feedwater outlet temperature.</p>
+            <p>TTD indicates how closely the feedwater outlet approaches the condensing-steam temperature and is therefore a useful heat-transfer indicator.</p>
+          </article>
+          <article class="content-card">
+            <h3>Drain Cooler Approach (DCA)</h3>
+            <p><strong>DCA = T<sub>drain,out</sub> − T<sub>FW,in</sub></strong></p>
+            <p><strong>T<sub>drain,out</sub></strong> = heater drain outlet temperature.<br><strong>T<sub>FW,in</sub></strong> = feedwater inlet temperature.</p>
+            <p>DCA helps diagnose drain cooling, liquid level and internal drainage/baffle behaviour.</p>
+          </article>
+          <article class="content-card"><h3>Common degradation patterns</h3><p>Air accumulation can blank heat-transfer surface; steam-side or water-side fouling can increase thermal resistance; drainage defects can disturb level and subcooling behaviour.</p></article>
+          <article class="content-card"><h3>Bypass creates a cascade</h3><p>If a high-pressure heater is bypassed, colder feedwater returns to the boiler. Boiler heat input rises, turbine extraction conditions change and condenser heat rejection can also shift. The local heater issue becomes a cycle-wide performance issue.</p></article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">07</p>
+        <h2>Air–gas path and ESP performance are thermodynamically connected</h2>
+        <div class="content-grid">
+          <article class="content-card"><h3>Flue-gas velocity</h3><p>Gas velocity influences residence time through heat-transfer and particulate-control equipment. Changes in air flow, leakage or gas temperature can therefore affect more than boiler efficiency alone.</p></article>
+          <article class="content-card"><h3>Ash resistivity</h3><p>Electrostatic precipitation performance depends on ash properties as well as electrical conditions. Coal chemistry, sulphur and moisture can influence collection behaviour.</p></article>
+          <article class="content-card"><h3>Field shorting / hopper condition</h3><p>Accumulated ash and mechanical problems can disturb electrical fields and collection performance. These are equipment-condition issues, not only stack-emission observations.</p></article>
+          <article class="content-card"><h3>Thermal interaction</h3><p>Air-heater leakage or higher flue-gas exit temperature can increase gas volume and velocity, creating a link between thermal performance and downstream ESP operating conditions.</p></article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">08</p>
+        <h2>The whole-plant diagnostic loop</h2>
+        <div class="content-grid">
+          <article class="content-card"><h3>1. Detect the local deviation</h3><p>Examples: condenser pressure rises, feedwater-heater TTD changes, turbine stage pressure shifts, or flue-gas exit temperature increases.</p></article>
+          <article class="content-card"><h3>2. Trace the thermodynamic response</h3><p>Check what happens to heat transfer, extraction flow, boiler heat input, cooling demand, auxiliary power and net output.</p></article>
+          <article class="content-card"><h3>3. Separate cause from consequence</h3><p>A colder feedwater return may be the consequence of a heater problem; higher boiler firing is then a response, not the original cause.</p></article>
+          <article class="content-card"><h3>4. Validate with related signals</h3><p>Use multiple independent measurements and compare against operating context before deciding on the failure mechanism.</p></article>
+          <article class="content-card"><h3>5. Quantify the performance effect</h3><p>Translate the confirmed deviation into heat-rate, output, auxiliary-power or efficiency impact using plant-specific validated calculations.</p></article>
+          <article class="content-card"><h3>6. Correct and re-baseline</h3><p>After maintenance or operating correction, verify that the expected relationships recover and update the reference baseline if the plant configuration has legitimately changed.</p></article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">What to Trend</p>
+        <h2>A compact diagnostic view.</h2>
+        <div class="article-table-wrap">
+          <table>
+            <thead><tr><th>Area</th><th>Key relationships</th><th>What a deviation may indicate</th><th>First engineering checks</th></tr></thead>
+            <tbody>
+              <tr><td>Boiler / combustion</td><td>O₂, CO, flue-gas exit temperature, firing, air flow</td><td>Excess-air imbalance, leakage, combustion loss, heat-transfer deterioration</td><td>Air ingress, air/fuel distribution, soot/fouling, measurement validity</td></tr>
+              <tr><td>Turbine</td><td>Stage pressure vs load, steam conditions, efficiency</td><td>Leakage, restriction, erosion/deposits, flow-path change</td><td>Comparable operating point, valve position, pressure survey, seal/gland indicators</td></tr>
+              <tr><td>Condenser</td><td>Back pressure, saturation temperature, CW inlet/outlet temperature, flow</td><td>Fouling, low CW flow, air ingress, warm CW inlet</td><td>CW pumps/valves/strainers, air-removal system, tube cleanliness, cooling-tower condition</td></tr>
+              <tr><td>Feedwater heaters</td><td>TTD, DCA, shell pressure, FW inlet/outlet temperature, drain temperature</td><td>Air accumulation, fouling, drainage/level problem, heater bypass</td><td>Venting, drain system, level, extraction-steam conditions, temperature-instrument health</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">Important Limitation</p>
+        <h2>Performance penalties are plant-specific.</h2>
+        <div class="callout">The source material includes illustrative heat-rate and economic penalties for changes in steam temperature, pressure, excess oxygen, condenser back pressure and heater availability. Those numbers are <strong>not universal constants</strong>. Actual penalties depend on unit design, load, steam conditions, cooling system, fuel, equipment condition and the calculation method. Public-facing diagnostics should therefore use validated plant-specific curves or calculations rather than copying a generic penalty value.</div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">Related Tools</p>
+        <h2>Turn the concepts into repeatable engineering review.</h2>
+        <div class="content-grid">
+          <article class="content-card"><h3>Calculated KPI Validation</h3><p>Validate equations, units, boundaries, time alignment, uncertainty and independent checks before performance KPIs are trusted.</p><p><a href="../resources/kpi-validation.html">Open resource →</a></p></article>
+          <article class="content-card"><h3>Sensor Data Quality</h3><p>Review drift, noise, bias, flat-lines, scaling and plausibility before interpreting thermodynamic relationships.</p><p><a href="../resources/sensor-data-quality.html">Open resource →</a></p></article>
+          <article class="content-card"><h3>Predictive Alert Validation</h3><p>Check whether a detected deviation is persistent, context-aware, evidence-supported and actionable.</p><p><a href="../resources/alert-validation.html">Open resource →</a></p></article>
+          <article class="content-card"><h3>Power & Process Applications</h3><p>See how engineering relationships extend across rotating, thermal and electrical systems.</p><p><a href="../expertise/power-process-applications.html">Explore expertise →</a></p></article>
+        </div>
+      </section>
+
+      <div class="callout"><strong>Source note:</strong> this page synthesizes concepts from the supplied <em>Thermal Cycle Optimization</em> and <em>The Thermodynamic Dashboard</em> learning materials. The diagrams and numerical examples in those documents are used as conceptual guidance; plant-specific penalties and thresholds are intentionally not presented here as universal limits.</div>
+
+      <div class="page-cta"><a class="button" href="engineering-data-power-process.html">Back to Engineering Data & Power/Process</a><a class="button secondary" href="../resources/kpi-validation.html">Calculated KPI Validation →</a></div>
+    </div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div></footer>
+</body>
+</html>
