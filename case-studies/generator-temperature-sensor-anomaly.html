@@ -1,25 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>The Temperature That Looked Dangerous — But Was Alone | Bhaskar Anand</title><meta name="description" content="An anonymized engineering story about generator temperature measurement, sensor validation and multi-signal fault verification."/><link rel="stylesheet" href="../styles-v4.css?v=20260825g"/></head>
-<body class="page-case-study">
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav"><a href="index.html">Case Studies</a><a href="../index.html#insights">Insights</a><a href="../index.html#contact">Contact</a></nav></div></header>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>The Temperature That Looked Dangerous — But Was Alone | Bhaskar Anand</title>
+<meta name="description" content="Engineering case study on generator temperature measurement credibility and multi-signal fault verification."/>
+<link rel="stylesheet" href="../styles-v4.css?v=20260825g"/><link rel="stylesheet" href="../visual-refresh.css?v=20260829d"/><link rel="stylesheet" href="case-visuals.css?v=20260829a"/>
+</head><body class="page-case-study">
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav" aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../expertise.html">Expertise</a><a href="../experience.html">Experience</a><a href="../projects.html" aria-current="page">Projects</a><a href="../insights/index.html">Insights</a><a href="../resources.html">Resources</a><a href="../research.html">Research</a><a href="../contact.html">Contact</a></nav></div></header>
 <main>
-<section class="article-hero"><div class="container"><div class="article-hero-inner"><p class="eyebrow">Instrumentation · Fault Verification</p><h1>The Temperature That Looked Dangerous — But Was Alone</h1><p class="article-deck">One temperature signal moved sharply upward. The rest of the machine did not agree.</p></div></div></section>
-<section class="article-main"><div class="container article-layout"><article class="article-content">
-<p>A sudden rise in a generator temperature indication deserves attention. If the value is interpreted in isolation, the safest first reaction may be to assume that a real hotspot is developing.</p>
-<h2>The contradiction</h2>
-<p>Now imagine that nearby temperature measurements remain steady. Cooling conditions have not changed. Electrical loading is stable. Other thermal indicators continue following their normal pattern. Only one measurement has moved.</p>
-<div class="concept-grid"><div class="concept-box"><h4>One sensor</h4><p>Sharp upward step.</p></div><div class="concept-box"><h4>Nearby temperatures</h4><p>No supporting rise.</p></div><div class="concept-box"><h4>Cooling context</h4><p>Still behaving normally.</p></div></div>
-<h2>Why disagreement is useful information</h2>
-<p>A genuine localized thermal problem can exist, so the signal must never be dismissed casually. But a real physical event usually has consequences somewhere else in the thermal system. If the surrounding evidence remains coherent while one sensor separates dramatically from the rest, instrument drift, connection issues or sensor failure become credible competing hypotheses.</p>
-<h2>What good diagnostics change</h2>
-<p>The objective is not to let an algorithm declare the machine healthy. The objective is to help the engineer decide what evidence to verify first. Instead of treating one measurement as unquestionable truth, the signal is tested against the physical context of the machine.</p>
-<div class="case-grid"><div class="case-box"><span class="project-label">If assumed real immediately</span><h4>Unnecessary intervention</h4><p>A questionable measurement can drive a highly conservative operational response before the instrument itself has been checked.</p></div><div class="case-box"><span class="project-label">If dismissed immediately</span><h4>Real risk could be missed</h4><p>Correlation is not proof. Independent verification remains essential whenever equipment protection is involved.</p></div></div>
-<h2>The engineering response</h2>
-<p>Check the sensor against adjacent measurements, operating load, cooling conditions and any available redundant indication. If the physical system remains consistent while the suspect measurement does not, the investigation can move toward the instrumentation chain with much stronger justification.</p>
-<div class="article-quote">Multi-signal diagnostics can identify bad machines — and can also stop a bad measurement from being mistaken for a bad machine.</div>
-<div class="article-note"><strong>Scope:</strong> An anonymized engineering learning scenario. No customer, site, vendor, application or monetary information is represented.</div>
-<div class="article-footer-cta"><h3>Return to the case study library</h3><p>Explore the other independent stories across rotor dynamics, thermodynamics, hydraulics and cooling systems.</p><a href="index.html">View all engineering case studies →</a></div>
-</article><aside class="article-toc"><strong>Case study</strong><a href="index.html">All case studies</a></aside></div></section>
+<section class="article-hero"><div class="container case-hero-grid">
+<div class="article-hero-inner"><p class="eyebrow">Instrumentation · Fault Verification</p><h1>The temperature that looked dangerous — but was alone.</h1><p class="article-deck">One signal moved sharply. The rest of the thermal picture refused to agree.</p><div class="case-kicker"><span>Peer comparison</span><span>Load context</span><span>Sensor credibility</span></div></div>
+<div class="case-hero-visual">
+<svg viewBox="0 0 560 330" role="img" aria-label="Generator with multiple temperature sensors and one anomalous sensor">
+<rect x="60" y="70" width="420" height="180" rx="34" fill="#172e38" stroke="#d8e3e6" stroke-width="5"/>
+<circle cx="270" cy="160" r="64" fill="#0d212a" stroke="#92a7ad" stroke-width="6"/>
+<g fill="#80c0c6"><circle cx="125" cy="110" r="12"/><circle cx="190" cy="110" r="12"/><circle cx="350" cy="110" r="12"/><circle cx="415" cy="110" r="12"/><circle cx="125" cy="205" r="12"/><circle cx="415" cy="205" r="12"/></g>
+<circle cx="350" cy="205" r="16" fill="#2f1f1c" stroke="#ff8678" stroke-width="6"/>
+<path d="M350 205 V78" stroke="#c73b32" stroke-width="5"/><text x="350" y="56" text-anchor="middle" fill="#ffb1a6" font-size="12">one sensor rises</text>
+<polyline points="110,286 165,284 220,286 275,282 330,284 350,228 385,284 440,286" fill="none" stroke="#c73b32" stroke-width="4"/>
+<text x="270" y="312" text-anchor="middle" fill="#d5e2e5" font-size="12">peer disagreement is the clue</text>
+</svg></div>
+</div></section>
+
+<section class="article-main case-main"><div class="container case-content">
+<div class="case-summary-grid">
+<div class="case-summary-card alert"><small>Primary signal</small><strong>One temperature steps upward</strong><span>Potential hotspot or measurement issue.</span></div>
+<div class="case-summary-card"><small>Peer sensors</small><strong>Nearby temperatures stay stable</strong><span>No matching thermal pattern.</span></div>
+<div class="case-summary-card"><small>Operating context</small><strong>Load and cooling remain steady</strong><span>No obvious process driver.</span></div>
+<div class="case-summary-card alert"><small>Question</small><strong>Equipment fault or sensor fault?</strong><span>Credibility must be tested before conclusion.</span></div>
+</div>
+
+<section class="case-visual-block">
+<div class="case-visual-head"><div><small>Peer-sensor comparison</small><h2>One line leaves the pack.</h2><p>A real thermal event usually creates supporting evidence somewhere else in the machine. An isolated signal deserves an instrumentation check.</p></div></div>
+<div class="case-diagram">
+<svg viewBox="0 0 900 380" role="img" aria-label="Several stable temperature traces and one rising trace">
+<rect width="900" height="380" fill="#fff"/>
+<g stroke="#eee4db"><line x1="80" y1="80" x2="850" y2="80"/><line x1="80" y1="150" x2="850" y2="150"/><line x1="80" y1="220" x2="850" y2="220"/><line x1="80" y1="290" x2="850" y2="290"/></g>
+<text x="22" y="185" fill="#725e55" font-size="12">TEMPERATURE</text><text x="78" y="340" fill="#8a776d" font-size="11">time →</text>
+<polyline points="80,235 160,232 240,236 320,231 400,234 480,232 560,235 640,233 720,236 850,234" fill="none" stroke="#6d8790" stroke-width="3"/>
+<polyline points="80,250 160,248 240,251 320,247 400,250 480,249 560,251 640,248 720,250 850,249" fill="none" stroke="#8fa3aa" stroke-width="3"/>
+<polyline points="80,218 160,216 240,219 320,214 400,217 480,215 560,218 640,216 720,219 850,217" fill="none" stroke="#4e7b86" stroke-width="3"/>
+<polyline points="80,242 160,240 240,241 320,239 400,241 480,237 540,228 600,190 660,145 720,110 790,88 850,76" fill="none" stroke="#c73b32" stroke-width="5"/>
+<rect x="610" y="35" width="190" height="46" rx="12" fill="#fff0ed" stroke="#c73b32"/><text x="705" y="63" text-anchor="middle" fill="#8d3029" font-size="12">single sensor diverges</text>
+</svg></div>
+<div class="case-legend"><span><i class="normal"></i>Peer temperatures</span><span><i class="risk"></i>Questionable channel</span></div>
+</section>
+
+<div class="evidence-board">
+<div class="evidence-panel"><h3>Evidence board</h3><div class="evidence-rows">
+<div class="evidence-row"><strong>Target RTD</strong><span>Sharp isolated rise</span><span class="trend-badge trend-up">↑</span></div>
+<div class="evidence-row"><strong>Peer RTDs</strong><span>No corresponding rise</span><span class="trend-badge trend-flat">Stable</span></div>
+<div class="evidence-row"><strong>Electrical load</strong><span>No matching increase</span><span class="trend-badge trend-flat">Stable</span></div>
+<div class="evidence-row"><strong>Cooling</strong><span>No obvious degradation signal</span><span class="trend-badge trend-flat">Stable</span></div>
+</div></div>
+<div class="hypothesis-panel"><small>Credible hypothesis</small><h3>Measurement / instrumentation anomaly</h3><p>The isolated nature of the signal makes sensor or circuit error plausible, but it does not prove the equipment is healthy.</p><div class="verify-list"><div class="verify-item"><b>1</b><span>Compare redundant or nearby temperature channels.</span></div><div class="verify-item"><b>2</b><span>Inspect RTD wiring, terminals and transmitter path.</span></div><div class="verify-item"><b>3</b><span>Cross-check with an independent measurement if possible.</span></div><div class="verify-item"><b>4</b><span>Confirm load and cooling context did not change.</span></div></div></div>
+</div>
+
+<div class="causal-chain"><div class="causal-step"><small>01</small><strong>One value rises</strong><span>Alarm-worthy at first glance.</span></div><div class="causal-step"><small>02</small><strong>Peers disagree</strong><span>No local thermal pattern appears.</span></div><div class="causal-step"><small>03</small><strong>Context stays stable</strong><span>Load and cooling do not support heating.</span></div><div class="causal-step"><small>04</small><strong>Credibility check</strong><span>Instrumentation hypothesis becomes testable.</span></div></div>
+<div class="case-takeaway"><div class="take-icon">?</div><div><strong>Key idea</strong><span>Contradicting evidence is valuable. A good diagnostic system should know when the rest of the machine does not agree with one sensor.</span></div></div>
+<div class="article-note"><strong>Scope:</strong> A single deviating RTD suggests an instrumentation hypothesis; it does not by itself prove the absence of a real localized thermal issue.</div>
+<div class="article-footer-cta"><h3>Back to the case library</h3><p>Compare how different physical systems produce different evidence patterns.</p><a href="index.html">View all case studies →</a></div>
+</div></section>
 </main><footer class="site-footer"><div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div></footer>
 </body></html>
