@@ -1,23 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>When Pressure and Temperature Fall Together | Bhaskar Anand</title><meta name="description" content="An anonymized engineering story about cooling-loop pressure, temperature and changing flow distribution."/><link rel="stylesheet" href="../styles-v4.css?v=20260825g"/></head>
-<body class="page-case-study">
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav"><a href="index.html">Case Studies</a><a href="../index.html#insights">Insights</a><a href="../index.html#contact">Contact</a></nav></div></header>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>When Pressure and Temperature Fall Together | Bhaskar Anand</title>
+<meta name="description" content="Engineering case study on cooling-loop pressure, temperature and flow-path diagnosis."/>
+<link rel="stylesheet" href="../styles-v4.css?v=20260825g"/><link rel="stylesheet" href="../visual-refresh.css?v=20260829d"/><link rel="stylesheet" href="case-visuals.css?v=20260829a"/>
+</head><body class="page-case-study">
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav" aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../expertise.html">Expertise</a><a href="../experience.html">Experience</a><a href="../projects.html" aria-current="page">Projects</a><a href="../insights/index.html">Insights</a><a href="../resources.html">Resources</a><a href="../research.html">Research</a><a href="../contact.html">Contact</a></nav></div></header>
 <main>
-<section class="article-hero"><div class="container"><div class="article-hero-inner"><p class="eyebrow">Cooling Hydraulics · Process Correlation</p><h1>When Pressure and Temperature Fall Together</h1><p class="article-deck">A pressure drop can be ordinary. A temperature change can be ordinary. When both happen together, the flow path deserves attention.</p></div></div></section>
-<section class="article-main"><div class="container article-layout"><article class="article-content">
-<p>A cooling-water loop normally develops a stable relationship between pressure, temperature and flow distribution. The exact values move with operating conditions, but the way those signals respond to one another is usually repeatable.</p>
-<h2>The moment the story changed</h2>
-<p>Imagine outlet pressure suddenly moving lower while the cooling-water temperature also shifts at nearly the same time. Neither signal, viewed alone, tells you enough. Together they suggest that something physical may have changed in the circuit.</p>
-<div class="workflow-grid"><div class="workflow-step"><span class="workflow-number">1</span><h4>Pressure moves</h4><p>The hydraulic resistance or available flow path no longer behaves as expected.</p></div><div class="workflow-step"><span class="workflow-number">2</span><h4>Temperature follows</h4><p>The simultaneous thermal response suggests a real change in fluid distribution, not just a noisy pressure instrument.</p></div><div class="workflow-step"><span class="workflow-number">3</span><h4>The path becomes the question</h4><p>Valves, bypasses and restrictions become the logical places to investigate.</p></div></div>
-<h2>What the physics may suggest</h2>
-<p>A bypass or control valve drifting away from its intended position is one credible explanation. Changing valve position changes hydraulic resistance, redistributes flow and can alter how much heat the loop removes. The pressure and temperature responses then become two views of the same underlying flow-path change.</p>
-<h2>Why this matters operationally</h2>
-<p>If the cooling path continues to deteriorate, the system may lose the thermal margin needed to protect the connected equipment. What begins as a modest hydraulic deviation can eventually appear as a temperature limitation or operating trip.</p>
-<div class="case-grid"><div class="case-box"><span class="project-label">If it progresses</span><h4>Cooling margin can shrink</h4><p>Reduced or misdirected flow can weaken heat removal and increase thermal risk.</p></div><div class="case-box"><span class="project-label">What early detection buys</span><h4>A focused inspection</h4><p>Instead of treating pressure and temperature as separate alarms, engineers can validate the valve and bypass path directly.</p></div></div>
-<div class="article-quote">The value came from recognizing that two signals were describing the same physical change.</div>
-<div class="article-note"><strong>Scope:</strong> An anonymized engineering learning scenario. No customer, site, vendor, application or monetary information is represented.</div>
-<div class="article-footer-cta"><h3>Explore another diagnostic story</h3><p>See why a pump motor can look like the problem when the real issue begins on the suction side.</p><a href="feedwater-pump-suction-restriction.html">Read the feedwater-pump story →</a></div>
-</article><aside class="article-toc"><strong>Case study</strong><a href="index.html">All case studies</a></aside></div></section>
+<section class="article-hero"><div class="container case-hero-grid">
+<div class="article-hero-inner"><p class="eyebrow">Cooling Hydraulics · Process Correlation</p><h1>When pressure and temperature fall together.</h1><p class="article-deck">The important clue was not either signal alone. It was that both changed together at the same operating moment.</p><div class="case-kicker"><span>Hydraulics</span><span>Thermal response</span><span>Valve / bypass path</span></div></div>
+<div class="case-hero-visual">
+<svg viewBox="0 0 560 330" role="img" aria-label="Cooling loop with control valve and paired pressure temperature sensors">
+<defs><marker id="ca" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7ec6cd"/></marker></defs>
+<path d="M60 95 H245 V230 H500" fill="none" stroke="#75919a" stroke-width="16" stroke-linecap="round"/>
+<path d="M245 95 H500" fill="none" stroke="#536a73" stroke-width="10" stroke-dasharray="12 9"/>
+<path d="M85 95 H205" stroke="#7ec6cd" stroke-width="5" marker-end="url(#ca)"/><path d="M300 230 H455" stroke="#7ec6cd" stroke-width="5" marker-end="url(#ca)"/>
+<polygon points="310,76 330,95 310,114 290,95" fill="#f59e0b" stroke="#ffc878" stroke-width="3"/>
+<text x="310" y="52" text-anchor="middle" fill="#f5c58d" font-size="12">control / bypass valve</text>
+<circle cx="390" cy="230" r="14" fill="#122731" stroke="#c73b32" stroke-width="5"/><text x="390" y="274" text-anchor="middle" fill="#ffaea4" font-size="12">P ↓</text>
+<circle cx="470" cy="230" r="14" fill="#122731" stroke="#f59e0b" stroke-width="5"/><text x="470" y="274" text-anchor="middle" fill="#ffd08c" font-size="12">T ↓</text>
+<text x="280" y="305" text-anchor="middle" fill="#d6e3e7" font-size="12">paired movement → investigate the path</text>
+</svg></div>
+</div></section>
+
+<section class="article-main case-main"><div class="container case-content">
+<div class="case-summary-grid">
+<div class="case-summary-card alert"><small>Signal 1</small><strong>Outlet pressure moves lower</strong><span>Hydraulic behaviour changes.</span></div>
+<div class="case-summary-card alert"><small>Signal 2</small><strong>Temperature shifts at the same time</strong><span>Thermal response supports a real flow change.</span></div>
+<div class="case-summary-card"><small>Interpretation</small><strong>One flow-path event can explain both</strong><span>Valve, bypass or restriction deserves attention.</span></div>
+<div class="case-summary-card"><small>Verification</small><strong>Check command vs actual path</strong><span>Valve position, flow, ΔP and bypass behaviour.</span></div>
+</div>
+
+<section class="case-visual-block">
+<div class="case-visual-head"><div><small>Synchronized evidence</small><h2>Two sensors react at the same moment.</h2><p>A shared timestamp and coherent direction make a real process change more plausible than two unrelated sensor issues.</p></div></div>
+<div class="case-diagram">
+<svg viewBox="0 0 900 380" role="img" aria-label="Synchronized pressure and temperature trend change">
+<rect width="900" height="380" fill="#fff"/>
+<g stroke="#eee4db"><line x1="80" y1="80" x2="850" y2="80"/><line x1="80" y1="150" x2="850" y2="150"/><line x1="80" y1="240" x2="850" y2="240"/><line x1="80" y1="310" x2="850" y2="310"/></g>
+<line x1="510" y1="50" x2="510" y2="330" stroke="#f59e0b" stroke-width="3" stroke-dasharray="7 6"/>
+<text x="522" y="68" fill="#9a641f" font-size="11">same event time</text>
+<text x="18" y="118" fill="#725e55" font-size="12">PRESSURE</text><text x="8" y="278" fill="#725e55" font-size="12">TEMPERATURE</text>
+<polyline points="80,112 150,110 220,113 290,108 360,112 430,109 500,111 540,136 610,142 680,145 760,146 850,146" fill="none" stroke="#c73b32" stroke-width="4"/>
+<polyline points="80,265 150,264 220,262 290,267 360,264 430,263 500,264 540,285 610,292 680,294 760,296 850,297" fill="none" stroke="#f59e0b" stroke-width="4"/>
+<rect x="565" y="178" width="210" height="48" rx="12" fill="#fff5e8" stroke="#e7bd92"/><text x="670" y="197" text-anchor="middle" fill="#7e5540" font-size="12">paired movement</text><text x="670" y="214" text-anchor="middle" fill="#9d6f56" font-size="10">suggests shared physical cause</text>
+</svg></div>
+<div class="case-legend"><span><i class="risk"></i>Pressure</span><span><i class="change"></i>Temperature</span></div>
+</section>
+
+<div class="evidence-board">
+<div class="evidence-panel"><h3>Evidence board</h3><div class="evidence-rows">
+<div class="evidence-row"><strong>Pressure</strong><span>Step / sustained move lower</span><span class="trend-badge trend-down">↓</span></div>
+<div class="evidence-row"><strong>Temperature</strong><span>Changes at nearly the same time</span><span class="trend-badge trend-down">↓</span></div>
+<div class="evidence-row"><strong>Timing</strong><span>Signals move together</span><span class="trend-badge trend-context">Aligned</span></div>
+<div class="evidence-row"><strong>Operating state</strong><span>Confirm load / demand did not explain it</span><span class="trend-badge trend-context">Context</span></div>
+</div></div>
+<div class="hypothesis-panel"><small>Credible hypothesis</small><h3>Changing valve / bypass flow path</h3><p>A valve drifting away from its intended position can change hydraulic resistance and heat removal together.</p><div class="verify-list"><div class="verify-item"><b>1</b><span>Compare valve command and actual feedback.</span></div><div class="verify-item"><b>2</b><span>Check loop flow and differential pressure.</span></div><div class="verify-item"><b>3</b><span>Inspect bypass / manual valve alignment.</span></div><div class="verify-item"><b>4</b><span>Verify pressure and temperature sensors independently.</span></div></div></div>
+</div>
+
+<div class="causal-chain"><div class="causal-step"><small>01</small><strong>Valve / path changes</strong><span>Hydraulic resistance is altered.</span></div><div class="causal-step"><small>02</small><strong>Flow redistributes</strong><span>Different circuit flow develops.</span></div><div class="causal-step"><small>03</small><strong>Pressure responds</strong><span>Hydraulic signature shifts.</span></div><div class="causal-step"><small>04</small><strong>Thermal response follows</strong><span>Heat removal changes with flow.</span></div></div>
+<div class="case-takeaway"><div class="take-icon">↔</div><div><strong>Key idea</strong><span>Correlation becomes useful when two sensors describe the same physical mechanism—not merely because they moved at the same time.</span></div></div>
+<div class="article-note"><strong>Scope:</strong> Conceptual learning case. The valve/bypass explanation is a hypothesis that must be confirmed with direct process evidence.</div>
+<div class="article-footer-cta"><h3>Next case: feedwater pump</h3><p>An electrical-looking symptom can originate in the hydraulics.</p><a href="feedwater-pump-suction-restriction.html">Open next case →</a></div>
+</div></section>
 </main><footer class="site-footer"><div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div></footer>
 </body></html>
