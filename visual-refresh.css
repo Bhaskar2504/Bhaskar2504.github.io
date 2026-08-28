@@ -200,3 +200,10 @@
 .page-resources .resource-card{border-color:#cfe0db;background:linear-gradient(145deg,#fff,#f5fbf9)}
 .page-resources .resource-card:hover{border-color:#8fc6bc;box-shadow:0 18px 42px rgba(15,71,66,.12)}
 .page-resources .resource-number{background:#0f7d70;color:#fff}
+
+.page-experience .role-more{margin-top:14px;border-top:1px solid #e4eaed;padding-top:12px}
+.page-experience .role-more summary{cursor:pointer;color:#7a4c14;font-size:.84rem;font-weight:700;list-style:none}
+.page-experience .role-more summary::-webkit-details-marker{display:none}
+.page-experience .role-more summary:after{content:" +";color:#f59e0b}
+.page-experience .role-more[open] summary:after{content:" −"}
+.page-experience .role-more ul{margin-top:12px}
