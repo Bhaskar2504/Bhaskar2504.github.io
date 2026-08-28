@@ -1,0 +1,133 @@
+/* Infographic-first redesign — 2026-08-29 */
+:root{--ig-teal:#0f7d88;--ig-cyan:#35b4ad;--ig-navy:#071521;--ig-blue:#4f8db8;--ig-amber:#f59e0b;--ig-red:#c73b32;--ig-paper:#f7f4ee}
+
+.infographic{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:26px;background:#fff;box-shadow:var(--shadow-soft)}
+.infographic svg{display:block;width:100%;height:auto}
+.viz-caption{margin:12px 0 0;color:var(--muted);font-size:.82rem}
+.icon-disc{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--accent-soft);color:var(--accent);font-weight:700}
+.icon-disc svg{width:22px;height:22px}
+.compact-heading{width:min(100%,760px);margin-bottom:26px}.compact-heading h2{margin:0;color:var(--navy);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:500;line-height:1.08;letter-spacing:-.035em}.compact-heading p{margin:10px 0 0;color:var(--muted)}
+.visual-section{padding-block:clamp(52px,6vw,76px)}
+.visual-section+.visual-section{padding-top:0}
+
+/* HOME — three-lens systems map */
+.home-system-map{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.9fr);gap:clamp(24px,5vw,58px);align-items:center}
+.home-system-copy{max-width:620px}
+.home-system-copy h2{margin:0;color:var(--navy);font-size:clamp(2rem,3.6vw,3.35rem);font-weight:500;line-height:1.06;letter-spacing:-.04em}
+.home-system-copy p{color:var(--muted);font-size:1.05rem}
+.system-orbit{position:relative;min-height:390px}
+.system-core{position:absolute;left:50%;top:50%;z-index:3;display:grid;place-items:center;width:128px;height:128px;padding:18px;border-radius:50%;transform:translate(-50%,-50%);background:linear-gradient(145deg,#071521,#123a42);color:#fff;text-align:center;font-size:.9rem;font-weight:700;box-shadow:0 18px 44px rgba(8,24,39,.22)}
+.system-ring{position:absolute;left:50%;top:50%;width:300px;height:300px;border:1px dashed #9dc9c7;border-radius:50%;transform:translate(-50%,-50%)}
+.system-node{position:absolute;z-index:4;width:116px;padding:13px;border:1px solid #cfe1e1;border-radius:16px;background:#fff;box-shadow:var(--shadow-soft);text-align:center}
+.system-node strong{display:block;color:var(--navy);font-size:.9rem}.system-node span{display:block;margin-top:4px;color:var(--muted);font-size:.72rem}
+.system-node.one{left:50%;top:2%;transform:translateX(-50%)}.system-node.two{right:2%;top:57%;transform:translateY(-50%)}.system-node.three{left:2%;top:57%;transform:translateY(-50%)}
+
+/* ABOUT — decision orbit */
+.about-visual-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(360px,1.1fr);gap:clamp(28px,5vw,58px);align-items:center}
+.about-portrait-card{position:relative;min-height:430px;overflow:hidden;border-radius:28px;background:linear-gradient(145deg,#172b37,#214d56);box-shadow:var(--shadow)}
+.about-portrait-card img{position:absolute;left:26px;bottom:0;width:46%;max-height:92%;object-fit:cover;object-position:center top;border-radius:24px 24px 0 0}
+.about-quote-card{position:absolute;right:26px;top:42px;width:47%;padding:22px;border:1px solid rgba(255,255,255,.18);border-radius:20px;background:rgba(255,255,255,.08);backdrop-filter:blur(10px);color:#fff}
+.about-quote-card strong{display:block;font-size:1.2rem;line-height:1.35}.about-quote-card span{display:block;margin-top:10px;color:#bdd1d6;font-size:.84rem}
+.about-orbit{position:relative;min-height:430px}
+.about-orbit .orbit-core{position:absolute;left:50%;top:50%;display:grid;place-items:center;width:138px;height:138px;padding:20px;border-radius:50%;transform:translate(-50%,-50%);background:#fff;border:1px solid #dacdbd;box-shadow:var(--shadow);text-align:center;color:#263540;font-weight:700}
+.about-orbit .orbit-ring{position:absolute;left:50%;top:50%;width:330px;height:330px;border:1px dashed #c8b69f;border-radius:50%;transform:translate(-50%,-50%)}
+.orbit-node{position:absolute;display:grid;place-items:center;width:112px;height:78px;padding:10px;border:1px solid #e2d5c4;border-radius:16px;background:#fffefb;box-shadow:0 8px 20px rgba(50,39,25,.06);text-align:center;color:#3e4c55;font-size:.82rem;font-weight:600}
+.orbit-node.n1{left:50%;top:0;transform:translateX(-50%)}.orbit-node.n2{right:0;top:27%}.orbit-node.n3{right:3%;bottom:7%}.orbit-node.n4{left:3%;bottom:7%}.orbit-node.n5{left:0;top:27%}
+
+/* EXPERTISE — capability constellation */
+.expertise-constellation{position:relative;min-height:390px;margin-bottom:32px;border:1px solid #183744;border-radius:28px;background:radial-gradient(circle at center,rgba(53,180,173,.12),transparent 32%),linear-gradient(145deg,#071521,#0c2430);overflow:hidden}
+.expertise-constellation:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(126,215,209,.22) 1px,transparent 1px);background-size:28px 28px;opacity:.35}
+.constellation-core{position:absolute;left:50%;top:50%;z-index:3;display:grid;place-items:center;width:132px;height:132px;padding:18px;border-radius:50%;transform:translate(-50%,-50%);background:#f7fbfc;color:#0d2833;text-align:center;font-weight:800;box-shadow:0 18px 50px rgba(0,0,0,.28)}
+.constellation-line{position:absolute;left:50%;top:50%;z-index:1;height:1px;width:160px;transform-origin:left center;background:linear-gradient(90deg,rgba(126,215,209,.9),rgba(126,215,209,.08))}
+.constellation-line.l1{transform:rotate(-90deg)}.constellation-line.l2{transform:rotate(-30deg)}.constellation-line.l3{transform:rotate(30deg)}.constellation-line.l4{transform:rotate(90deg)}.constellation-line.l5{transform:rotate(150deg)}.constellation-line.l6{transform:rotate(210deg)}
+.constellation-node{position:absolute;z-index:3;display:grid;place-items:center;width:150px;min-height:62px;padding:10px;border:1px solid #255261;border-radius:16px;background:#0f2b37;color:#d8e8ec;text-align:center;font-size:.78rem;font-weight:700}
+.constellation-node.c1{left:50%;top:6%;transform:translateX(-50%)}.constellation-node.c2{right:7%;top:23%}.constellation-node.c3{right:7%;bottom:20%}.constellation-node.c4{left:50%;bottom:5%;transform:translateX(-50%)}.constellation-node.c5{left:7%;bottom:20%}.constellation-node.c6{left:7%;top:23%}
+.expertise-card .expertise-symbol{display:grid;place-items:center;width:46px;height:46px;margin-bottom:18px;border:1px solid #29515f;border-radius:14px;background:rgba(53,180,173,.08);color:#7ed7d1;font-size:1.25rem;font-weight:700}
+
+/* EXPERIENCE — visual career rail */
+.career-rail{display:grid;grid-template-columns:repeat(6,minmax(130px,1fr));gap:0;margin:8px 0 46px;overflow-x:auto;padding:26px 0 12px}
+.career-stop{position:relative;min-width:150px;padding:44px 12px 12px;text-align:center}
+.career-stop:before{content:"";position:absolute;left:0;right:0;top:17px;height:2px;background:#cdd8dd}.career-stop:first-child:before{left:50%}.career-stop:last-child:before{right:50%}
+.career-dot{position:absolute;left:50%;top:8px;z-index:2;width:20px;height:20px;border:5px solid #f4f6f8;border-radius:50%;transform:translateX(-50%);background:#f59e0b;box-shadow:0 0 0 1px #d8a34f}
+.career-stop:last-child .career-dot{background:#0f7d88;box-shadow:0 0 0 1px #6bb3b5}
+.career-stop small{display:block;color:#a76e20;font-weight:700}.career-stop strong{display:block;margin-top:5px;color:var(--navy);font-size:.86rem}.career-stop span{display:block;margin-top:5px;color:var(--muted);font-size:.72rem;line-height:1.4}
+.page-experience .page-shell{width:min(100%,1100px)}
+.page-experience .role-detail{grid-template-columns:130px minmax(0,1fr);padding:22px 24px}
+.page-experience .role-detail p{font-size:.92rem;line-height:1.55}
+.page-experience .role-tags{margin-top:11px}.page-experience .role-tag{font-size:.7rem;padding:5px 8px}
+
+/* PROJECTS — diagnostic signal cards */
+.project-process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:28px 0 42px}
+.project-process-step{position:relative;padding:18px;border:1px solid #ead1b5;border-radius:18px;background:#fffaf4}
+.project-process-step:not(:last-child):after{content:"→";position:absolute;right:-9px;top:50%;z-index:3;transform:translateY(-50%);display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#fff;color:#b24b31;font-weight:800}
+.project-process-step small{color:#b04a2e;font-weight:800}.project-process-step strong{display:block;margin-top:6px;color:#432d27;font-size:.92rem}.project-process-step span{display:block;margin-top:5px;color:#846d63;font-size:.75rem}
+.case-link-card .case-mini-viz{height:86px;margin:10px 0 14px;border:1px solid #f0d5c1;border-radius:12px;background:#fffaf7}
+.case-mini-viz svg{width:100%;height:100%}
+.case-link-card p{font-size:.86rem!important;line-height:1.5!important}
+
+/* INSIGHTS — knowledge map */
+.knowledge-map{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;margin:10px 0 50px;padding:30px;border:1px solid #d9d2c4;border-radius:26px;background:#fffdf8;box-shadow:var(--shadow-soft)}
+.knowledge-column{display:grid;gap:12px}.knowledge-node{padding:15px 16px;border:1px solid #dfd7c9;border-radius:14px;background:#fff;color:#33434d;font-size:.86rem;font-weight:600}
+.knowledge-node small{display:block;margin-top:3px;color:#7b858d;font-size:.71rem;font-weight:400}
+.knowledge-core{display:grid;place-items:center;width:144px;height:144px;padding:18px;border-radius:50%;background:linear-gradient(145deg,#102437,#2d5262);color:#fff;text-align:center;font-size:.9rem;font-weight:800;box-shadow:0 18px 46px rgba(16,36,55,.24)}
+.page-insights .library-card p{font-size:.88rem;line-height:1.5}
+.page-insights .topic-area-card ul{display:none}
+.page-insights .topic-area-card{min-height:170px}
+
+/* RESOURCES — stage-gate pipeline */
+.resource-pipeline{display:grid;grid-template-columns:repeat(6,minmax(120px,1fr));gap:8px;margin:10px 0 42px;overflow-x:auto;padding:8px 0}
+.resource-stage{position:relative;min-width:140px;padding:18px 14px;border:1px solid #c9ddd7;border-radius:16px;background:#fff;text-align:center}
+.resource-stage:not(:last-child):after{content:"";position:absolute;right:-9px;top:50%;width:10px;height:2px;background:#8ab9b0}
+.resource-stage .stage-icon{display:grid;place-items:center;width:38px;height:38px;margin:0 auto 10px;border-radius:12px;background:#e8f5f1;color:#157165;font-weight:800}
+.resource-stage strong{display:block;color:#17363a;font-size:.82rem}.resource-stage span{display:block;margin-top:4px;color:#6a7b7c;font-size:.7rem}
+.page-resources .resource-card{min-height:230px}
+.page-resources .resource-card ul{display:none}.page-resources .resource-card p{font-size:.86rem;line-height:1.5}
+
+/* RESEARCH — foundation stack + academic rail */
+.foundation-stack{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:10px 0 46px}
+.foundation-layer{min-height:120px;padding:20px;border-radius:18px;color:#fff}
+.foundation-layer:nth-child(1){background:#6f5734}.foundation-layer:nth-child(2){background:#3c5c68}.foundation-layer:nth-child(3){background:#246f75}.foundation-layer:nth-child(4){background:#102b37}
+.foundation-layer small{opacity:.72}.foundation-layer strong{display:block;margin-top:8px;font-size:1.05rem}.foundation-layer span{display:block;margin-top:7px;font-size:.77rem;opacity:.8}
+.academic-rail{display:grid;grid-template-columns:repeat(4,minmax(180px,1fr));gap:14px;margin-top:24px;overflow-x:auto}
+.academic-stop{min-width:190px;padding:18px;border:1px solid #dfd4c3;border-radius:18px;background:#fffdf9}
+.academic-stop .edu-logo{width:44px;height:44px}.academic-stop strong{display:block;margin-top:12px;color:#283741}.academic-stop span{display:block;margin-top:5px;color:#6e777b;font-size:.8rem;line-height:1.45}
+.badge-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:24px}
+.credential-badge{padding:18px;border:1px solid #dfd4c3;border-radius:16px;background:#fffdf9}.credential-badge small{color:#886439;font-weight:700}.credential-badge strong{display:block;margin-top:6px;color:#293741}.credential-badge span{display:block;margin-top:6px;color:#747b7d;font-size:.78rem}
+
+/* CONTACT — one-screen contact console */
+.contact-console{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.75fr);gap:26px;align-items:stretch}
+.contact-console-main{padding:clamp(30px,5vw,58px);border:1px solid #1d3946;border-radius:28px;background:linear-gradient(145deg,#0a1d29,#0f2d39)}
+.contact-console-main h2{margin:0;color:#fff;font-size:clamp(2rem,4vw,3.4rem);font-weight:500;line-height:1.05}.contact-console-main p{max-width:620px;color:#b9cbd2}
+.contact-console-side{display:grid;gap:12px}
+.contact-console-side .contact-route{min-height:0}
+.contact-hint{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:28px}
+.contact-hint span{padding:10px;border:1px solid rgba(255,255,255,.12);border-radius:12px;color:#a9bec6;font-size:.72rem;text-align:center}
+
+/* Shared reduction of text density */
+.page-about .content-section>p,.page-projects .content-section>p,.page-research .content-section>p{max-width:760px}
+.page-about .content-card p,.page-projects .content-card p,.page-research .content-card p{font-size:.88rem;line-height:1.55}
+
+@media(max-width:980px){
+  .home-system-map,.about-visual-grid,.contact-console{grid-template-columns:1fr}
+  .system-orbit,.about-orbit{min-height:390px}
+  .project-process{grid-template-columns:1fr 1fr}
+  .project-process-step:nth-child(2):after{display:none}
+  .foundation-stack{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  .career-rail{grid-template-columns:repeat(6,160px)}
+  .expertise-constellation{min-height:520px}
+  .constellation-core{width:116px;height:116px}
+  .constellation-node{width:132px}
+  .constellation-node.c1{top:4%}.constellation-node.c2{right:3%;top:25%}.constellation-node.c3{right:3%;bottom:22%}.constellation-node.c4{bottom:3%}.constellation-node.c5{left:3%;bottom:22%}.constellation-node.c6{left:3%;top:25%}
+  .knowledge-map{grid-template-columns:1fr}.knowledge-core{margin:auto}.knowledge-column{grid-template-columns:1fr 1fr}
+  .contact-hint{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+  .system-orbit,.about-orbit{min-height:360px}
+  .system-ring{width:250px;height:250px}.system-node{width:98px;padding:10px}.system-core{width:108px;height:108px}
+  .about-orbit .orbit-ring{width:250px;height:250px}.orbit-node{width:94px;height:68px;font-size:.72rem}
+  .project-process{grid-template-columns:1fr}.project-process-step:after{display:none!important}
+  .foundation-stack{grid-template-columns:1fr}
+  .knowledge-column{grid-template-columns:1fr}
+}
