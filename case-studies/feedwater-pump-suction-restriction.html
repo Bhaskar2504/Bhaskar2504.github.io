@@ -1,26 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>The Feedwater Pump That Asked for More Current | Bhaskar Anand</title><meta name="description" content="An anonymized engineering story about pump suction restriction, motor current, flow degradation and cavitation risk."/><link rel="stylesheet" href="../styles-v4.css?v=20260825g"/></head>
-<body class="page-case-study">
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav"><a href="index.html">Case Studies</a><a href="../index.html#insights">Insights</a><a href="../index.html#contact">Contact</a></nav></div></header>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>The Feedwater Pump and a Changing Suction Path | Bhaskar Anand</title>
+<meta name="description" content="Engineering case study on pump suction restriction, flow degradation and operating-point interpretation."/>
+<link rel="stylesheet" href="../styles-v4.css?v=20260825g"/><link rel="stylesheet" href="../visual-refresh.css?v=20260829d"/><link rel="stylesheet" href="case-visuals.css?v=20260829a"/>
+</head><body class="page-case-study">
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav" aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../expertise.html">Expertise</a><a href="../experience.html">Experience</a><a href="../projects.html" aria-current="page">Projects</a><a href="../insights/index.html">Insights</a><a href="../resources.html">Resources</a><a href="../research.html">Research</a><a href="../contact.html">Contact</a></nav></div></header>
 <main>
-<section class="article-hero"><div class="container"><div class="article-hero-inner"><p class="eyebrow">Pump Hydraulics · Rotating Equipment</p><h1>The Feedwater Pump That Asked for More Current</h1><p class="article-deck">The motor current was rising. The easy conclusion was electrical. The better explanation emerged only after looking at what was happening on the suction side.</p></div></div></section>
-<section class="article-main"><div class="container article-layout"><article class="article-content">
-<p>A high-pressure feedwater pump normally draws electrical current in a repeatable relationship with flow, head and operating condition. If current starts creeping upward, the motor is an obvious place to look first.</p>
-<h2>The clue that changes the diagnosis</h2>
-<p>Now imagine that useful flow is gradually weakening at the same time. A suction-side strainer or restriction also begins showing a larger pressure drop. Suddenly the current increase means something different.</p>
-<div class="concept-grid"><div class="concept-box"><h4>Motor current</h4><p>Increasing effort.</p></div><div class="concept-box"><h4>Useful flow</h4><p>Gradually deteriorating.</p></div><div class="concept-box"><h4>Suction restriction</h4><p>Increasing pressure loss ahead of the pump.</p></div></div>
-<h2>What the hydraulics may suggest</h2>
-<p>A progressively restricted suction path can starve the pump and shift its operating point. The pump may work under poorer suction conditions while delivering less useful flow. The motor current becomes a symptom of the hydraulic problem rather than proof of an electrical fault.</p>
-<div class="article-callout"><p><strong>Diagnostic shift:</strong> “High motor current” becomes “high motor current + weaker flow + worsening suction restriction.” The second statement points to a very different inspection path.</p></div>
-<h2>If the condition is allowed to progress</h2>
-<p>Poor suction conditions can move the pump closer to cavitation, increase mechanical stress and degrade performance. Continued operation may also increase unnecessary energy consumption while the machine delivers less useful hydraulic output.</p>
-<div class="case-grid"><div class="case-box"><span class="project-label">Misleading first view</span><h4>Motor problem?</h4><p>Current alone can send the investigation toward the electrical system.</p></div><div class="case-box"><span class="project-label">Engineering view</span><h4>Hydraulic restriction</h4><p>Current, flow and suction pressure loss together make choking or restriction a more credible hypothesis.</p></div></div>
-<h2>What early detection buys</h2>
-<p>The team can inspect and clean the suction path before the pump is pushed deeper into an inefficient or damaging operating region. The value is the chance to correct the cause rather than react to the later consequence.</p>
-<div class="article-quote">A signal may belong to one system but be caused by another. Good diagnostics follow the physics across that boundary.</div>
-<div class="article-note"><strong>Scope:</strong> An anonymized engineering learning scenario. No customer, site, vendor, application or monetary information is represented.</div>
-<div class="article-footer-cta"><h3>Explore another diagnostic story</h3><p>See how correlation can help distinguish a real thermal event from a questionable measurement.</p><a href="generator-temperature-sensor-anomaly.html">Read the temperature-sensor story →</a></div>
-</article><aside class="article-toc"><strong>Case study</strong><a href="index.html">All case studies</a></aside></div></section>
+<section class="article-hero"><div class="container case-hero-grid">
+<div class="article-hero-inner"><p class="eyebrow">Pump Hydraulics · Rotating Equipment</p><h1>The pump problem that started upstream.</h1><p class="article-deck">The strongest evidence was not in the motor. It was in the suction path.</p><div class="case-kicker"><span>Suction ΔP</span><span>Flow</span><span>Operating point</span><span>Cavitation risk</span></div></div>
+<div class="case-hero-visual">
+<svg viewBox="0 0 560 330" role="img" aria-label="Tank strainer pump and motor schematic">
+<defs><marker id="pa" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8ed1d5"/></marker></defs>
+<rect x="35" y="75" width="95" height="160" rx="14" fill="#18313b" stroke="#aec1c7" stroke-width="4"/><path d="M35 126 H130" stroke="#71adbb" stroke-width="4"/>
+<path d="M130 180 H270" stroke="#728f98" stroke-width="16"/><polygon points="195,156 219,180 195,204 171,180" fill="#3b2722" stroke="#ff8f7f" stroke-width="4"/>
+<path d="M140 180 H165" stroke="#8ed1d5" stroke-width="5" marker-end="url(#pa)"/><path d="M225 180 H265" stroke="#8ed1d5" stroke-width="5" marker-end="url(#pa)"/>
+<circle cx="337" cy="180" r="55" fill="#132a34" stroke="#dce5e7" stroke-width="6"/><path d="M305 180 C325 145 363 146 377 180 C361 215 325 214 305 180 Z" fill="#91aab1"/>
+<rect x="414" y="138" width="105" height="84" rx="14" fill="#18313b" stroke="#9fb4bb" stroke-width="4"/><text x="467" y="185" text-anchor="middle" fill="#fff" font-size="14">MOTOR</text>
+<text x="195" y="132" text-anchor="middle" fill="#ffb2a8" font-size="12">restriction grows</text><text x="195" y="236" text-anchor="middle" fill="#ffc27b" font-size="12">suction ΔP ↑</text><text x="337" y="270" text-anchor="middle" fill="#d3e1e4" font-size="12">flow / suction condition worsens</text>
+</svg></div>
+</div></section>
+
+<section class="article-main case-main"><div class="container case-content">
+<div class="case-summary-grid">
+<div class="case-summary-card alert"><small>Suction path</small><strong>Restriction / strainer ΔP increases</strong><span>Direct upstream evidence.</span></div>
+<div class="case-summary-card alert"><small>Hydraulic output</small><strong>Useful flow deteriorates</strong><span>The pump is not delivering the same result.</span></div>
+<div class="case-summary-card"><small>Electrical signal</small><strong>Current / power changes from expected</strong><span>Direction depends on actual operating point.</span></div>
+<div class="case-summary-card"><small>Question</small><strong>What moved the pump operating point?</strong><span>Interpret electrical loading in hydraulic context.</span></div>
+</div>
+
+<section class="case-visual-block">
+<div class="case-visual-head"><div><small>System boundary</small><h2>Follow the restriction before blaming the motor.</h2><p>The suction system, pump and motor are one energy-conversion chain. A symptom can appear electrically while the cause is hydraulic.</p></div></div>
+<div class="case-diagram">
+<svg viewBox="0 0 900 390" role="img" aria-label="Pump system with suction restriction and evidence lanes">
+<defs><marker id="fp" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#5f8992"/></marker></defs>
+<rect x="70" y="85" width="105" height="165" rx="14" fill="#edf6f7" stroke="#6f8992" stroke-width="4"/><path d="M70 137 H175" stroke="#6aa1ad" stroke-width="4"/>
+<path d="M175 200 H360" stroke="#738f97" stroke-width="16" marker-end="url(#fp)"/>
+<polygon points="255,176 280,200 255,224 230,200" fill="#fff0ed" stroke="#c73b32" stroke-width="4"/>
+<circle cx="455" cy="200" r="62" fill="#fff" stroke="#687f87" stroke-width="6"/><path d="M420 200 C438 160 480 162 493 200 C477 238 438 237 420 200 Z" fill="#d7e4e7"/>
+<rect x="565" y="158" width="120" height="84" rx="14" fill="#f6f7f7" stroke="#7c8f96" stroke-width="4"/><text x="625" y="207" text-anchor="middle" fill="#52656c" font-size="14">MOTOR</text>
+<path d="M685 200 H805" stroke="#738f97" stroke-width="16" marker-end="url(#fp)"/>
+<g font-size="12"><text x="255" y="150" text-anchor="middle" fill="#9e332b">restriction</text><text x="255" y="255" text-anchor="middle" fill="#9a641f">ΔP ↑</text><text x="455" y="290" text-anchor="middle" fill="#8a6c5c">flow ↓ / suction quality worsens</text><text x="625" y="290" text-anchor="middle" fill="#8a6c5c">current / power = context signal</text></g>
+<rect x="145" y="315" width="610" height="42" rx="12" fill="#fff5e8" stroke="#e7bc91"/><text x="450" y="341" text-anchor="middle" fill="#7c5541" font-size="12">diagnosis should follow the energy path: source → suction → pump → motor → process</text>
+</svg></div>
+</section>
+
+<div class="evidence-board">
+<div class="evidence-panel"><h3>Evidence board</h3><div class="evidence-rows">
+<div class="evidence-row"><strong>Suction ΔP</strong><span>Increasing across strainer / restriction</span><span class="trend-badge trend-up">↑</span></div>
+<div class="evidence-row"><strong>Flow</strong><span>Lower than expected for comparable state</span><span class="trend-badge trend-down">↓</span></div>
+<div class="evidence-row"><strong>Suction P</strong><span>Potentially worsening at pump inlet</span><span class="trend-badge trend-down">Check</span></div>
+<div class="evidence-row"><strong>Motor load</strong><span>Interpret versus pump/system operating point</span><span class="trend-badge trend-context">Context</span></div>
+</div></div>
+<div class="hypothesis-panel"><small>Credible hypothesis</small><h3>Suction-side restriction</h3><p>A degrading suction path can shift the pump operating point and reduce hydraulic performance. Electrical loading is supporting evidence, not standalone proof.</p><div class="verify-list"><div class="verify-item"><b>1</b><span>Confirm strainer / suction differential pressure.</span></div><div class="verify-item"><b>2</b><span>Check suction pressure and available NPSH margin.</span></div><div class="verify-item"><b>3</b><span>Compare flow, head and speed at the same operating state.</span></div><div class="verify-item"><b>4</b><span>Use motor current/power only with operating-point context.</span></div></div></div>
+</div>
+
+<div class="causal-chain"><div class="causal-step"><small>01</small><strong>Restriction builds</strong><span>Suction pressure loss increases.</span></div><div class="causal-step"><small>02</small><strong>Operating point shifts</strong><span>Pump sees poorer inlet conditions.</span></div><div class="causal-step"><small>03</small><strong>Hydraulic output changes</strong><span>Useful flow / efficiency can degrade.</span></div><div class="causal-step"><small>04</small><strong>Secondary symptoms appear</strong><span>Electrical and vibration behaviour may change.</span></div></div>
+<div class="case-takeaway"><div class="take-icon">→</div><div><strong>Key idea</strong><span>A signal can belong to one subsystem and be caused by another. Good diagnostics follow the physics across subsystem boundaries.</span></div></div>
+<div class="article-note"><strong>Technical caution:</strong> Motor current does not have a universal direction under suction restriction; it depends on the pump curve, system curve, speed and resulting operating point.</div>
+<div class="article-footer-cta"><h3>Next case: generator temperature</h3><p>When one sensor disagrees with the rest of the machine, credibility becomes part of diagnosis.</p><a href="generator-temperature-sensor-anomaly.html">Open next case →</a></div>
+</div></section>
 </main><footer class="site-footer"><div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div></footer>
 </body></html>
