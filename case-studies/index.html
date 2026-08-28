@@ -1,21 +1,137 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Engineering Case Studies | Bhaskar Anand</title><meta name="description" content="Anonymized engineering diagnostic stories across rotating, thermal, hydraulic and instrumentation problems."/>
-<link rel="stylesheet" href="../styles-v4.css?v=20260825g"/><link rel="stylesheet" href="../visual-refresh.css?v=20260829d"/><link rel="stylesheet" href="../infographics.css?v=20260829a"/>
-</head><body class="page-case-library">
+<title>Engineering Case Studies | Bhaskar Anand</title>
+<meta name="description" content="Engineering diagnostic case studies using asset schematics, signal relationships and physics-based reasoning."/>
+<link rel="stylesheet" href="../styles-v4.css?v=20260825g"/>
+<link rel="stylesheet" href="../visual-refresh.css?v=20260829d"/>
+<link rel="stylesheet" href="case-visuals.css?v=20260829a"/>
+</head>
+<body class="page-case-library">
 <header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav" aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../expertise.html">Expertise</a><a href="../experience.html">Experience</a><a href="../projects.html" aria-current="page">Projects</a><a href="../insights/index.html">Insights</a><a href="../resources.html">Resources</a><a href="../research.html">Research</a><a href="../contact.html">Contact</a></nav></div></header>
 <main>
-<section class="article-hero"><div class="container"><div class="article-hero-inner"><p class="eyebrow">Engineering Case Studies</p><h1>Five abnormal stories hiding inside ordinary signals.</h1><p class="article-deck">Use the signal sketches to choose a case; open the story for the engineering reasoning.</p></div></div></section>
-<section class="article-main"><div class="container">
-<div class="project-process" aria-label="Diagnostic reading method"><div class="project-process-step"><small>LOOK</small><strong>What changed?</strong><span>Trend, regime, relationship</span></div><div class="project-process-step"><small>CHECK</small><strong>What stayed normal?</strong><span>Contradicting evidence</span></div><div class="project-process-step"><small>REASON</small><strong>What physics fits?</strong><span>Mechanism, not label</span></div><div class="project-process-step"><small>VERIFY</small><strong>What next?</strong><span>Inspection or test</span></div></div>
-<div class="case-library-grid">
-<a class="case-link-card" href="turbine-vibration-load-correlation.html"><span class="case-no">01</span><span class="project-label">Rotor Dynamics</span><h3>Vibration follows load</h3><div class="case-mini-viz"><svg viewBox="0 0 220 86" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,55 45,51 90,58 135,45 180,40 220,34" fill="none" stroke="#c73b32" stroke-width="3"/><polyline points="0,31 45,33 90,28 135,30 180,23 220,19" fill="none" stroke="#f59e0b" stroke-width="3"/></svg></div><p>Changing sensitivity matters before a hard alarm does.</p><span class="case-arrow">Open story →</span></a>
-<a class="case-link-card" href="air-preheater-air-ingress.html"><span class="case-no">02</span><span class="project-label">Thermodynamics</span><h3>Heat recovery quietly changes</h3><div class="case-mini-viz"><svg viewBox="0 0 220 86" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,47 45,43 90,50 135,37 180,32 220,26" fill="none" stroke="#c73b32" stroke-width="3"/><polyline points="0,58 45,60 90,55 135,57 180,50 220,46" fill="none" stroke="#f59e0b" stroke-width="3"/></svg></div><p>Temperature, oxygen and draft become one thermal picture.</p><span class="case-arrow">Open story →</span></a>
-<a class="case-link-card" href="cooling-loop-valve-drift.html"><span class="case-no">03</span><span class="project-label">Cooling Hydraulics</span><h3>Pressure + temperature move together</h3><div class="case-mini-viz"><svg viewBox="0 0 220 86" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,43 45,39 90,46 135,33 180,28 220,22" fill="none" stroke="#c73b32" stroke-width="3"/><polyline points="0,49 45,51 90,46 135,48 180,41 220,37" fill="none" stroke="#f59e0b" stroke-width="3"/></svg></div><p>The relationship points toward flow distribution.</p><span class="case-arrow">Open story →</span></a>
-<a class="case-link-card" href="feedwater-pump-suction-restriction.html"><span class="case-no">04</span><span class="project-label">Pump Hydraulics</span><h3>The suction path changes</h3><div class="case-mini-viz"><svg viewBox="0 0 220 86" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,61 45,57 90,64 135,51 180,46 220,40" fill="none" stroke="#c73b32" stroke-width="3"/><polyline points="0,36 45,38 90,33 135,35 180,28 220,24" fill="none" stroke="#f59e0b" stroke-width="3"/></svg></div><p>Hydraulic evidence shifts attention upstream.</p><span class="case-arrow">Open story →</span></a>
-<a class="case-link-card" href="generator-temperature-sensor-anomaly.html"><span class="case-no">05</span><span class="project-label">Instrumentation</span><h3>One temperature stands alone</h3><div class="case-mini-viz"><svg viewBox="0 0 220 86" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,27 45,23 90,30 135,17 180,12 220,6" fill="none" stroke="#c73b32" stroke-width="3"/><polyline points="0,58 45,60 90,55 135,57 180,50 220,46" fill="none" stroke="#f59e0b" stroke-width="3"/></svg></div><p>Peer disagreement makes sensor credibility part of the diagnosis.</p><span class="case-arrow">Open story →</span></a>
-</div>
-<div class="article-note"><strong>Public-safe:</strong> generalized learning cases with no customer, site, vendor or proprietary identifiers.</div>
+<section class="article-hero">
+  <div class="container case-hero-grid">
+    <div class="article-hero-inner">
+      <p class="eyebrow">Engineering Case Studies</p>
+      <h1>Read the machine, not just the alarm.</h1>
+      <p class="article-deck">Each case starts from an asset schematic, then connects the important signals to a physical hypothesis and a verification path.</p>
+      <div class="case-kicker"><span>Asset schematic</span><span>Signal evidence</span><span>Physics</span><span>Verification</span></div>
+    </div>
+    <div class="case-hero-visual" aria-label="Engineering diagnostic workflow">
+      <svg viewBox="0 0 520 330" role="img" aria-label="Asset to signals to physics to action diagram">
+        <defs><marker id="heroArr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#f3b46a"/></marker></defs>
+        <rect x="30" y="110" width="120" height="110" rx="20" fill="#152a33" stroke="#7e929a"/>
+        <circle cx="90" cy="165" r="34" fill="#0d1e26" stroke="#d8e2e5" stroke-width="5"/><circle cx="90" cy="165" r="8" fill="#f3b46a"/>
+        <text x="90" y="244" text-anchor="middle" fill="#d7e3e7" font-size="13">ASSET</text>
+        <path d="M160 165 L215 165" stroke="#f3b46a" stroke-width="3" marker-end="url(#heroArr)"/>
+        <rect x="225" y="58" width="95" height="54" rx="14" fill="#1a313a" stroke="#6f8790"/><text x="272" y="90" text-anchor="middle" fill="#fff" font-size="12">SIGNAL A</text>
+        <rect x="225" y="138" width="95" height="54" rx="14" fill="#1a313a" stroke="#6f8790"/><text x="272" y="170" text-anchor="middle" fill="#fff" font-size="12">SIGNAL B</text>
+        <rect x="225" y="218" width="95" height="54" rx="14" fill="#1a313a" stroke="#6f8790"/><text x="272" y="250" text-anchor="middle" fill="#fff" font-size="12">CONTEXT</text>
+        <path d="M330 165 L370 165" stroke="#f3b46a" stroke-width="3" marker-end="url(#heroArr)"/>
+        <polygon points="405,96 475,135 475,205 405,244 335,205 335,135" fill="#3d2720" stroke="#f3b46a" stroke-width="2"/>
+        <text x="405" y="157" text-anchor="middle" fill="#fff" font-size="13">PHYSICS</text><text x="405" y="177" text-anchor="middle" fill="#f5c58d" font-size="11">hypothesis</text>
+        <text x="405" y="294" text-anchor="middle" fill="#d7e3e7" font-size="13">VERIFY BEFORE ACTION</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="article-main case-main"><div class="container case-shell">
+  <div class="case-summary-grid">
+    <div class="case-summary-card"><small>1 · Observe</small><strong>What changed?</strong><span>Trend, operating regime, relationship.</span></div>
+    <div class="case-summary-card"><small>2 · Compare</small><strong>What stayed normal?</strong><span>Contradicting or stabilizing evidence.</span></div>
+    <div class="case-summary-card alert"><small>3 · Reason</small><strong>What physics fits?</strong><span>Mechanism before diagnosis label.</span></div>
+    <div class="case-summary-card alert"><small>4 · Verify</small><strong>What should be checked?</strong><span>Inspection, test or independent measurement.</span></div>
+  </div>
+
+  <div class="case-index-grid">
+    <a class="case-index-card featured" href="turbine-vibration-load-correlation.html">
+      <div class="thumb">
+        <svg viewBox="0 0 560 300" role="img" aria-label="Steam turbine rotor schematic with vibration response">
+          <defs><linearGradient id="turbFill" x1="0" x2="1"><stop offset="0" stop-color="#eef4f5"/><stop offset="1" stop-color="#d2e0e3"/></linearGradient><marker id="vibArr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#c73b32"/></marker></defs>
+          <rect x="62" y="120" width="370" height="22" rx="11" fill="url(#turbFill)" stroke="#79929a"/>
+          <circle cx="135" cy="131" r="46" fill="#fff" stroke="#7f969d" stroke-width="6"/><circle cx="135" cy="131" r="9" fill="#657e86"/>
+          <circle cx="350" cy="131" r="39" fill="#fff" stroke="#7f969d" stroke-width="6"/><circle cx="350" cy="131" r="9" fill="#657e86"/>
+          <rect x="88" y="183" width="94" height="18" rx="5" fill="#9aacb1"/><rect x="307" y="183" width="88" height="18" rx="5" fill="#9aacb1"/>
+          <path d="M176 76 C222 41 291 43 327 78" fill="none" stroke="#f59e0b" stroke-width="4"/>
+          <path d="M338 80 C365 62 390 54 418 58" fill="none" stroke="#c73b32" stroke-width="5" marker-end="url(#vibArr)"/>
+          <text x="252" y="45" text-anchor="middle" fill="#8e5d27" font-size="14">load / thermal disturbance</text>
+          <text x="421" y="48" fill="#9f3029" font-size="13">response grows</text>
+          <polyline points="70,246 120,244 165,230 210,238 255,215 305,222 350,196 405,202 470,174" fill="none" stroke="#c73b32" stroke-width="4"/>
+          <line x1="70" y1="260" x2="490" y2="260" stroke="#d5c8bd"/><text x="70" y="282" fill="#8b776d" font-size="12">same operating changes → larger vibration response</text>
+        </svg>
+      </div>
+      <div class="case-index-copy"><span class="project-label">Rotor Dynamics</span><h3>The turbine vibration that followed load</h3><p>The absolute value is still acceptable. The changing sensitivity is not.</p><span class="case-arrow">Open case →</span></div>
+    </a>
+
+    <a class="case-index-card" href="air-preheater-air-ingress.html">
+      <div class="thumb">
+        <svg viewBox="0 0 520 240" role="img" aria-label="Air preheater with air leakage path">
+          <defs><marker id="aphA" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#c73b32"/></marker></defs>
+          <circle cx="255" cy="118" r="66" fill="#f7f2ec" stroke="#776e67" stroke-width="5"/><circle cx="255" cy="118" r="11" fill="#776e67"/>
+          <path d="M68 75 H182" stroke="#d05b39" stroke-width="12"/><path d="M330 75 H455" stroke="#d05b39" stroke-width="12"/>
+          <path d="M68 165 H182" stroke="#4d8aa0" stroke-width="12"/><path d="M330 165 H455" stroke="#4d8aa0" stroke-width="12"/>
+          <text x="70" y="57" fill="#a7422b" font-size="12">hot flue gas</text><text x="70" y="190" fill="#3e7589" font-size="12">combustion air</text>
+          <path d="M210 144 C242 175 292 177 326 147" fill="none" stroke="#c73b32" stroke-width="4" stroke-dasharray="8 6" marker-end="url(#aphA)"/>
+          <text x="258" y="211" text-anchor="middle" fill="#9b352c" font-size="12">leakage path grows</text>
+          <circle cx="420" cy="35" r="6" fill="#f59e0b"/><text x="435" y="39" fill="#8d6b55" font-size="11">O₂ ↑</text>
+        </svg>
+      </div>
+      <div class="case-index-copy"><span class="project-label">Thermodynamics</span><h3>The air preheater that quietly changed the boiler</h3><p>Temperature ↓, oxygen ↑, draft demand ↑ — one connected mechanism.</p><span class="case-arrow">Open case →</span></div>
+    </a>
+
+    <a class="case-index-card" href="cooling-loop-valve-drift.html">
+      <div class="thumb">
+        <svg viewBox="0 0 520 240" role="img" aria-label="Cooling loop piping with drifting valve">
+          <defs><marker id="flowA" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#4e7b86"/></marker></defs>
+          <path d="M70 75 H215 V165 H450" fill="none" stroke="#708c96" stroke-width="12" stroke-linecap="round"/>
+          <path d="M215 75 H450" fill="none" stroke="#b4c3c8" stroke-width="8" stroke-dasharray="10 8"/>
+          <polygon points="274,61 291,75 274,89 257,75" fill="#f59e0b" stroke="#a25b24" stroke-width="2"/>
+          <path d="M105 75 H180" stroke="#4e7b86" stroke-width="4" marker-end="url(#flowA)"/><path d="M325 165 H415" stroke="#4e7b86" stroke-width="4" marker-end="url(#flowA)"/>
+          <circle cx="365" cy="165" r="11" fill="#fff" stroke="#c73b32" stroke-width="4"/><text x="365" y="205" text-anchor="middle" fill="#9d3b32" font-size="11">P ↓</text>
+          <circle cx="430" cy="165" r="11" fill="#fff" stroke="#f59e0b" stroke-width="4"/><text x="430" y="205" text-anchor="middle" fill="#9a641f" font-size="11">T ↓</text>
+          <text x="273" y="40" text-anchor="middle" fill="#8e622f" font-size="12">valve / bypass path</text>
+        </svg>
+      </div>
+      <div class="case-index-copy"><span class="project-label">Cooling Hydraulics</span><h3>When pressure and temperature fall together</h3><p>Two ordinary changes become one flow-path clue.</p><span class="case-arrow">Open case →</span></div>
+    </a>
+
+    <a class="case-index-card" href="feedwater-pump-suction-restriction.html">
+      <div class="thumb">
+        <svg viewBox="0 0 520 240" role="img" aria-label="Pump suction line with strainer restriction">
+          <defs><marker id="pumpA" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#4e7b86"/></marker></defs>
+          <rect x="45" y="55" width="85" height="125" rx="12" fill="#e7f1f3" stroke="#6f8992"/><path d="M45 92 H130" stroke="#4e7b86" stroke-width="3"/>
+          <path d="M130 135 H245" stroke="#708c96" stroke-width="12"/><polygon points="190,116 210,135 190,154 170,135" fill="#fff0ed" stroke="#c73b32" stroke-width="3"/>
+          <circle cx="325" cy="135" r="45" fill="#fff" stroke="#627e87" stroke-width="6"/><path d="M297 135 C312 108 343 108 354 135 C343 161 312 161 297 135 Z" fill="#d9e6e9"/>
+          <rect x="383" y="102" width="78" height="66" rx="12" fill="#f4f5f5" stroke="#7d8f95"/><text x="422" y="140" text-anchor="middle" fill="#50636a" font-size="13">MOTOR</text>
+          <path d="M138 135 H165" stroke="#4e7b86" stroke-width="4" marker-end="url(#pumpA)"/><path d="M218 135 H270" stroke="#4e7b86" stroke-width="4" marker-end="url(#pumpA)"/>
+          <text x="189" y="101" text-anchor="middle" fill="#9d342d" font-size="11">restriction</text><text x="195" y="190" text-anchor="middle" fill="#9d342d" font-size="11">ΔP ↑</text><text x="325" y="203" text-anchor="middle" fill="#8c6d59" font-size="11">flow ↓ / suction worsens</text>
+        </svg>
+      </div>
+      <div class="case-index-copy"><span class="project-label">Pump Hydraulics</span><h3>The feedwater pump and a changing suction path</h3><p>Follow the hydraulic evidence upstream before blaming the motor.</p><span class="case-arrow">Open case →</span></div>
+    </a>
+
+    <a class="case-index-card" href="generator-temperature-sensor-anomaly.html">
+      <div class="thumb">
+        <svg viewBox="0 0 520 240" role="img" aria-label="Generator winding sensors with one anomalous sensor">
+          <rect x="76" y="45" width="365" height="135" rx="26" fill="#eef3f4" stroke="#72878f" stroke-width="5"/>
+          <circle cx="258" cy="112" r="48" fill="#fff" stroke="#8fa0a6" stroke-width="5"/>
+          <g fill="#4e7b86"><circle cx="130" cy="80" r="10"/><circle cx="185" cy="80" r="10"/><circle cx="330" cy="80" r="10"/><circle cx="385" cy="80" r="10"/><circle cx="130" cy="145" r="10"/><circle cx="385" cy="145" r="10"/></g>
+          <circle cx="330" cy="145" r="13" fill="#fff0ed" stroke="#c73b32" stroke-width="5"/>
+          <path d="M330 145 L330 55" stroke="#c73b32" stroke-width="4"/><path d="M120 200 H405" stroke="#d6c9bd"/>
+          <polyline points="130,190 180,188 230,187 280,189 330,95 380,188" fill="none" stroke="#c73b32" stroke-width="4"/>
+          <text x="330" y="36" text-anchor="middle" fill="#9e342c" font-size="12">one sensor disagrees</text>
+        </svg>
+      </div>
+      <div class="case-index-copy"><span class="project-label">Instrumentation</span><h3>The temperature that looked dangerous — but was alone</h3><p>Peer signals stay stable while one measurement departs.</p><span class="case-arrow">Open case →</span></div>
+    </a>
+  </div>
+
+  <div class="article-note"><strong>Scope:</strong> These are generalized engineering learning cases. The diagrams are conceptual and intentionally exclude customer, site, vendor and proprietary information.</div>
 </div></section>
-</main><footer class="site-footer"><div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div></footer>
-</body></html>
+</main>
+<footer class="site-footer"><div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div></footer>
+</body>
+</html>
