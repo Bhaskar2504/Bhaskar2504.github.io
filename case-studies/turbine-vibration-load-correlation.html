@@ -1,30 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Turbine Vibration That Followed Load | Bhaskar Anand</title>
-  <meta name="description" content="An anonymized engineering story about rotor vibration, load correlation and early rotor-dynamic diagnosis." />
-  <link rel="stylesheet" href="../styles-v4.css?v=20260825g" />
-  <link rel="stylesheet" href="../visual-refresh.css?v=20260829c" />
-</head>
-<body class="page-case-study">
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav"><a href="index.html">Case Studies</a><a href="../index.html#insights">Insights</a><a href="../index.html#contact">Contact</a></nav></div></header>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>The Turbine Vibration That Followed Load | Bhaskar Anand</title>
+<meta name="description" content="Engineering case study on turbine vibration sensitivity, load correlation and rotor-dynamic verification."/>
+<link rel="stylesheet" href="../styles-v4.css?v=20260825g"/><link rel="stylesheet" href="../visual-refresh.css?v=20260829d"/><link rel="stylesheet" href="case-visuals.css?v=20260829a"/>
+</head><body class="page-case-study">
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav" aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../expertise.html">Expertise</a><a href="../experience.html">Experience</a><a href="../projects.html" aria-current="page">Projects</a><a href="../insights/index.html">Insights</a><a href="../resources.html">Resources</a><a href="../research.html">Research</a><a href="../contact.html">Contact</a></nav></div></header>
 <main>
-<section class="article-hero"><div class="container"><div class="article-hero-inner"><p class="eyebrow">Rotor Dynamics · Steam Turbine</p><h1>The Turbine Vibration That Followed Load</h1><p class="article-deck">The vibration was still inside the alarm limit. The more important change was how the rotor had begun responding to the plant around it.</p></div></div></section>
-<section class="article-main"><div class="container article-layout"><article class="article-content">
-<p>A steam turbine can run for months with a familiar vibration signature. Load rises, steam conditions shift, temperatures settle, and the rotor responds in a repeatable way. Engineers may see small movements, but the relationship itself remains stable.</p>
-<h2>What began to change</h2>
-<p>Now imagine that the absolute vibration still looks acceptable, yet every meaningful load or steam-pressure change produces a stronger vibration response than it used to. At steady load the machine may still appear calm. During transitions, however, the rotor becomes increasingly sensitive.</p>
-<div class="threshold-visual"><span class="threshold-text upper">Load / steam disturbance</span><span class="threshold-text lower">Rotor response</span><svg class="threshold-svg" viewBox="0 0 900 170" preserveAspectRatio="none"><polyline points="0,55 110,55 170,35 270,35 340,70 440,70 510,42 610,42 690,64 790,64 900,34" fill="none" stroke="#8093a0" stroke-width="4"/><polyline points="0,112 110,110 170,101 270,99 340,118 440,114 510,89 610,83 690,109 790,100 900,66" fill="none" stroke="#0f6d78" stroke-width="5"/></svg><span class="threshold-note">The response changes before the limit is crossed</span></div>
-<h2>Why the relationship matters</h2>
-<p>The question is no longer simply, “Is vibration high?” It becomes, “Why has the rotor become more responsive to mechanical and thermal disturbances?” That difference matters because rotor-dynamic problems often reveal themselves through changing sensitivity before they reveal themselves through a trip-level value.</p>
-<h2>What the physics may suggest</h2>
-<p>A developing mechanical unbalance is one credible explanation. A small unbalance can become more visible when shaft alignment, thermal state, steam forces or load change. Other mechanical causes would still need to be ruled out, but the multi-signal pattern gives engineers a focused hypothesis rather than a generic vibration alarm.</p>
-<div class="case-grid"><div class="case-box"><span class="project-label">If it progresses</span><h4>Dynamic loading can build</h4><p>Higher rotor excitation can increase bearing loading, accelerate bearing-surface damage and increase the chance of a forced operating response.</p></div><div class="case-box"><span class="project-label">What early detection buys</span><h4>Time to validate</h4><p>Engineers can compare load, steam conditions and vibration together, inspect the mechanical hypothesis and plan balancing or inspection during an available maintenance window.</p></div></div>
-<div class="article-quote">The useful signal was not simply higher vibration. It was a changing relationship between the rotor and the operating condition.</div>
-<div class="article-note"><strong>Scope:</strong> An anonymized engineering learning scenario. No customer, site, vendor, application or monetary information is represented.</div>
-<div class="article-footer-cta"><h3>Explore another diagnostic story</h3><p>See how a thermal problem can reveal itself through oxygen, temperature and draft loading.</p><a href="air-preheater-air-ingress.html">Read the air preheater story →</a></div>
-</article><aside class="article-toc"><strong>In this story</strong><a href="#">Opening</a><a href="index.html">All case studies</a></aside></div></section>
+<section class="article-hero">
+<div class="container case-hero-grid">
+<div class="article-hero-inner"><p class="eyebrow">Rotor Dynamics · Steam Turbine</p><h1>The vibration that followed load.</h1><p class="article-deck">The alarm value still looked acceptable. The machine’s sensitivity to operating changes did not.</p><div class="case-kicker"><span>Load correlation</span><span>Rotor response</span><span>Mechanical verification</span></div></div>
+<div class="case-hero-visual">
+<svg viewBox="0 0 560 330" role="img" aria-label="Steam turbine rotor and growing vibration response">
+<defs><marker id="ta" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#c73b32"/></marker></defs>
+<rect x="52" y="145" width="382" height="22" rx="11" fill="#d9e4e7" stroke="#91a3aa"/>
+<circle cx="132" cy="156" r="50" fill="#10242d" stroke="#d5e0e3" stroke-width="6"/><circle cx="132" cy="156" r="9" fill="#f5b262"/>
+<circle cx="350" cy="156" r="43" fill="#10242d" stroke="#d5e0e3" stroke-width="6"/><circle cx="350" cy="156" r="9" fill="#f5b262"/>
+<rect x="80" y="221" width="105" height="18" rx="5" fill="#667d86"/><rect x="306" y="221" width="94" height="18" rx="5" fill="#667d86"/>
+<path d="M180 84 C230 50 300 48 336 84" fill="none" stroke="#f59e0b" stroke-width="4"/>
+<text x="258" y="55" text-anchor="middle" fill="#f5c188" font-size="13">load / thermal change</text>
+<path d="M364 98 C400 74 440 70 482 80" fill="none" stroke="#c73b32" stroke-width="5" marker-end="url(#ta)"/>
+<path d="M364 118 C408 99 450 101 498 118" fill="none" stroke="#f59e0b" stroke-width="3"/>
+<text x="440" y="54" text-anchor="middle" fill="#ffb0a7" font-size="12">response amplitude grows</text>
+<line x1="65" y1="285" x2="500" y2="285" stroke="#6f848c"/><polyline points="65,274 115,272 170,261 220,267 275,247 325,252 380,226 435,232 500,202" fill="none" stroke="#c73b32" stroke-width="4"/>
+</svg></div>
+</div></section>
+
+<section class="article-main case-main"><div class="container case-content">
+<div class="case-summary-grid">
+<div class="case-summary-card"><small>Observed</small><strong>Vibration remains below the absolute alarm</strong><span>No simple threshold breach.</span></div>
+<div class="case-summary-card alert"><small>Changed</small><strong>Response to load / steam changes grows</strong><span>Sensitivity is no longer stable.</span></div>
+<div class="case-summary-card"><small>Question</small><strong>Why is the rotor more excitable?</strong><span>Look beyond the absolute number.</span></div>
+<div class="case-summary-card alert"><small>Action</small><strong>Verify the mechanical hypothesis</strong><span>Trend, phase, spectrum, alignment, thermal state.</span></div>
+</div>
+
+<section class="case-visual-block">
+<div class="case-visual-head"><div><small>Signal relationship</small><h2>Same operating disturbance. Larger vibration response.</h2><p>The useful pattern is the changing gain between operating condition and rotor response.</p></div></div>
+<div class="case-diagram">
+<svg viewBox="0 0 900 370" role="img" aria-label="Load steps and increasing vibration response over time">
+<rect width="900" height="370" fill="#fff"/>
+<g stroke="#eee4db" stroke-width="1"><line x1="75" y1="70" x2="850" y2="70"/><line x1="75" y1="140" x2="850" y2="140"/><line x1="75" y1="230" x2="850" y2="230"/><line x1="75" y1="300" x2="850" y2="300"/></g>
+<text x="22" y="104" fill="#725e55" font-size="12">LOAD</text><text x="12" y="270" fill="#725e55" font-size="12">VIBRATION</text>
+<polyline points="75,125 170,125 170,88 285,88 285,126 390,126 390,87 510,87 510,126 620,126 620,88 750,88 750,126 850,126" fill="none" stroke="#4e7b86" stroke-width="4"/>
+<polyline points="75,274 170,274 192,260 220,278 246,262 285,274 390,274 412,248 442,286 470,250 510,274 620,274 642,228 672,298 704,232 750,274 850,274" fill="none" stroke="#c73b32" stroke-width="4"/>
+<path d="M205 185 V220" stroke="#f59e0b" stroke-width="3"/><path d="M445 175 V220" stroke="#f59e0b" stroke-width="3"/><path d="M680 158 V220" stroke="#f59e0b" stroke-width="3"/>
+<text x="205" y="174" text-anchor="middle" fill="#9a641f" font-size="11">small response</text><text x="445" y="164" text-anchor="middle" fill="#9a641f" font-size="11">larger</text><text x="680" y="147" text-anchor="middle" fill="#9a641f" font-size="11">largest</text>
+<line x1="75" y1="330" x2="850" y2="330" stroke="#d9cdc3"/><text x="75" y="351" fill="#8a776d" font-size="11">time →</text>
+</svg></div>
+<div class="case-legend"><span><i class="normal"></i>Operating condition</span><span><i class="risk"></i>Rotor response</span><span><i class="change"></i>Increasing sensitivity</span></div>
+</section>
+
+<div class="evidence-board">
+<div class="evidence-panel"><h3>Evidence board</h3><div class="evidence-rows">
+<div class="evidence-row"><strong>Load / steam</strong><span>Repeatable operating transitions</span><span class="trend-badge trend-context">Context</span></div>
+<div class="evidence-row"><strong>Vibration</strong><span>Stronger response during transitions</span><span class="trend-badge trend-up">Sensitivity ↑</span></div>
+<div class="evidence-row"><strong>Steady state</strong><span>May still look acceptable</span><span class="trend-badge trend-flat">Normal-ish</span></div>
+<div class="evidence-row"><strong>Alarm status</strong><span>No trip-level value required for concern</span><span class="trend-badge trend-flat">Below limit</span></div>
+</div></div>
+<div class="hypothesis-panel"><small>Credible hypothesis</small><h3>Developing rotor-dynamic issue</h3><p>Mechanical unbalance is one plausible explanation, but the pattern is not uniquely diagnostic.</p><div class="verify-list"><div class="verify-item"><b>1</b><span>Compare amplitude + phase, not amplitude alone.</span></div><div class="verify-item"><b>2</b><span>Review spectrum / harmonic content.</span></div><div class="verify-item"><b>3</b><span>Check alignment and thermal-state dependence.</span></div><div class="verify-item"><b>4</b><span>Inspect bearing / rotor condition before concluding.</span></div></div></div>
+</div>
+
+<div class="causal-chain">
+<div class="causal-step"><small>01</small><strong>Operating change</strong><span>Load or steam condition shifts.</span></div>
+<div class="causal-step"><small>02</small><strong>Rotor forces change</strong><span>Thermal / mechanical state moves.</span></div>
+<div class="causal-step"><small>03</small><strong>Response grows</strong><span>Vibration sensitivity increases.</span></div>
+<div class="causal-step"><small>04</small><strong>Investigation narrows</strong><span>Mechanical hypothesis becomes worth testing.</span></div>
+</div>
+
+<div class="case-takeaway"><div class="take-icon">Δ</div><div><strong>Key idea</strong><span>The useful signal is not only vibration level. It is the changing relationship between vibration and operating condition.</span></div></div>
+<div class="article-note"><strong>Scope:</strong> Conceptual, anonymized engineering learning case. It does not represent a confirmed failure diagnosis for any specific machine.</div>
+<div class="article-footer-cta"><h3>Next case: air preheater</h3><p>Three different subsystems begin pointing to the same thermal problem.</p><a href="air-preheater-air-ingress.html">Open next case →</a></div>
+</div></section>
 </main><footer class="site-footer"><div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div></footer>
 </body></html>
