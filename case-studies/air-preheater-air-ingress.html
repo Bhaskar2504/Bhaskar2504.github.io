@@ -1,23 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>The Air Preheater That Quietly Changed the Boiler | Bhaskar Anand</title><meta name="description" content="An anonymized engineering story about air-preheater heat transfer, air ingress, oxygen and draft loading."/><link rel="stylesheet" href="../styles-v4.css?v=20260825g"/></head>
-<body class="page-case-study">
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav"><a href="index.html">Case Studies</a><a href="../index.html#insights">Insights</a><a href="../index.html#contact">Contact</a></nav></div></header>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>The Air Preheater That Quietly Changed the Boiler | Bhaskar Anand</title>
+<meta name="description" content="Engineering case study on air-preheater leakage, heat recovery, oxygen and induced-draft demand."/>
+<link rel="stylesheet" href="../styles-v4.css?v=20260825g"/><link rel="stylesheet" href="../visual-refresh.css?v=20260829d"/><link rel="stylesheet" href="case-visuals.css?v=20260829a"/>
+</head><body class="page-case-study">
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav" aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../expertise.html">Expertise</a><a href="../experience.html">Experience</a><a href="../projects.html" aria-current="page">Projects</a><a href="../insights/index.html">Insights</a><a href="../resources.html">Resources</a><a href="../research.html">Research</a><a href="../contact.html">Contact</a></nav></div></header>
 <main>
-<section class="article-hero"><div class="container"><div class="article-hero-inner"><p class="eyebrow">Thermodynamics · Boiler Auxiliaries</p><h1>The Air Preheater That Quietly Changed the Boiler</h1><p class="article-deck">No single parameter looked dramatic. The story emerged only when temperature, oxygen and draft demand were read together.</p></div></div></section>
-<section class="article-main"><div class="container article-layout"><article class="article-content">
-<p>An air preheater sits at an important thermal boundary. It recovers heat from flue gas and transfers it to the combustion-air side. When that exchange works well, the downstream temperatures, oxygen behavior and fan loading tend to follow familiar patterns.</p>
-<h2>The first clues</h2>
-<p>Imagine primary or secondary air outlet temperature beginning to fall for a similar operating condition. At the same time, flue-gas oxygen trends upward and the induced-draft system starts working harder than expected.</p>
-<div class="concept-grid"><div class="concept-box"><h4>Temperature</h4><p>Useful heat recovery is weakening.</p></div><div class="concept-box"><h4>Oxygen</h4><p>Additional air may be entering the gas path.</p></div><div class="concept-box"><h4>Draft demand</h4><p>The fan may be handling more gas volume than before.</p></div></div>
-<h2>Why the three signals belong together</h2>
-<p>A lower air outlet temperature alone could be blamed on load, ambient condition or heat-transfer variation. Higher oxygen alone could be blamed on combustion control. Higher fan loading alone could look like a fan issue. When all three move consistently, a common physical mechanism becomes more credible.</p>
-<h2>What the thermodynamics may suggest</h2>
-<p>Seal deterioration or air ingress across the preheater is one plausible explanation. Air entering the flue-gas path changes gas mass flow, alters oxygen concentration and weakens effective heat recovery. The fan then has to move the additional gas volume through the downstream path.</p>
-<div class="case-grid"><div class="case-box"><span class="project-label">If it progresses</span><h4>The boiler pays twice</h4><p>Heat recovery can deteriorate while draft power rises, creating both a thermal-efficiency penalty and additional auxiliary loading.</p></div><div class="case-box"><span class="project-label">What early detection buys</span><h4>A planned repair opportunity</h4><p>Engineers can inspect seals, leakage indicators and heat-transfer performance before the condition becomes a larger operating constraint.</p></div></div>
-<div class="article-quote">Thermal degradation often appears first as a disagreement between heat transfer, gas chemistry and fan demand.</div>
-<div class="article-note"><strong>Scope:</strong> An anonymized engineering learning scenario. No customer, site, vendor, application or monetary information is represented.</div>
-<div class="article-footer-cta"><h3>Explore another diagnostic story</h3><p>See how two ordinary cooling-loop signals can become meaningful when they move together.</p><a href="cooling-loop-valve-drift.html">Read the cooling-loop story →</a></div>
-</article><aside class="article-toc"><strong>Case study</strong><a href="index.html">All case studies</a></aside></div></section>
+<section class="article-hero"><div class="container case-hero-grid">
+<div class="article-hero-inner"><p class="eyebrow">Thermodynamics · Boiler Auxiliaries</p><h1>The air preheater that quietly changed the boiler.</h1><p class="article-deck">No single signal looked dramatic. Temperature, oxygen and draft demand together created the story.</p><div class="case-kicker"><span>Heat recovery</span><span>Gas chemistry</span><span>Draft loading</span></div></div>
+<div class="case-hero-visual">
+<svg viewBox="0 0 560 330" role="img" aria-label="Air preheater schematic with leakage path">
+<defs><marker id="aa" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#c73b32"/></marker></defs>
+<circle cx="282" cy="166" r="82" fill="#152b34" stroke="#d9e2e5" stroke-width="6"/><circle cx="282" cy="166" r="15" fill="#f5b262"/>
+<path d="M55 100 H198" stroke="#d95c3c" stroke-width="16"/><path d="M366 100 H510" stroke="#d95c3c" stroke-width="16"/>
+<path d="M55 232 H198" stroke="#4c89a0" stroke-width="16"/><path d="M366 232 H510" stroke="#4c89a0" stroke-width="16"/>
+<text x="56" y="75" fill="#f1aa8e" font-size="13">hot flue gas</text><text x="56" y="262" fill="#9fd4e7" font-size="13">combustion air</text>
+<path d="M220 210 C258 246 315 246 354 206" fill="none" stroke="#c73b32" stroke-width="5" stroke-dasharray="10 7" marker-end="url(#aa)"/>
+<text x="285" y="291" text-anchor="middle" fill="#ffb0a6" font-size="12">air leakage / seal path</text>
+<circle cx="462" cy="50" r="7" fill="#f59e0b"/><text x="480" y="55" fill="#f5c58d" font-size="12">O₂ ↑</text>
+</svg></div>
+</div></section>
+
+<section class="article-main case-main"><div class="container case-content">
+<div class="case-summary-grid">
+<div class="case-summary-card alert"><small>Air side</small><strong>Outlet temperature trends lower</strong><span>Useful heat recovery weakens.</span></div>
+<div class="case-summary-card alert"><small>Gas side</small><strong>Flue-gas O₂ trends higher</strong><span>Additional air may be entering.</span></div>
+<div class="case-summary-card"><small>Draft system</small><strong>ID demand trends higher</strong><span>More gas volume may be moved.</span></div>
+<div class="case-summary-card"><small>Question</small><strong>One mechanism or three faults?</strong><span>Look for a common physical cause.</span></div>
+</div>
+
+<section class="case-visual-block">
+<div class="case-visual-head"><div><small>Cross-system relationship</small><h2>Three signals, one thermal mechanism.</h2><p>Read the heat-transfer, chemistry and draft systems together rather than as isolated alarms.</p></div></div>
+<div class="case-diagram">
+<svg viewBox="0 0 900 380" role="img" aria-label="Air preheater process flow and related signal changes">
+<defs><marker id="ap" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6e858c"/></marker></defs>
+<rect x="335" y="75" width="230" height="210" rx="34" fill="#faf7f3" stroke="#81766f" stroke-width="5"/>
+<circle cx="450" cy="180" r="72" fill="#fff" stroke="#8d8179" stroke-width="4"/><circle cx="450" cy="180" r="13" fill="#8d8179"/>
+<path d="M85 125 H325" stroke="#cf5e3f" stroke-width="18" marker-end="url(#ap)"/><path d="M575 125 H810" stroke="#cf5e3f" stroke-width="18" marker-end="url(#ap)"/>
+<path d="M85 245 H325" stroke="#4f879a" stroke-width="18" marker-end="url(#ap)"/><path d="M575 245 H810" stroke="#4f879a" stroke-width="18" marker-end="url(#ap)"/>
+<path d="M390 225 C420 267 500 268 530 222" fill="none" stroke="#c73b32" stroke-width="6" stroke-dasharray="11 8"/>
+<text x="450" y="325" text-anchor="middle" fill="#9c3a31" font-size="13">seal leakage path</text>
+<g font-size="12"><text x="108" y="95" fill="#a7442d">flue gas</text><text x="108" y="278" fill="#41778a">air</text></g>
+<g><rect x="665" y="42" width="125" height="46" rx="12" fill="#fff0ed" stroke="#c73b32"/><text x="727" y="70" text-anchor="middle" fill="#8e2f29" font-size="13">O₂ ↑</text>
+<rect x="650" y="295" width="150" height="46" rx="12" fill="#fff2de" stroke="#f59e0b"/><text x="725" y="323" text-anchor="middle" fill="#8e5d1b" font-size="13">air outlet T ↓</text>
+<rect x="80" y="315" width="150" height="46" rx="12" fill="#fff2de" stroke="#f59e0b"/><text x="155" y="343" text-anchor="middle" fill="#8e5d1b" font-size="13">ID demand ↑</text></g>
+</svg></div>
+<div class="case-legend"><span><i class="normal"></i>Normal process path</span><span><i class="risk"></i>Leakage mechanism</span><span><i class="change"></i>Observed response</span></div>
+</section>
+
+<div class="evidence-board">
+<div class="evidence-panel"><h3>Evidence board</h3><div class="evidence-rows">
+<div class="evidence-row"><strong>Air outlet T</strong><span>Lower at comparable operation</span><span class="trend-badge trend-down">↓</span></div>
+<div class="evidence-row"><strong>Flue-gas O₂</strong><span>Higher than expected</span><span class="trend-badge trend-up">↑</span></div>
+<div class="evidence-row"><strong>ID demand</strong><span>Higher draft / gas-handling effort</span><span class="trend-badge trend-up">↑</span></div>
+<div class="evidence-row"><strong>Load context</strong><span>Compare only at similar operating state</span><span class="trend-badge trend-context">Normalize</span></div>
+</div></div>
+<div class="hypothesis-panel"><small>Credible hypothesis</small><h3>Air ingress / seal deterioration</h3><p>Leakage across the preheater can alter O₂, gas mass flow and effective heat recovery at the same time.</p><div class="verify-list"><div class="verify-item"><b>1</b><span>Compare O₂ upstream and downstream of the preheater.</span></div><div class="verify-item"><b>2</b><span>Check leakage / seal condition indicators.</span></div><div class="verify-item"><b>3</b><span>Correct temperature comparison for load and inlet conditions.</span></div><div class="verify-item"><b>4</b><span>Check draft pressure and fan demand together.</span></div></div></div>
+</div>
+
+<div class="causal-chain"><div class="causal-step"><small>01</small><strong>Seal path degrades</strong><span>Additional air crosses to gas side.</span></div><div class="causal-step"><small>02</small><strong>Gas composition changes</strong><span>O₂ rises and gas volume changes.</span></div><div class="causal-step"><small>03</small><strong>Heat recovery weakens</strong><span>Air outlet temperature deteriorates.</span></div><div class="causal-step"><small>04</small><strong>Draft work increases</strong><span>ID system handles the changed gas path.</span></div></div>
+<div class="case-takeaway"><div class="take-icon">Σ</div><div><strong>Key idea</strong><span>The diagnosis becomes credible because heat transfer, gas chemistry and draft demand agree with the same physical mechanism.</span></div></div>
+<div class="article-note"><strong>Scope:</strong> Conceptual learning case. Air ingress is a hypothesis to verify, not a conclusion from any one signal.</div>
+<div class="article-footer-cta"><h3>Next case: cooling loop</h3><p>Two signals move together and shift attention to the flow path.</p><a href="cooling-loop-valve-drift.html">Open next case →</a></div>
+</div></section>
 </main><footer class="site-footer"><div class="container">© 2026 Bhaskar Anand. Professional portfolio.</div></footer>
 </body></html>
