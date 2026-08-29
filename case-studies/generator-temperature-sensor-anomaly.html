@@ -22,11 +22,13 @@
 
 <section class="article-main case-main"><div class="container case-content">
 <div class="case-summary-grid">
-<div class="case-summary-card alert"><small>Primary signal</small><strong>One temperature steps upward</strong><span>Potential hotspot or measurement issue.</span></div>
-<div class="case-summary-card"><small>Peer sensors</small><strong>Nearby temperatures stay stable</strong><span>No matching thermal pattern.</span></div>
-<div class="case-summary-card"><small>Operating context</small><strong>Load and cooling remain steady</strong><span>No obvious process driver.</span></div>
-<div class="case-summary-card alert"><small>Question</small><strong>Equipment fault or sensor fault?</strong><span>Credibility must be tested before conclusion.</span></div>
+<div class="case-summary-card"><small>Problem</small><strong>One temperature channel steps upward</strong><span>Potential hotspot or measurement problem.</span></div>
+<div class="case-summary-card"><small>Data</small><strong>Peer temperatures stable · load stable · cooling stable</strong><span>The excursion is isolated from the expected thermal pattern.</span></div>
+<div class="case-summary-card alert"><small>Physics</small><strong>Measurement / instrumentation anomaly is plausible</strong><span>Isolation weakens the equipment-fault hypothesis but does not disprove it.</span></div>
+<div class="case-summary-card"><small>Verification</small><strong>Peer sensors · RTD circuit · transmitter path · independent check</strong><span>Confirm operating context before treating it as instrumentation.</span></div>
+<div class="case-summary-card"><small>Status</small><strong>Diagnostic hypothesis</strong><span>Sensor error is not confirmed until independent evidence supports it.</span></div>
 </div>
+<p class="case-method-note">Structure: symptom → available evidence → physical interpretation → verification → decision status.</p>
 
 <section class="case-visual-block">
 <div class="case-visual-head"><div><small>Peer-sensor comparison</small><h2>One line leaves the pack.</h2><p>A real thermal event usually creates supporting evidence somewhere else in the machine. An isolated signal deserves an instrumentation check.</p></div></div>
