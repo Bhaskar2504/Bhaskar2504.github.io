@@ -68,3 +68,5 @@
 .footer-links a:hover{color:#b9d7d7}
 @media(max-width:1000px){.signature-flow{grid-template-columns:1fr 26px 1fr 26px 1fr}.signature-flow .signature-node:nth-of-type(4),.signature-flow .signature-node:nth-of-type(5){margin-top:8px}.profile-summary{grid-template-columns:1fr}}
 @media(max-width:720px){.signature-flow{grid-template-columns:1fr}.signature-arrow{transform:rotate(90deg);min-height:18px}.signature-node{min-height:0}.footer-row{align-items:flex-start;flex-direction:column}}
+
+.credibility-line{margin-top:18px;color:#9fb3bb;font-size:.82rem;font-weight:600;letter-spacing:.01em}
