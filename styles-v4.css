@@ -57,3 +57,11 @@ section{position:relative;padding-block:clamp(72px,8vw,104px)}section:nth-of-typ
 .page-home .nav-more-menu a:hover{background:#14303b!important;color:#fff!important}
 .page-home .nav-cv{border-color:rgba(126,215,209,.35)!important;background:rgba(126,215,209,.1)!important;color:#8be1d8!important}
 @media(max-width:980px){.nav-more{width:auto}.nav-more-menu{left:0;right:auto}.nav-more summary{padding:7px 9px;font-size:.84rem}}
+
+.nav-more.is-current summary{background:var(--navy);color:#fff}
+.page-home .nav-more.is-current summary{background:#fff;color:#081827}
+.site-footer .footer-row{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.site-footer .footer-links{display:flex;flex-wrap:wrap;gap:14px}
+.site-footer .footer-links a{color:inherit;text-decoration:none}
+.site-footer .footer-links a:hover{color:var(--accent)}
+@media(max-width:720px){.site-footer .footer-row{align-items:flex-start;flex-direction:column}}
