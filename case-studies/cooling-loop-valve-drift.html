@@ -24,11 +24,13 @@
 
 <section class="article-main case-main"><div class="container case-content">
 <div class="case-summary-grid">
-<div class="case-summary-card alert"><small>Signal 1</small><strong>Outlet pressure moves lower</strong><span>Hydraulic behaviour changes.</span></div>
-<div class="case-summary-card alert"><small>Signal 2</small><strong>Temperature shifts at the same time</strong><span>Thermal response supports a real flow change.</span></div>
-<div class="case-summary-card"><small>Interpretation</small><strong>One flow-path event can explain both</strong><span>Valve, bypass or restriction deserves attention.</span></div>
-<div class="case-summary-card"><small>Verification</small><strong>Check command vs actual path</strong><span>Valve position, flow, ΔP and bypass behaviour.</span></div>
+<div class="case-summary-card"><small>Problem</small><strong>Pressure and temperature move together</strong><span>The loop behaviour changes as a connected system.</span></div>
+<div class="case-summary-card"><small>Data</small><strong>Outlet pressure ↓ + temperature shift at the same time</strong><span>Two independent measurements support a real flow-path change.</span></div>
+<div class="case-summary-card alert"><small>Physics</small><strong>Changing valve / bypass flow path</strong><span>Hydraulic resistance and heat removal can change together.</span></div>
+<div class="case-summary-card"><small>Verification</small><strong>Command vs feedback · flow · ΔP · bypass alignment</strong><span>Verify pressure and temperature sensors independently.</span></div>
+<div class="case-summary-card"><small>Status</small><strong>Diagnostic hypothesis</strong><span>Valve drift is plausible until the actual flow path is verified.</span></div>
 </div>
+<p class="case-method-note">Structure: symptom → available evidence → physical interpretation → verification → decision status.</p>
 
 <section class="case-visual-block">
 <div class="case-visual-head"><div><small>Synchronized evidence</small><h2>Two sensors react at the same moment.</h2><p>A shared timestamp and coherent direction make a real process change more plausible than two unrelated sensor issues.</p></div></div>
