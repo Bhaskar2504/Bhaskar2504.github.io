@@ -15,3 +15,12 @@
 .page-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:54px;padding-top:28px;border-top:1px solid var(--border)}
 @media(max-width:820px){.page-intro{grid-template-columns:1fr}.role-detail,.credential-row{grid-template-columns:1fr;gap:8px}.journey-band{grid-template-columns:repeat(6,190px)}.contact-route-grid{grid-template-columns:1fr}}
 @media(max-width:520px){.content-card,.role-detail,.case-link-card,.contact-purpose,.contact-route,.context-card{padding:21px}}
+
+.career-proof-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 28px}
+.career-proof-strip>div{padding:16px 17px;border:1px solid #d9e3e5;border-radius:16px;background:#fff;box-shadow:0 6px 18px rgba(8,24,39,.035)}
+.career-proof-strip strong{display:block;color:#102a3a;font-size:1.08rem}
+.career-proof-strip span{display:block;margin-top:4px;color:#73828a;font-size:.72rem;line-height:1.4}
+.role-impact{display:flex;flex-wrap:wrap;gap:7px;margin:11px 0 4px}
+.role-impact span{padding:6px 9px;border:1px solid #d6e5e6;border-radius:999px;background:#f1f8f7;color:#2c666b;font-size:.7rem;font-weight:600}
+@media(max-width:760px){.career-proof-strip{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.career-proof-strip{grid-template-columns:1fr}}
