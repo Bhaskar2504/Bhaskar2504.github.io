@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Why Maintenance Context Can Change an AI Diagnosis | Bhaskar Anand</title>
+<meta name="description" content="Public-safe reliability case showing how repair history and follow-up condition evidence can change an analytics interpretation."/><meta property="og:type" content="article"/><meta property="og:title" content="Why Maintenance Context Can Change an AI Diagnosis | Bhaskar Anand"/><meta property="og:description" content="Analytics can be directionally right and still tell the wrong maintenance story if repair context is missing."/><meta property="og:url" content="https://bhaskar2504.github.io/case-studies/maintenance-context-changes-diagnosis.html"/><meta property="og:image" content="https://github.com/Bhaskar2504.png?size=1200"/><meta name="twitter:card" content="summary_large_image"/><link rel="canonical" href="https://bhaskar2504.github.io/case-studies/maintenance-context-changes-diagnosis.html"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081721'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial' font-size='30' font-weight='700' fill='%237ed7d1'%3EBA%3C/text%3E%3C/svg%3E"/>
+<link rel="stylesheet" href="../styles-v4.css?v=20260825g"/><link rel="stylesheet" href="../visual-refresh.css?v=20260829d"/><link rel="stylesheet" href="case-visuals.css?v=20260829a"/><link rel="stylesheet" href="reliability-intelligence.css?v=20260927a"/>
+</head><body class="page-case-study">
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav" aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../experience.html">Experience</a><a href="../projects.html" aria-current="page">Projects</a><a href="../expertise.html">Expertise</a><details class="nav-more"><summary>More</summary><div class="nav-more-menu"><a href="../insights/index.html">Insights</a><a href="../resources.html">Resources</a><a href="../research.html">Research</a></div></details><a class="nav-cv" href="../Bhaskar_Anand_Public_CV.pdf" download>CV</a><a class="nav-cta" href="../index.html#contact">Let's Talk</a></nav></div></header>
+<main>
+<section class="article-hero"><div class="container case-hero-grid">
+<div class="article-hero-inner"><p class="eyebrow">Engineering Validation · Maintenance Context</p><h1>Why maintenance context can change an AI diagnosis.</h1><p class="article-deck">A condition alert can be technically plausible and still describe the wrong story if the later repair and post-repair evidence are missing.</p><div class="case-kicker"><span>Condition monitoring</span><span>Repair history</span><span>Vibration</span><span>Diagnostic revision</span></div><div class="ri-safety-note"><strong>Generalized public-safe case.</strong> Organization, asset identity, dates, transaction IDs, source-system details and monetary values are intentionally omitted.</div></div>
+<div class="case-hero-visual"><svg viewBox="0 0 560 330" role="img" aria-label="Analytics interpretation revised after maintenance context is added">
+<defs><marker id="mcArr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#f3b46a"/></marker></defs>
+<rect x="34" y="88" width="120" height="68" rx="15" fill="#17303a" stroke="#7e929a"/><text x="94" y="116" text-anchor="middle" fill="#fff" font-size="11">CONDITION</text><text x="94" y="136" text-anchor="middle" fill="#fff" font-size="11">ALERT / EVENT</text>
+<path d="M162 122 H224" stroke="#f3b46a" stroke-width="3" marker-end="url(#mcArr)"/>
+<rect x="236" y="72" width="124" height="98" rx="18" fill="#3d2720" stroke="#f3b46a"/><text x="298" y="105" text-anchor="middle" fill="#fff" font-size="11">INITIAL</text><text x="298" y="124" text-anchor="middle" fill="#fff" font-size="11">INTERPRETATION</text><text x="298" y="149" text-anchor="middle" fill="#f5c58d" font-size="10">“warning caught?”</text>
+<path d="M298 177 V224" stroke="#f3b46a" stroke-width="3" marker-end="url(#mcArr)"/>
+<rect x="210" y="235" width="176" height="58" rx="14" fill="#17303a" stroke="#7e929a"/><text x="298" y="258" text-anchor="middle" fill="#fff" font-size="11">REPAIR + FOLLOW-UP</text><text x="298" y="278" text-anchor="middle" fill="#9fc0c5" font-size="10">mechanical fault + recurrence</text>
+<path d="M394 264 H444" stroke="#f3b46a" stroke-width="3" marker-end="url(#mcArr)"/>
+<rect x="452" y="205" width="80" height="118" rx="15" fill="#10252e" stroke="#f3b46a"/><text x="492" y="244" text-anchor="middle" fill="#fff" font-size="11">REVISED</text><text x="492" y="263" text-anchor="middle" fill="#fff" font-size="11">DIAGNOSIS</text><text x="492" y="288" text-anchor="middle" fill="#f5c58d" font-size="10">real failure</text>
+</svg></div></div></section>
+
+<section class="article-main case-main"><div class="container case-content">
+<div class="case-summary-grid">
+<div class="case-summary-card"><small>Initial evidence</small><strong>A rotating asset trips with elevated vibration</strong><span>Without maintenance context, it could be framed as an alert that preceded intervention.</span></div>
+<div class="case-summary-card"><small>Repair evidence</small><strong>A mechanical flow-path fault is repaired soon afterward</strong><span>The event was not merely an avoided failure; a real hardware problem existed.</span></div>
+<div class="case-summary-card alert"><small>Follow-up</small><strong>Vibration returns later</strong><span>Post-repair evidence raises questions about residual damage or a second mechanism.</span></div>
+<div class="case-summary-card"><small>Revision</small><strong>The diagnosis changes from “near miss” to “actual failure + follow-up condition”</strong><span>Maintenance history changes the meaning of the analytics timeline.</span></div>
+<div class="case-summary-card"><small>Status</small><strong>Mechanism still requires engineering verification</strong><span>The revised narrative is stronger, but residual vibration is not automatically the same root cause.</span></div>
+</div>
+<p class="case-method-note">Case structure: analytics-only interpretation → maintenance evidence → revised chronology → post-repair condition → verification.</p>
+
+<section class="ri-section"><div class="ri-section-head"><small>01 · Two different stories</small><h2>The same alert can mean something different once repair history is visible.</h2><p>This is why condition-monitoring outputs should not be interpreted independently from maintenance execution.</p></div>
+<div class="ri-comparison">
+<div class="ri-compare bad"><small>Analytics-only view</small><h3>“The system raised a warning before a failure.”</h3><ul><li>Sees vibration and an adverse event</li><li>Assumes maintenance response prevented escalation</li><li>May label the case an early-warning success</li><li>Misses what was physically repaired</li></ul></div>
+<div class="ri-compare good"><small>Analytics + maintenance view</small><h3>“A real mechanical failure occurred and was repaired.”</h3><ul><li>Links the event to a confirmed hardware intervention</li><li>Reclassifies the case as an actual failure</li><li>Uses later vibration as post-repair evidence</li><li>Separates repair success from residual condition</li></ul></div>
+</div></section>
+
+<section class="ri-section"><div class="ri-section-head"><small>02 · Reconstructed chronology</small><h2>What changes when the maintenance record is joined to the signal history.</h2></div>
+<div class="ri-timeline">
+<div class="ri-event risk"><div class="ri-when">Event</div><div><strong>Rotating equipment reaches a vibration-related trip/protection event.</strong><p>The condition is operationally significant, but the root mechanism is not yet established.</p></div></div>
+<div class="ri-event context"><div class="ri-when">Repair</div><div><strong>A mechanical flow-path component is found defective and corrected.</strong><p>This confirms that a real equipment problem existed close to the event and changes the earlier “near miss” narrative.</p></div></div>
+<div class="ri-event warn"><div class="ri-when">Months later</div><div><strong>Vibration reappears at related measurement locations.</strong><p>The return of the symptom does not prove the same cause, but it means the post-repair state deserves review.</p></div></div>
+<div class="ri-event context"><div class="ri-when">Engineering review</div><div><strong>The case is split into failure confirmation and residual-condition verification.</strong><p>One question is what caused the original event. A second is whether the later vibration reflects residual damage, a new mechanism or measurement behaviour.</p></div></div>
+</div></section>
+
+<section class="case-visual-block"><div class="case-visual-head"><div><small>Evidence fusion</small><h2>Maintenance context changes the label—and the next action.</h2><p>Condition monitoring tells you something changed. Repair history helps tell you what actually happened.</p></div></div>
+<div class="case-diagram"><svg viewBox="0 0 900 360" role="img" aria-label="Condition signal, maintenance repair and follow-up evidence converging on revised diagnosis">
+<rect width="900" height="360" fill="#fff"/>
+<rect x="70" y="80" width="180" height="78" rx="16" fill="#edf4f4" stroke="#4e7b86"/><text x="160" y="111" text-anchor="middle" fill="#385f67" font-size="12">CONDITION EVIDENCE</text><text x="160" y="134" text-anchor="middle" fill="#5d747a" font-size="11">vibration / event</text>
+<rect x="70" y="206" width="180" height="78" rx="16" fill="#fff7ef" stroke="#e4b68f"/><text x="160" y="237" text-anchor="middle" fill="#6d4c39" font-size="12">MAINTENANCE EVIDENCE</text><text x="160" y="260" text-anchor="middle" fill="#8d6d5d" font-size="11">confirmed repair</text>
+<path d="M268 119 H395" stroke="#4e7b86" stroke-width="4"/><path d="M268 245 H395" stroke="#f59e0b" stroke-width="4"/>
+<rect x="405" y="100" width="185" height="164" rx="22" fill="#3d2720" stroke="#f3b46a" stroke-width="2"/><text x="497" y="145" text-anchor="middle" fill="#fff" font-size="12">RECONSTRUCTED</text><text x="497" y="165" text-anchor="middle" fill="#fff" font-size="12">ASSET STORY</text><text x="497" y="198" text-anchor="middle" fill="#f5c58d" font-size="11">failure occurred</text><text x="497" y="220" text-anchor="middle" fill="#f5c58d" font-size="11">repair performed</text><text x="497" y="242" text-anchor="middle" fill="#f5c58d" font-size="11">condition returned</text>
+<path d="M604 182 H712" stroke="#c73b32" stroke-width="4"/>
+<rect x="720" y="124" width="120" height="116" rx="18" fill="#fff0ed" stroke="#c73b32"/><text x="780" y="158" text-anchor="middle" fill="#7e2c27" font-size="12">REVISED</text><text x="780" y="178" text-anchor="middle" fill="#7e2c27" font-size="12">DIAGNOSIS</text><text x="780" y="208" text-anchor="middle" fill="#7b6a62" font-size="10">verify residual</text><text x="780" y="224" text-anchor="middle" fill="#7b6a62" font-size="10">condition</text>
+</svg></div></section>
+
+<div class="evidence-board">
+<div class="evidence-panel"><h3>Evidence board</h3><div class="evidence-rows">
+<div class="evidence-row"><strong>Condition signal</strong><span>Vibration associated with an adverse event</span><span class="trend-badge trend-up">Material</span></div>
+<div class="evidence-row"><strong>Repair history</strong><span>Physical defect corrected shortly afterward</span><span class="trend-badge trend-context">Confirms failure</span></div>
+<div class="evidence-row"><strong>Follow-up signal</strong><span>Related vibration returns later</span><span class="trend-badge trend-up">Review</span></div>
+<div class="evidence-row"><strong>Diagnosis status</strong><span>Original event reclassified; later mechanism unresolved</span><span class="trend-badge trend-context">Split</span></div>
+</div></div>
+<div class="hypothesis-panel"><small>Engineering interpretation</small><h3>Actual failure, then a separate residual-condition question</h3><p>The maintenance evidence strengthens the classification of the original event, while the later vibration still requires independent verification before being attributed to the same mechanism.</p><div class="verify-list"><div class="verify-item"><b>1</b><span>Confirm the repaired component and failure mechanism.</span></div><div class="verify-item"><b>2</b><span>Compare pre- and post-repair vibration signatures.</span></div><div class="verify-item"><b>3</b><span>Review alignment, hydraulic condition, bearing condition and operating point.</span></div><div class="verify-item"><b>4</b><span>Separate residual damage from a new fault or measurement issue.</span></div></div></div>
+</div>
+
+<div class="ri-decision"><small>APM implication</small><strong>Closed-loop reliability requires maintenance feedback.</strong><p>Alert quality cannot be evaluated only from sensor data. Work execution, confirmed failure mode and post-repair behaviour are part of the model-validation loop.</p></div>
+<div class="article-note"><strong>Scope:</strong> This case demonstrates a change in interpretation after maintenance history is included. It does not claim that later vibration is necessarily residual damage from the original event.</div>
+<div class="ri-disclosure"><strong>Public-safety statement.</strong> Generalized case. Customer, employer, site, equipment identifiers, dates, source-system names, transaction IDs, costs and original maintenance wording are intentionally omitted.</div>
+<div class="article-footer-cta"><h3>Explore the Maintenance Intelligence framework</h3><p>See how maintenance context, hierarchy quality and sensor credibility fit into one reliability method.</p><a href="maintenance-intelligence.html">Open the flagship case →</a></div>
+</div></section>
+</main><footer class="site-footer"><div class="container footer-row"><span>© 2026 Bhaskar Anand.</span><span class="footer-links"><a href="../Bhaskar_Anand_Public_CV.pdf" download>CV</a><a href="mailto:bhaskar2006anand@gmail.com">Email</a><a href="https://www.linkedin.com/in/bhaskar-anand-apm" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/Bhaskar2504" target="_blank" rel="noreferrer">GitHub</a></span></div></footer>
+</body></html>
