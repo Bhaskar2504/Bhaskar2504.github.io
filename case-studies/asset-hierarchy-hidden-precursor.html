@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>The Warning Was There. The Asset Hierarchy Hid It. | Bhaskar Anand</title>
+<meta name="description" content="Public-safe reliability case on asset hierarchy quality, maintenance text, cross-tagged records and precursor-to-event linkage."/><meta property="og:type" content="article"/><meta property="og:title" content="The Warning Was There. The Asset Hierarchy Hid It. | Bhaskar Anand"/><meta property="og:description" content="How inconsistent asset coding can separate a precursor from the later event it belongs to."/><meta property="og:url" content="https://bhaskar2504.github.io/case-studies/asset-hierarchy-hidden-precursor.html"/><meta property="og:image" content="https://github.com/Bhaskar2504.png?size=1200"/><meta name="twitter:card" content="summary_large_image"/><link rel="canonical" href="https://bhaskar2504.github.io/case-studies/asset-hierarchy-hidden-precursor.html"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081721'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial' font-size='30' font-weight='700' fill='%237ed7d1'%3EBA%3C/text%3E%3C/svg%3E"/>
+<link rel="stylesheet" href="../styles-v4.css?v=20260825g"/><link rel="stylesheet" href="../visual-refresh.css?v=20260829d"/><link rel="stylesheet" href="case-visuals.css?v=20260829a"/><link rel="stylesheet" href="reliability-intelligence.css?v=20260927a"/>
+</head><body class="page-case-study">
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav" aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../experience.html">Experience</a><a href="../projects.html" aria-current="page">Projects</a><a href="../expertise.html">Expertise</a><details class="nav-more"><summary>More</summary><div class="nav-more-menu"><a href="../insights/index.html">Insights</a><a href="../resources.html">Resources</a><a href="../research.html">Research</a></div></details><a class="nav-cv" href="../Bhaskar_Anand_Public_CV.pdf" download>CV</a><a class="nav-cta" href="../index.html#contact">Let's Talk</a></nav></div></header>
+<main>
+<section class="article-hero"><div class="container case-hero-grid">
+<div class="article-hero-inner"><p class="eyebrow">EAM/APM Data Quality · Precursor Linkage</p><h1>The warning was there. The asset hierarchy hid it.</h1><p class="article-deck">A precursor and the later adverse event belonged to the same physical equipment—but structured location coding separated the records.</p><div class="case-kicker"><span>Asset hierarchy</span><span>Maintenance text</span><span>Cross-tag linkage</span><span>Data quality</span></div><div class="ri-safety-note"><strong>Composite public-safe case.</strong> Equipment identity, organization, dates, source-system details, transaction IDs and financial values have been removed or generalized.</div></div>
+<div class="case-hero-visual"><svg viewBox="0 0 560 330" role="img" aria-label="One physical asset with precursor and event stored under different hierarchy nodes">
+<defs><marker id="ahArr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#f3b46a"/></marker></defs>
+<circle cx="90" cy="165" r="42" fill="#142c35" stroke="#dbe5e7" stroke-width="5"/><text x="90" y="160" text-anchor="middle" fill="#fff" font-size="11">PHYSICAL</text><text x="90" y="179" text-anchor="middle" fill="#fff" font-size="11">ASSET</text>
+<path d="M137 148 C182 105 209 92 244 86" fill="none" stroke="#f3b46a" stroke-width="3" marker-end="url(#ahArr)"/><path d="M137 182 C182 225 209 238 244 244" fill="none" stroke="#f3b46a" stroke-width="3" marker-end="url(#ahArr)"/>
+<rect x="257" y="54" width="128" height="64" rx="14" fill="#17303a" stroke="#7e929a"/><text x="321" y="80" text-anchor="middle" fill="#fff" font-size="11">HIERARCHY NODE A</text><text x="321" y="99" text-anchor="middle" fill="#9fc0c5" font-size="10">warning record</text>
+<rect x="257" y="212" width="128" height="64" rx="14" fill="#17303a" stroke="#7e929a"/><text x="321" y="238" text-anchor="middle" fill="#fff" font-size="11">HIERARCHY NODE B</text><text x="321" y="257" text-anchor="middle" fill="#9fc0c5" font-size="10">later event</text>
+<path d="M395 86 H455" stroke="#6f8790" stroke-width="3" stroke-dasharray="7 6"/><path d="M395 244 H455" stroke="#6f8790" stroke-width="3" stroke-dasharray="7 6"/>
+<rect x="455" y="118" width="76" height="94" rx="14" fill="#3d2720" stroke="#f3b46a"/><text x="493" y="148" text-anchor="middle" fill="#fff" font-size="11">TEXT</text><text x="493" y="166" text-anchor="middle" fill="#fff" font-size="11">LINKS</text><text x="493" y="188" text-anchor="middle" fill="#f5c58d" font-size="10">same asset</text>
+<text x="280" y="306" text-anchor="middle" fill="#d7e3e7" font-size="12">physical truth can be split by information architecture</text>
+</svg></div></div></section>
+
+<section class="article-main case-main"><div class="container case-content">
+<div class="case-summary-grid">
+<div class="case-summary-card"><small>Situation</small><strong>An abnormal condition is logged against one hierarchy location</strong><span>The text clearly refers to a specific physical asset.</span></div>
+<div class="case-summary-card"><small>Later event</small><strong>The same asset reaches a more serious event shortly afterward</strong><span>That record is stored under a different structured location.</span></div>
+<div class="case-summary-card alert"><small>Failure mode</small><strong>Hierarchy-only search sees two unrelated records</strong><span>The connection disappears if analytics trust the location code without checking the text.</span></div>
+<div class="case-summary-card"><small>Recovery</small><strong>Free text and asset context restore the link</strong><span>The physical equipment—not the database branch—should anchor the history.</span></div>
+<div class="case-summary-card"><small>APM lesson</small><strong>Data quality is part of reliability engineering</strong><span>Hierarchy defects directly affect event detection, model labels and root-cause analysis.</span></div>
+</div>
+<p class="case-method-note">Case structure: precursor → hierarchy mismatch → later event → text/context reconciliation → APM data-quality action.</p>
+
+<section class="ri-section"><div class="ri-section-head"><small>01 · What happened</small><h2>Two records. One machine. Two different locations.</h2><p>The structured data fragmented a sequence that was physically coherent.</p></div>
+<div class="ri-timeline">
+<div class="ri-event warn"><div class="ri-when">Precursor</div><div><strong>A fault indication is raised on an auxiliary rotating device.</strong><p>The maintenance description identifies the equipment and the fault mechanism clearly enough to be useful.</p></div></div>
+<div class="ri-event context"><div class="ri-when">Data issue</div><div><strong>The precursor is booked under a neighboring or parent system rather than the asset's later event location.</strong><p>A location-code query would put the record into the wrong reliability population.</p></div></div>
+<div class="ri-event risk"><div class="ri-when">Later event</div><div><strong>The same physical device reaches a trip/protection event on the same fault family.</strong><p>The later record is stored elsewhere in the hierarchy, so the precursor-to-event chain is not obvious.</p></div></div>
+<div class="ri-event context"><div class="ri-when">Reconstruction</div><div><strong>Maintenance text and equipment context reconnect the two records.</strong><p>The combined sequence becomes usable for event review, hierarchy correction and future APM logic.</p></div></div>
+</div></section>
+
+<section class="case-visual-block"><div class="case-visual-head"><div><small>Information architecture</small><h2>The database path and the physical asset are not always the same thing.</h2><p>Asset hierarchy is a model of the plant. When that model is wrong, analytics inherit the error.</p></div></div>
+<div class="case-diagram"><svg viewBox="0 0 900 370" role="img" aria-label="Comparison of fragmented hierarchy view and reconciled physical asset view">
+<rect width="900" height="370" fill="#fff"/>
+<text x="220" y="42" text-anchor="middle" fill="#725e55" font-size="13">STRUCTURED VIEW</text><text x="680" y="42" text-anchor="middle" fill="#725e55" font-size="13">PHYSICAL-ASSET VIEW</text>
+<rect x="70" y="80" width="150" height="58" rx="14" fill="#fff7ef" stroke="#e4b68f"/><text x="145" y="114" text-anchor="middle" fill="#6d4c39" font-size="12">warning / node A</text>
+<rect x="245" y="222" width="150" height="58" rx="14" fill="#fff0ed" stroke="#c73b32"/><text x="320" y="256" text-anchor="middle" fill="#7e2c27" font-size="12">event / node B</text>
+<path d="M220 109 C300 108 340 150 348 200" fill="none" stroke="#d8c9bc" stroke-width="3" stroke-dasharray="7 6"/><text x="237" y="173" fill="#9a877c" font-size="11">looks unrelated</text>
+<circle cx="665" cy="165" r="58" fill="#edf4f4" stroke="#4e7b86" stroke-width="4"/><text x="665" y="160" text-anchor="middle" fill="#385f67" font-size="12">ONE PHYSICAL</text><text x="665" y="179" text-anchor="middle" fill="#385f67" font-size="12">ASSET</text>
+<rect x="550" y="70" width="120" height="48" rx="12" fill="#fff7ef" stroke="#e4b68f"/><text x="610" y="99" text-anchor="middle" fill="#6d4c39" font-size="11">precursor</text>
+<rect x="690" y="236" width="120" height="48" rx="12" fill="#fff0ed" stroke="#c73b32"/><text x="750" y="265" text-anchor="middle" fill="#7e2c27" font-size="11">later event</text>
+<path d="M630 118 L650 132" stroke="#4e7b86" stroke-width="3"/><path d="M705 220 L730 236" stroke="#4e7b86" stroke-width="3"/>
+<text x="665" y="325" text-anchor="middle" fill="#5b7076" font-size="11">text + context restore chronology</text>
+</svg></div></section>
+
+<div class="ri-comparison">
+<div class="ri-compare bad"><small>Naïve analytics</small><h3>Trust structured location alone</h3><ul><li>Miss precursor linkage</li><li>Under-count recurrence</li><li>Train labels on fragmented history</li><li>Send engineers to the wrong asset population</li></ul></div>
+<div class="ri-compare good"><small>Engineering-grade analytics</small><h3>Reconcile hierarchy with physical context</h3><ul><li>Validate asset references in text</li><li>Use parent/child and neighboring-system logic</li><li>Deduplicate related work</li><li>Flag hierarchy defects for correction</li></ul></div>
+</div>
+
+<div class="evidence-board">
+<div class="evidence-panel"><h3>Evidence board</h3><div class="evidence-rows">
+<div class="evidence-row"><strong>Structured location</strong><span>Different between precursor and event</span><span class="trend-badge trend-context">Mismatch</span></div>
+<div class="evidence-row"><strong>Maintenance text</strong><span>Names the same physical equipment/fault family</span><span class="trend-badge trend-up">Link</span></div>
+<div class="evidence-row"><strong>Chronology</strong><span>Warning precedes adverse event</span><span class="trend-badge trend-context">Sequence</span></div>
+<div class="evidence-row"><strong>APM impact</strong><span>Hierarchy error can distort event history</span><span class="trend-badge trend-up">Material</span></div>
+</div></div>
+<div class="hypothesis-panel"><small>Engineering interpretation</small><h3>Information architecture hid a physically coherent sequence</h3><p>The public conclusion is about data quality and event linkage—not proof that the precursor would certainly have prevented the later event.</p><div class="verify-list"><div class="verify-item"><b>1</b><span>Confirm physical equipment identity from engineering documentation.</span></div><div class="verify-item"><b>2</b><span>Check parent/child functional-location logic and tagging rules.</span></div><div class="verify-item"><b>3</b><span>Rebuild the event population after hierarchy correction.</span></div><div class="verify-item"><b>4</b><span>Review whether similar cross-tag defects exist elsewhere.</span></div></div></div>
+</div>
+
+<div class="ri-decision"><small>APM implication</small><strong>Asset hierarchy validation belongs upstream of predictive modelling.</strong><p>If the event history is split across inconsistent identifiers, model labels, recurrence counts and RCA evidence will be wrong before the algorithm starts.</p></div>
+<div class="article-note"><strong>Scope:</strong> This case demonstrates that a precursor and later event can be separated by structured-data errors. It does not claim that the precursor guaranteed the later event or that correcting the hierarchy alone would prevent failure.</div>
+<div class="ri-disclosure"><strong>Public-safety statement.</strong> Composite case. Identifying organization, site, asset tags, exact time interval, transaction IDs, source-system name, costs and original maintenance wording are intentionally omitted.</div>
+<div class="article-footer-cta"><h3>Explore the Maintenance Intelligence framework</h3><p>See how hierarchy quality, maintenance context and sensor credibility fit into one reliability method.</p><a href="maintenance-intelligence.html">Open the flagship case →</a></div>
+</div></section>
+</main><footer class="site-footer"><div class="container footer-row"><span>© 2026 Bhaskar Anand.</span><span class="footer-links"><a href="../Bhaskar_Anand_Public_CV.pdf" download>CV</a><a href="mailto:bhaskar2006anand@gmail.com">Email</a><a href="https://www.linkedin.com/in/bhaskar-anand-apm" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/Bhaskar2504" target="_blank" rel="noreferrer">GitHub</a></span></div></footer>
+</body></html>
