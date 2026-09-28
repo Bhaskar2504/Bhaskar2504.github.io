@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>The Decision Gap | Reliability Intelligence | Bhaskar Anand</title>
+<meta name="description" content="A public-safe reliability framework for turning maintenance evidence into timely engineering decisions without overstating causality or business value."/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="The Decision Gap | Bhaskar Anand"/>
+<meta property="og:description" content="The hardest reliability problem is often not missing data. It is evidence that exists but never becomes a decision in time."/>
+<meta property="og:url" content="https://bhaskar2504.github.io/case-studies/decision-gap.html"/>
+<meta property="og:image" content="https://github.com/Bhaskar2504.png?size=1200"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="canonical" href="https://bhaskar2504.github.io/case-studies/decision-gap.html"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081721'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial' font-size='30' font-weight='700' fill='%237ed7d1'%3EBA%3C/text%3E%3C/svg%3E"/>
+<link rel="stylesheet" href="../styles-v4.css?v=20260825g"/>
+<link rel="stylesheet" href="../visual-refresh.css?v=20260829d"/>
+<link rel="stylesheet" href="case-visuals.css?v=20260829a"/>
+<link rel="stylesheet" href="reliability-intelligence.css?v=20260928a"/>
+</head>
+<body class="page-case-study">
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav" aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../experience.html">Experience</a><a href="../projects.html" aria-current="page">Projects</a><a href="../expertise.html">Expertise</a><details class="nav-more"><summary>More</summary><div class="nav-more-menu"><a href="../insights/index.html">Insights</a><a href="../resources.html">Resources</a><a href="../research.html">Research</a></div></details><a class="nav-cv" href="../Bhaskar_Anand_Public_CV.pdf" download>CV</a><a class="nav-cta" href="../index.html#contact">Let's Talk</a></nav></div></header>
+<main>
+<section class="article-hero"><div class="container case-hero-grid">
+<div class="article-hero-inner">
+<p class="eyebrow">Reliability Intelligence · Decision Framework</p>
+<h1>The Decision Gap</h1>
+<p class="article-deck">The hardest reliability problem is often not missing data. It is evidence that already exists—but never becomes an engineering decision while there is still time to act.</p>
+<div class="case-kicker"><span>Evidence integrity</span><span>Maintenance context</span><span>Decision timing</span><span>Audience translation</span></div>
+<div class="ri-safety-note"><strong>Public-safe abstraction.</strong> This page preserves the analytical framework while removing customer, employer, plant, site, unit, transaction, exact-date, source-system, exact-cost and source-specific identifiers.</div>
+</div>
+<div class="case-hero-visual">
+<svg viewBox="0 0 560 330" role="img" aria-label="Evidence to decision gap to action">
+<defs><marker id="dgArr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#f3b46a"/></marker></defs>
+<rect x="40" y="112" width="130" height="92" rx="18" fill="#16313a" stroke="#7e929a"/><text x="105" y="146" text-anchor="middle" fill="#fff" font-size="13">EVIDENCE</text><text x="105" y="168" text-anchor="middle" fill="#a8c5ca" font-size="10">warning · work record</text><text x="105" y="186" text-anchor="middle" fill="#a8c5ca" font-size="10">trend · recurrence</text>
+<path d="M182 158 H250" stroke="#f3b46a" stroke-width="3" marker-end="url(#dgArr)"/>
+<rect x="264" y="84" width="122" height="148" rx="24" fill="#3d2720" stroke="#f3b46a" stroke-width="2"/><text x="325" y="129" text-anchor="middle" fill="#fff" font-size="13">DECISION</text><text x="325" y="149" text-anchor="middle" fill="#fff" font-size="13">GAP</text><text x="325" y="181" text-anchor="middle" fill="#f5c58d" font-size="10">not connected</text><text x="325" y="199" text-anchor="middle" fill="#f5c58d" font-size="10">not escalated</text>
+<path d="M398 158 H455" stroke="#f3b46a" stroke-width="3" marker-end="url(#dgArr)"/>
+<circle cx="493" cy="158" r="43" fill="#173f48" stroke="#6cb0a4" stroke-width="3"/><text x="493" y="153" text-anchor="middle" fill="#fff" font-size="11">ENGINEERING</text><text x="493" y="170" text-anchor="middle" fill="#fff" font-size="11">ACTION</text>
+<text x="280" y="282" text-anchor="middle" fill="#d8e3e6" font-size="12">The value is in closing the gap without overstating what the evidence proves.</text>
+</svg>
+</div></div></section>
+
+<section class="article-main case-main"><div class="container case-content">
+<section class="ri-section">
+<div class="ri-section-head"><small>Core idea</small><h2>A signal can exist, be credible, and still fail to become a decision.</h2><p>The framework separates three questions that are often mixed together: what the record shows, what engineering interpretation is justified, and whether anyone acted in time.</p></div>
+<div class="ri-proof-grid">
+<div class="ri-proof-card"><small>Evidence</small><strong>What actually happened?</strong><p>Start with the maintenance record, condition evidence, recurrence, operating context and physical asset relationship. Do not rewrite history to make the case stronger.</p></div>
+<div class="ri-proof-card"><small>Interpretation</small><strong>What does the evidence support?</strong><p>Separate confirmed pattern, plausible mechanism and unresolved hypothesis. Repetition can increase confidence without proving causality.</p></div>
+<div class="ri-proof-card"><small>Decision</small><strong>Was anything done while action was still possible?</strong><p>A good retrospective can identify missed opportunities, but it should not be presented as a prevented failure if no timely intervention occurred.</p></div>
+<div class="ri-proof-card"><small>Value</small><strong>Was value actually realized—or only visible in hindsight?</strong><p>Incurred cost, estimated exposure and proven avoided loss are different categories. The framework keeps them separate.</p></div>
+</div>
+</section>
+
+<section class="ri-section">
+<div class="ri-section-head"><small>Method</small><h2>Evidence record → grade → audience story → decision.</h2><p>Facts stay constant. The lens changes depending on who has to decide.</p></div>
+<div class="ri-flow">
+<div class="ri-flow-step"><small>01</small><strong>Evidence record</strong><span>Capture the asset, signal, chronology, intervention, result and uncertainty before writing the story.</span></div>
+<div class="ri-flow-step"><small>02</small><strong>Evidence grade</strong><span>Distinguish confirmed lessons from open analytics events and from genuinely proven value.</span></div>
+<div class="ri-flow-step"><small>03</small><strong>Audience lens</strong><span>Reorder the same facts for operations, reliability, analytics, finance or leadership.</span></div>
+<div class="ri-flow-step"><small>04</small><strong>Decision</strong><span>State the practical next action, verification path and what remains uncertain.</span></div>
+</div>
+</section>
+
+<section class="ri-section">
+<div class="ri-section-head"><small>Evidence discipline</small><h2>Do not promote a retrospective lesson into a value claim.</h2><p>The source material explicitly distinguishes confirmed patterns from open analytical events and does not claim that a monitoring system historically caught failures that were only recognized later.</p></div>
+<div class="ri-matrix">
+<div class="ri-matrix-cell emphasis"><small>Lessons case</small><strong>Pattern is real; timely decision was not proven</strong><span>Use for engineering learning, failure-mode design, monitoring logic and process improvement. Do not claim avoided failure.</span></div>
+<div class="ri-matrix-cell"><small>Analytics / open case</small><strong>Signal is interesting; cause is unresolved</strong><span>Keep the case visible as a hypothesis. Do not turn an unexplained anomaly into a confident diagnosis.</span></div>
+<div class="ri-matrix-cell"><small>Proven value</small><strong>Requires intervention + verified outcome</strong><span>This is a higher bar. It should be reserved for evidence showing a decision was made and a measurable consequence followed.</span></div>
+<div class="ri-matrix-cell"><small>Commercial integrity</small><strong>Incurred cost ≠ avoided cost</strong><span>Historical repair spend can establish consequence, but it is not automatically a saving attributable to analytics.</span></div>
+</div>
+</section>
+
+<section class="ri-section">
+<div class="ri-section-head"><small>Recurring patterns</small><h2>Six ways the decision gap appears in industrial maintenance data.</h2><p>These are generalized pattern families rather than source-specific incident reproductions.</p></div>
+<div class="ri-case-grid">
+<div class="ri-case-card"><small>01 · Warning without decision</small><h3>Evidence existed, but no workflow connected it to action.</h3><p>A warning, drift or quality flag can sit in the record without ownership, escalation or an engineering check.</p></div>
+<div class="ri-case-card"><small>02 · Sister / fleet repeat</small><h3>One asset failed; peers repeated the same signature later.</h3><p>The unit-level view treats events independently. The fleet view asks whether one failure was an early preview of the next.</p></div>
+<div class="ri-case-card"><small>03 · Chronic cost without trip</small><h3>The asset never trips, so alarm-led monitoring never sees the burden.</h3><p>High-frequency low-severity work can consume maintenance effort for years without generating a dramatic event.</p></div>
+<div class="ri-case-card"><small>04 · Records that mislead</small><h3>Duplicates, wrong tags and migrating symptoms distort the asset story.</h3><p>Reliability analytics inherits the weaknesses of the maintenance record unless the history is reconstructed first.</p></div>
+<div class="ri-case-card"><small>05 · Fast-moving recurrence</small><h3>Time between similar events begins to compress.</h3><p>The shrinking interval can be a useful signal even before the exact mechanical mechanism is confirmed.</p></div>
+<div class="ri-case-card"><small>06 · Open evidence</small><h3>Some anomalies should remain unresolved.</h3><p>An unusual cost, weak cross-asset thread or incomplete signal can be worth retaining without promoting it to a diagnosis.</p></div>
+</div>
+</section>
+
+<section class="ri-section">
+<div class="ri-section-head"><small>Generalized case patterns</small><h2>What the underlying evidence teaches without exposing its source.</h2><p>These public-safe abstractions preserve the analytical lesson and deliberately remove exact counts, dates, costs, equipment identifiers and source-system details.</p></div>
+<div class="ri-atlas">
+<div><small>01</small><strong>Repeating precursor</strong><span>Similar warning behaviour appears before multiple unplanned events.</span></div>
+<div><small>02</small><strong>Repair did not hold</strong><span>A related failure follows an intervention, with later condition evidence on the same train.</span></div>
+<div><small>03</small><strong>“Bad quality” signal</strong><span>A questionable measurement later aligns with a confirmed equipment problem; a peer asset shows an earlier-stage analogue.</span></div>
+<div><small>04</small><strong>Fleet concentration</strong><span>Most events across similar machines cluster into a small number of recurring signatures.</span></div>
+<div><small>05</small><strong>Accelerating recurrence</strong><span>Intervals between related events contract, raising the priority for inspection.</span></div>
+<div><small>06</small><strong>Shared design fault</strong><span>Parallel equipment exhibits a near-identical nuisance-failure pattern.</span></div>
+<div><small>07</small><strong>Cost outlier</strong><span>A large maintenance entry triggers review but does not prove technical severity or root cause.</span></div>
+<div><small>08</small><strong>Non-trip burden</strong><span>Repeated leakage or minor defects create chronic maintenance cost without a shutdown.</span></div>
+<div><small>09</small><strong>Duplicate event risk</strong><span>Two records may represent one physical event, inflating failure counts if not reconciled.</span></div>
+<div><small>10</small><strong>Misfiled precursor</strong><span>A warning and later event belong to the same physical asset but live under different structured identities.</span></div>
+<div><small>11</small><strong>Standby readiness</strong><span>A backup asset may be “available” on paper yet fail a proof or load test.</span></div>
+<div><small>12</small><strong>Fault migration</strong><span>The symptom changes subsystem over time, hiding one evolving system-level problem.</span></div>
+</div>
+</section>
+
+<section class="ri-section">
+<div class="ri-section-head"><small>Same evidence, different decision</small><h2>Audience translation without changing the facts.</h2><p>The source dossier tells the same evidence through multiple professional lenses. That idea is retained here because it is useful for APM delivery, executive communication and customer adoption.</p></div>
+<div class="ri-case-grid">
+<div class="ri-case-card"><small>CXO / Plant Head</small><h3>What risk repeats—and what decision is required?</h3><p>Lead with consequence, recurrence and governance. Keep technical detail available but subordinate to the decision.</p></div>
+<div class="ri-case-card"><small>Operations</small><h3>What did the plant actually see?</h3><p>Normal state → alert → action taken → return to service. No blame; only the sequence visible in the operational record.</p></div>
+<div class="ri-case-card"><small>Reliability</small><h3>What changed, what mechanisms fit, and what must be checked?</h3><p>Baseline, deviation, competing causes, evidence that supports or contradicts each, and the physical verification step.</p></div>
+<div class="ri-case-card"><small>Analytics</small><h3>How would a continuous-monitoring system evaluate the signal?</h3><p>Signal type, alternative explanations, normalization needs, false-positive risk and what historical data cannot prove.</p></div>
+<div class="ri-case-card"><small>Finance / Procurement</small><h3>What is the cost basis?</h3><p>Separate incurred repair spend, partial totals, estimates and any proven avoided value. Do not mix them.</p></div>
+<div class="ri-case-card"><small>Customer / Pre-sales</small><h3>What transferable problem could be tested safely?</h3><p>Use a generalized analogue, explain method and evidence, then propose a first diagnostic step—not a guaranteed outcome.</p></div>
+<div class="ri-case-card"><small>Conference / Webinar</small><h3>Clue first. Answer last.</h3><p>Tell the engineering story clearly while retaining uncertainty, alternative explanations and the actual evidence boundary.</p></div>
+<div class="ri-case-card"><small>Interview</small><h3>Separate evidence from personal contribution.</h3><p>Situation → task → what I personally did → result → what I learned. Never invent ownership the record cannot establish.</p></div>
+<div class="ri-case-card"><small>Engineering governance</small><h3>One evidence base, many views.</h3><p>The story may change in order and emphasis. The underlying facts, uncertainty and evidence grade should not.</p></div>
+</div>
+</section>
+
+<section class="ri-section">
+<div class="ri-section-head"><small>Decision design</small><h2>What would close the gap in a production APM workflow?</h2><p>The framework naturally maps into functional requirements for reliability analytics and Engineering AI.</p></div>
+<div class="ri-proof-grid">
+<div class="ri-proof-card"><small>Ownership</small><strong>Every questionable signal needs a disposition</strong><p>Assign owner, response window and escalation path for persistent quality flags, recurring alarms and unresolved anomalies.</p></div>
+<div class="ri-proof-card"><small>Fleet logic</small><strong>One unit's failure should trigger a peer check</strong><p>When equipment is installed in twins or fleets, compare siblings against the same failure signature rather than waiting for independent recurrence.</p></div>
+<div class="ri-proof-card"><small>Data model</small><strong>Link physical assets across inconsistent identifiers</strong><p>Use hierarchy validation, aliasing and maintenance-text context so warnings do not disappear behind naming differences.</p></div>
+<div class="ri-proof-card"><small>Evidence governance</small><strong>Keep uncertainty explicit</strong><p>Preserve confirmed facts, hypotheses, contradicting evidence and unresolved items separately in the workflow.</p></div>
+</div>
+</section>
+
+<div class="ri-decision"><small>Portfolio principle</small><strong>The goal is not to make every anomaly sound predictive.</strong><p>The goal is to make the evidence chain inspectable enough that an engineer can decide what to verify, what to ignore, what to escalate and what can legitimately be claimed as value.</p></div>
+
+<div class="ri-comparison">
+<div class="ri-compare good"><small>Continue</small><h3>Explore the broader Maintenance Intelligence library</h3><ul><li>Asset-history reconstruction</li><li>Sensor credibility</li><li>Hierarchy failures</li><li>Repair-effectiveness feedback</li></ul><div class="hero-actions"><a class="button" href="maintenance-intelligence.html">Maintenance Intelligence</a></div></div>
+<div class="ri-compare"><small>Case library</small><h3>Compare with physics-first diagnostic cases</h3><ul><li>Rotating equipment</li><li>Thermal systems</li><li>Hydraulics</li><li>Instrumentation</li></ul><div class="hero-actions"><a class="button secondary" href="index.html">All Case Studies</a></div></div>
+</div>
+
+<div class="ri-disclosure"><strong>Public-safety standard.</strong> The original source material contains operational maintenance evidence. This public page intentionally abstracts the content so that customer, employer, plant, site, unit, exact date, transaction, source-system, exact financial and proprietary maintenance identifiers are not reproduced. Exact incident combinations have also been generalized to reduce re-identification risk.</div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container footer-row"><span>© 2026 Bhaskar Anand.</span><span class="footer-links"><a href="../Bhaskar_Anand_Public_CV.pdf" download>CV</a><a href="mailto:bhaskar2006anand@gmail.com">Email</a><a href="https://www.linkedin.com/in/bhaskar-anand-apm" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/Bhaskar2504" target="_blank" rel="noreferrer">GitHub</a></span></div></footer>
+</body>
+</html>
