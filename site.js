@@ -7,7 +7,7 @@
 (function(){
   var doc=document.documentElement;
   var header=document.querySelector('.site-header');
-  var groups=[].slice.call(document.querySelectorAll('.nav-group'));
+  var groups=[].slice.call(document.querySelectorAll('.nav-group,.theme-picker'));
   var btn=document.querySelector('.nav-toggle');
   var nav=document.getElementById('primary-nav');
   var label=btn&&btn.querySelector('.nav-toggle-label');
@@ -24,10 +24,33 @@
     onScroll();
   }
 
+  /* Theme picker: persists the choice; "classic" removes the attribute so the original CSS applies */
+  var THEME_COLORS={classic:'#0f172a',midnight:'#050b17',daylight:'#ffffff'};
+  function currentTheme(){return doc.getAttribute('data-theme')||'classic';}
+  function applyTheme(t){
+    if(t==='classic')doc.removeAttribute('data-theme');else doc.setAttribute('data-theme',t);
+    var meta=document.querySelector('meta[name="theme-color"]');
+    if(!meta){meta=document.createElement('meta');meta.name='theme-color';document.head.appendChild(meta);}
+    meta.content=THEME_COLORS[t]||THEME_COLORS.classic;
+  }
+  var picker=document.querySelector('.theme-picker');
+  if(picker){
+    var radios=[].slice.call(picker.querySelectorAll('input[name="site-theme"]'));
+    radios.forEach(function(r){
+      r.checked=(r.value===currentTheme());
+      r.addEventListener('change',function(){
+        applyTheme(r.value);
+        try{localStorage.setItem('theme',r.value);}catch(e){}
+        if(!mobile.matches)picker.open=false;
+      });
+    });
+    applyTheme(currentTheme());
+  }
+
   /* Dropdown groups */
   function closeGroups(except){groups.forEach(function(g){if(g!==except)g.open=false;});}
   groups.forEach(function(g){g.addEventListener('toggle',function(){if(g.open&&!mobile.matches)closeGroups(g);});});
-  document.addEventListener('click',function(e){if(!mobile.matches&&!e.target.closest('.nav-group'))closeGroups();});
+  document.addEventListener('click',function(e){if(!mobile.matches&&!e.target.closest('.nav-group,.theme-picker'))closeGroups();});
 
   if(!btn||!nav)return;
 
@@ -41,7 +64,7 @@
   function isOpen(){return btn.getAttribute('aria-expanded')==='true';}
   /* A closed slide-in panel is inert: unreachable by Tab and hidden from screen readers
      regardless of animation state. On desktop the nav is never inert. */
-  function syncInert(){nav.inert=mobile.matches&&!isOpen();}
+  function syncInert(){nav.inert=mobile.matches&&!isOpen();var tp=document.querySelector('.theme-picker');if(tp&&mobile.matches)tp.open=true;}
   function setMenu(open){
     btn.setAttribute('aria-expanded',open);
     nav.inert=mobile.matches&&!open;

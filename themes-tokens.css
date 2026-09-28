@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Theme tokens
+   "classic" is the original design and sets no data-theme attribute, so these
+   tokens (and the generated themes.css overrides) only apply to the alternates.
+   Every text/background pair below meets WCAG AA (>= 4.5:1) within its theme.
+   ========================================================================== */
+
+/* ---------- Midnight: deep slate with cyan accents ---------- */
+:root[data-theme="midnight"]{
+  color-scheme:dark;
+  --t-surface:#111a2e;          /* cards, primary panels */
+  --t-surface-2:#0c1426;        /* page sections */
+  --t-surface-3:#18233a;        /* tinted chips / wells */
+  --t-band:#08101f;             /* dark bands (heroes, feature sections) */
+  --t-band-deep:#050b17;
+  --t-band-accent:#0a1c29;
+  --t-veil:rgba(148,163,184,.10);
+  --t-text-strong:#f8fafc;      /* 17.1:1 on surface */
+  --t-text:#e2e8f0;             /* 14.1:1 */
+  --t-text-muted:#b6c2d1;       /*  9.6:1 */
+  --t-text-faint:#9aa8ba;       /*  7.0:1 */
+  --t-on-band:#e2e8f0;
+  --t-accent:#0b6377;           /* button fill; #e2e8f0 text 5.6:1, white 6.9:1 */
+  --t-warm-text:#fbbf6b;        /* amber status text, 10.5:1 on surface */
+  --t-warm-on-band:#fbbf6b;
+  --t-shade:rgba(2,6,23,.35);
+  --t-solid:#22314d;            /* dark buttons/chips lift off the page; white text 12.6:1 */
+  --t-accent-text:#67e8f9;      /* 11.3:1 on surface */
+  --t-accent-on-band:#67e8f9;
+  --t-accent-border:rgba(34,211,238,.35);
+  --t-border:rgba(148,163,184,.2);
+  --t-border-on-band:rgba(148,163,184,.2);
+  --t-page:#0c1426;
+}
+
+/* ---------- Daylight: all-light, high readability ---------- */
+:root[data-theme="daylight"]{
+  color-scheme:light;
+  --t-surface:#ffffff;
+  --t-surface-2:#f5f7fb;
+  --t-surface-3:#eaf0f6;
+  --t-band:#eef3f8;             /* former dark bands become soft light panels */
+  --t-band-deep:#f1f5f9;
+  --t-band-accent:#e6f3f5;
+  --t-veil:rgba(15,23,42,.05);
+  --t-text-strong:#0b1324;      /* 18.5:1 on white */
+  --t-text:#1e293b;             /* 14.6:1 */
+  --t-text-muted:#44546a;       /*  8.3:1 */
+  --t-text-faint:#56657a;       /*  6.1:1, 5.6:1 on band */
+  --t-on-band:#0f172a;
+  --t-accent:#0e7490;           /* white text 5.4:1 */
+  --t-warm-text:#8a4b0c;        /* amber status text, 6.8:1 on white, 5.9:1 on tinted wells */
+  --t-warm-on-band:#8a4b0c;
+  --t-shade:rgba(15,23,42,.05);
+  --t-solid:#0f172a;            /* dark buttons/chips stay dark; white text 17.9:1 */
+  --t-accent-text:#0e6a83;      /*  6.3:1 on white, 5.6:1 on band */
+  --t-accent-on-band:#0e6a83;
+  --t-accent-border:rgba(14,116,144,.3);
+  --t-border:#dde4ee;
+  --t-border-on-band:rgba(15,23,42,.12);
+  --t-page:#f5f7fb;
+}
+
+:root[data-theme] body{background:var(--t-page);color:var(--t-text)}
+
+/* Images, infographics and organisation logos keep their own colours on a white tile */
+:root[data-theme="midnight"] main img{background-color:#fff}
+:root[data-theme] main .org-logo,:root[data-theme] main .edu-logo{background:#fff;color:#0f6f78}
+
+/* ---------- Header in Daylight: light glass instead of navy ---------- */
+:root[data-theme="daylight"]{--nav-bg:255 255 255;--nav-text:#0f172a;--nav-soft:#334155;--nav-muted:#526076;--nav-line:rgba(15,23,42,.1);--nav-accent:#0e7490;--nav-accent-ink:#0e6a83}
+:root[data-theme="daylight"] .site-header .nav-panel a{color:#0f172a}
+:root[data-theme="daylight"] .site-header .nav-panel a:hover{background:#eef6f8}
+:root[data-theme="daylight"] .site-header .nav-panel a[aria-current="page"]{background:#e3f2f5}
+:root[data-theme="daylight"] .site-header .nav-panel{border-color:#dde4ee;box-shadow:0 24px 60px -18px rgba(15,23,42,.25)}
+:root[data-theme="daylight"] .site-header .nav-cta{color:#fff}
+:root[data-theme="daylight"] .site-header .nav-cta:hover{background:#155e75}
+:root[data-theme="daylight"] .brand-mark{background:linear-gradient(145deg,#e6f6f8,#fff);color:#0e6a83;box-shadow:inset 0 0 0 1px rgba(14,116,144,.45)}
+:root[data-theme="daylight"] .breadcrumbs{background:#f1f5f9}
+:root[data-theme="daylight"] .breadcrumbs li+li:before{color:#94a3b8}
+:root[data-theme="daylight"] .breadcrumbs [aria-current]{color:#1e293b}
+:root[data-theme="daylight"] .site-header.is-scrolled{box-shadow:0 10px 30px -16px rgba(15,23,42,.35)}
+:root[data-theme="daylight"] .nav-toggle{border-color:rgba(15,23,42,.2)!important}
+
+/* ---------- Theme picker ---------- */
+.theme-picker{position:relative}
+.theme-picker summary{list-style:none;display:grid;place-items:center;width:38px;height:38px;border:1px solid rgba(148,163,184,.35);border-radius:999px;color:var(--nav-text,#f8fafc);cursor:pointer;transition:border-color .2s ease,color .2s ease}
+.theme-picker summary::-webkit-details-marker{display:none}
+.theme-picker summary:hover,.theme-picker[open] summary{border-color:var(--nav-accent,#22d3ee);color:var(--nav-accent-ink,#67e8f9)}
+.theme-picker summary svg{width:18px;height:18px}
+.theme-menu{position:absolute;right:0;top:calc(100% + 12px);z-index:85;width:260px;margin:0;padding:8px;border:1px solid rgba(148,163,184,.18);border-radius:16px;background:rgb(var(--nav-bg,15 23 42)/.97);box-shadow:0 24px 60px -18px rgba(2,6,23,.6)}
+.theme-menu legend{float:left;width:100%;padding:6px 10px 8px;color:var(--nav-accent-ink,#67e8f9);font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.theme-option{display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:10px;color:var(--nav-text,#f8fafc);font-size:.9rem;font-weight:600;cursor:pointer}
+.theme-option:hover{background:rgba(34,211,238,.09)}
+.theme-option input{position:absolute;opacity:0;pointer-events:none}
+.theme-option small{display:block;color:var(--nav-muted,#94a3b8);font-size:.78rem;font-weight:450}
+.theme-swatch{flex:0 0 auto;width:30px;height:30px;border-radius:9px;box-shadow:inset 0 0 0 1px rgba(148,163,184,.4)}
+.theme-swatch.classic{background:linear-gradient(135deg,#0e303b 0 50%,#f6f8f8 50%)}
+.theme-swatch.midnight{background:linear-gradient(135deg,#050b17 0 50%,#111a2e 50%);box-shadow:inset 0 0 0 1px rgba(34,211,238,.5)}
+.theme-swatch.daylight{background:linear-gradient(135deg,#eef3f8 0 50%,#fff 50%)}
+.theme-option .theme-check{margin-left:auto;width:18px;height:18px;border:2px solid rgba(148,163,184,.5);border-radius:50%}
+.theme-option input:checked~.theme-check{border-color:var(--nav-accent,#22d3ee);background:radial-gradient(circle,var(--nav-accent,#22d3ee) 0 4px,transparent 5px)}
+.theme-option input:focus-visible~.theme-swatch{outline:2px solid var(--nav-accent,#22d3ee);outline-offset:2px}
+:root[data-theme="daylight"] .theme-menu{border-color:#dde4ee;box-shadow:0 24px 60px -18px rgba(15,23,42,.25)}
+:root[data-theme="daylight"] .theme-option:hover{background:#eef6f8}
+@media (max-width:980px){
+  .js-nav .theme-picker{order:10;margin-top:14px;padding-top:14px;border-top:1px solid var(--nav-line)}
+  .js-nav .theme-picker summary{display:none}
+  .js-nav .theme-menu{position:static;width:auto;padding:0;border:0;box-shadow:none;background:transparent}
+  .js-nav .theme-picker:not([open]) .theme-menu{display:block}
+}
+.theme-menu legend+*{clear:both}

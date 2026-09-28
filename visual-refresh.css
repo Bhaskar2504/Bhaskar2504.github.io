@@ -65,7 +65,7 @@
 .page-about .article-hero{background:linear-gradient(120deg,#f6efe4 0%,#fbf8f2 58%,#eaf4f2 100%);border-bottom:1px solid #e2ddd3}
 .page-about .article-hero:before{background-image:linear-gradient(rgba(8,24,39,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(8,24,39,.035) 1px,transparent 1px)}
 .page-about .article-hero:after{background:radial-gradient(circle,rgba(15,125,136,.14),transparent 70%)}
-.page-about .article-hero .eyebrow{color:#9a6a2f}
+.page-about .article-hero .eyebrow{color:#895e2a}
 .page-about .article-hero h1{color:#182635;max-width:860px}
 .page-about .article-deck{color:#5d676d}
 .page-about .article-main{background:#fffdf9}
@@ -130,7 +130,7 @@
 .page-insights .hub-hero:after{background:radial-gradient(circle,rgba(245,158,11,.19),transparent 70%)}
 .page-insights .hub-main{background:#f7f4ee}
 .page-insights .library-card{background:#fffefa}
-.page-insights .tile-number{color:#9a5c1f}
+.page-insights .tile-number{color:#95591e}
 
 /* RESEARCH — academic paper */
 .page-research{background:var(--paper)}
@@ -156,7 +156,7 @@
 .page-contact .contact-route{border-color:#1d3946;background:#0c2230;box-shadow:none}
 .page-contact .contact-route small{color:#79d8d0}.page-contact .contact-route strong{color:#fff}.page-contact .contact-route span{color:#aabcc4}
 .page-contact .contact-box{margin-top:34px!important;border:1px solid #1d3946;box-shadow:none}
-.page-contact .site-footer{border-top-color:#1c3440;background:#071521;color:#7e969f}
+.page-contact .site-footer{border-top-color:#1c3440;background:#071521;color:#566b73}
 .contact-route strong{display:flex;align-items:center;gap:10px}
 .contact-route strong img{width:23px;height:23px;object-fit:contain}
 
