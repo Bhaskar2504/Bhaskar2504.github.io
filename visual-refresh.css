@@ -58,7 +58,7 @@
 .home-feature.flagship p{color:#c6d6dc}
 .home-feature.flagship .feature-link{color:#81ddd5}
 .home-feature.cases{grid-area:cases;background:linear-gradient(145deg,#fff6e7,#fff0e7);border-color:#f0c38c}
-.home-feature.cases:before{content:"HIGH SIGNAL";position:absolute;right:20px;top:18px;padding:6px 9px;border-radius:999px;background:#9e2f28;color:#fff;font-size:.65rem;font-weight:800;letter-spacing:.12em}
+.home-feature.cases:before{content:"HIGH SIGNAL";position:absolute;right:20px;top:18px;padding:6px 9px;border-radius:999px;background:#9e2f28;color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.12em}
 .home-feature.cases h3{color:#8c2d27}
 .home-feature.cases .feature-link{color:#b33b2f}
 .home-feature.insights{grid-area:insights;background:linear-gradient(150deg,#eef6ff,#f7fbff);border-color:#cfdde9}
@@ -187,7 +187,7 @@
   .home-portrait{width:138px;border-width:5px;border-radius:20px}
   .home-plant{width:86%;border-radius:22px}
   .home-plant figcaption{left:16px;bottom:15px;font-size:.76rem}
-  .home-visual-badge{font-size:.65rem}
+  .home-visual-badge{font-size:.72rem}
 }
 
 

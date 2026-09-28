@@ -21,6 +21,6 @@
 .career-proof-strip strong{display:block;color:#102a3a;font-size:1.08rem}
 .career-proof-strip span{display:block;margin-top:4px;color:#73828a;font-size:.72rem;line-height:1.4}
 .role-impact{display:flex;flex-wrap:wrap;gap:7px;margin:11px 0 4px}
-.role-impact span{padding:6px 9px;border:1px solid #d6e5e6;border-radius:999px;background:#f1f8f7;color:#2c666b;font-size:.7rem;font-weight:600}
+.role-impact span{padding:6px 9px;border:1px solid #d6e5e6;border-radius:999px;background:#f1f8f7;color:#2c666b;font-size:.72rem;font-weight:600}
 @media(max-width:760px){.career-proof-strip{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.career-proof-strip{grid-template-columns:1fr}}

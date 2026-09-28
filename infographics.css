@@ -54,7 +54,7 @@
 .page-experience .page-shell{width:min(100%,1100px)}
 .page-experience .role-detail{grid-template-columns:130px minmax(0,1fr);padding:22px 24px}
 .page-experience .role-detail p{font-size:.92rem;line-height:1.55}
-.page-experience .role-tags{margin-top:11px}.page-experience .role-tag{font-size:.7rem;padding:5px 8px}
+.page-experience .role-tags{margin-top:11px}.page-experience .role-tag{font-size:.72rem;padding:5px 8px}
 
 /* PROJECTS — diagnostic signal cards */
 .project-process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:28px 0 42px}
@@ -68,7 +68,7 @@
 /* INSIGHTS — knowledge map */
 .knowledge-map{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;margin:10px 0 50px;padding:30px;border:1px solid #d9d2c4;border-radius:26px;background:#fffdf8;box-shadow:var(--shadow-soft)}
 .knowledge-column{display:grid;gap:12px}.knowledge-node{padding:15px 16px;border:1px solid #dfd7c9;border-radius:14px;background:#fff;color:#33434d;font-size:.86rem;font-weight:600}
-.knowledge-node small{display:block;margin-top:3px;color:#7b858d;font-size:.71rem;font-weight:400}
+.knowledge-node small{display:block;margin-top:3px;color:#7b858d;font-size:.72rem;font-weight:400}
 .knowledge-core{display:grid;place-items:center;width:144px;height:144px;padding:18px;border-radius:50%;background:linear-gradient(145deg,#102437,#2d5262);color:#fff;text-align:center;font-size:.9rem;font-weight:800;box-shadow:0 18px 46px rgba(16,36,55,.24)}
 .page-insights .library-card p{font-size:.88rem;line-height:1.5}
 .page-insights .topic-area-card ul{display:none}
@@ -79,7 +79,7 @@
 .resource-stage{position:relative;min-width:140px;padding:18px 14px;border:1px solid #c9ddd7;border-radius:16px;background:#fff;text-align:center}
 .resource-stage:not(:last-child):after{content:"";position:absolute;right:-9px;top:50%;width:10px;height:2px;background:#8ab9b0}
 .resource-stage .stage-icon{display:grid;place-items:center;width:38px;height:38px;margin:0 auto 10px;border-radius:12px;background:#e8f5f1;color:#157165;font-weight:800}
-.resource-stage strong{display:block;color:#17363a;font-size:.82rem}.resource-stage span{display:block;margin-top:4px;color:#6a7b7c;font-size:.7rem}
+.resource-stage strong{display:block;color:#17363a;font-size:.82rem}.resource-stage span{display:block;margin-top:4px;color:#6a7b7c;font-size:.72rem}
 .page-resources .resource-card{min-height:230px}
 .page-resources .resource-card ul{display:none}.page-resources .resource-card p{font-size:.86rem;line-height:1.5}
 
