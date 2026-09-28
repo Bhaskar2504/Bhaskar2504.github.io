@@ -13,7 +13,7 @@
 
 /* Resources hub — engineering assurance system */
 .page-resources{background:#eef3f4}
-.page-resources .site-header{background:rgba(247,250,250,.9)}
+
 .resource-command-hero{position:relative;isolation:isolate;overflow:hidden;padding-block:clamp(54px,6vw,82px);background:linear-gradient(128deg,#071721 0%,#0a2930 56%,#164a47 100%);color:#fff}
 .resource-command-hero:before{content:"";position:absolute;inset:0;z-index:-2;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px}
 .resource-command-hero:after{content:"";position:absolute;z-index:-1;right:-130px;top:-190px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(73,196,176,.24),transparent 68%)}

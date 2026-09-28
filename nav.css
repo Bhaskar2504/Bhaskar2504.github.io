@@ -1,0 +1,162 @@
+/* ==========================================================================
+   Site navigation: dark glass header, grouped menus, breadcrumbs
+   Loaded last on every page. Selectors are prefixed with .site-header so they
+   win over page stylesheets without !important.
+   ========================================================================== */
+
+:root{
+  --nav-bg:15 23 42;              /* #0f172a as RGB channels for alpha mixes */
+  --nav-text:#f8fafc;
+  --nav-muted:#94a3b8;            /* 6.9:1 on #0f172a */
+  --nav-soft:#cbd5e1;
+  --nav-accent:#22d3ee;           /* cyan */
+  --nav-accent-ink:#67e8f9;
+  --nav-line:rgba(148,163,184,.14);
+  --nav-h:74px;
+  --nav-ease:cubic-bezier(.2,.8,.2,1);
+}
+
+/* ---------- Skip link ---------- */
+.skip-link{position:absolute;left:12px;top:-60px;z-index:100;padding:10px 14px;border-radius:10px;background:var(--nav-accent);color:#0f172a;font-weight:700;text-decoration:none}
+.skip-link:focus{top:12px}
+
+/* ---------- Header shell: sticky glass, shadow after scroll ---------- */
+.site-header{
+  position:sticky;top:0;z-index:60;
+  background:rgb(var(--nav-bg)/.96);
+  border-bottom:1px solid var(--nav-line);
+  -webkit-backdrop-filter:saturate(160%) blur(14px);
+  backdrop-filter:saturate(160%) blur(14px);
+  transition:background-color .25s ease,box-shadow .25s ease;
+  view-transition-name:site-header;           /* stays put during page transitions */
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.site-header{background:rgb(var(--nav-bg))}}
+.site-header.is-scrolled{background:rgb(var(--nav-bg)/.86);box-shadow:0 12px 32px -14px rgba(2,6,23,.75)}
+.site-header .nav-wrap{min-height:var(--nav-h);display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:24px;padding-block:0}
+
+/* ---------- Brand: monogram + name ---------- */
+.site-header .brand{display:inline-flex;align-items:center;gap:11px;padding-left:0;color:var(--nav-text);font-size:1rem;font-weight:650;letter-spacing:-.01em;text-decoration:none}
+.site-header .brand:before{display:none}
+.brand-mark{position:relative;display:grid;place-items:center;width:34px;height:34px;overflow:hidden;border-radius:10px;background:linear-gradient(145deg,#0e2a3a,#0f172a);box-shadow:inset 0 0 0 1px rgba(34,211,238,.45),0 6px 18px -6px rgba(34,211,238,.45);color:var(--nav-accent-ink);font-size:.8rem;font-weight:800;letter-spacing:.02em}
+.brand-mark:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%)}
+.site-header .brand:hover .brand-mark{box-shadow:inset 0 0 0 1px rgba(34,211,238,.8),0 8px 22px -6px rgba(34,211,238,.6)}
+
+/* ---------- Top-level items ---------- */
+.site-header .nav{display:flex;align-items:center;gap:4px;flex-wrap:nowrap}
+.site-header .nav-group{position:relative}
+.site-header .nav-group summary{
+  list-style:none;display:flex;align-items:center;gap:7px;padding:10px 12px;border-radius:10px;
+  color:var(--nav-soft);font-size:.92rem;font-weight:550;cursor:pointer;user-select:none;
+  /* animated underline drawn under the label */
+  background:linear-gradient(var(--nav-accent),var(--nav-accent)) no-repeat;
+  background-origin:content-box;background-position:0 calc(100% + 6px);background-size:0 2px;
+  transition:color .2s ease,background-size .3s var(--nav-ease),background-color .2s ease;
+}
+.site-header .nav-group summary::-webkit-details-marker{display:none}
+.site-header .nav-group summary:after{content:"";width:6px;height:6px;margin-top:-3px;border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:rotate(45deg);transition:transform .25s var(--nav-ease);opacity:.75}
+.site-header .nav-group[open] summary:after{transform:rotate(-135deg);margin-top:3px}
+.site-header .nav-group summary:hover,.site-header .nav-group[open] summary{color:var(--nav-text);background-size:100% 2px}
+.site-header .nav-group.is-current summary{color:var(--nav-text);background-size:100% 2px}
+
+.site-header .nav-cv,.site-header .nav-cta{display:inline-flex;align-items:center;padding:9px 16px;border-radius:999px;font-size:.88rem;font-weight:650;text-decoration:none;transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}
+.site-header .nav-cv{margin-left:8px;border:1px solid rgba(148,163,184,.35);color:var(--nav-text);background:transparent}
+.site-header .nav-cv:hover{border-color:var(--nav-accent);color:var(--nav-accent-ink)}
+.site-header .nav-cta{border:1px solid transparent;background:var(--nav-accent);color:#0f172a}
+.site-header .nav-cta:hover{background:var(--nav-accent-ink);transform:translateY(-1px)}
+
+/* ---------- Dropdown panels ---------- */
+.site-header .nav-panel{
+  position:absolute;left:0;top:calc(100% + 12px);z-index:80;display:grid;gap:2px;width:320px;padding:8px;
+  border:1px solid rgba(148,163,184,.18);border-radius:16px;background:rgb(var(--nav-bg)/.96);
+  box-shadow:0 24px 60px -18px rgba(2,6,23,.85),0 0 0 1px rgba(2,6,23,.4);
+  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+}
+.site-header .nav-group[open] .nav-panel{animation:navPanelIn .2s var(--nav-ease)}
+.site-header .nav-panel.align-right{left:auto;right:0}
+.site-header .nav-panel.wide{left:50%;width:540px;grid-template-columns:1fr 1fr;transform:translateX(-50%)}
+.site-header .nav-group[open] .nav-panel.wide{animation-name:navPanelInCentered}
+.site-header .nav-panel a{display:block;padding:10px 12px;border-radius:10px;color:#f1f5f9;font-size:.92rem;font-weight:600;line-height:1.3;text-decoration:none;white-space:normal;transition:background-color .15s ease}
+.site-header .nav-panel a small{display:block;margin-top:3px;color:var(--nav-muted);font-size:.8rem;font-weight:450}
+.site-header .nav-panel a:hover{background:rgba(34,211,238,.09)}
+.site-header .nav-panel a[aria-current="page"]{background:rgba(34,211,238,.12);box-shadow:inset 3px 0 0 var(--nav-accent)}
+.site-header .nav-panel-head{grid-column:1/-1;padding:6px 12px 4px;color:var(--nav-accent-ink);font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.site-header .nav-panel.wide .nav-panel-lead{grid-column:1/-1;margin-bottom:4px;border-bottom:1px solid var(--nav-line);border-radius:10px 10px 0 0}
+
+/* ---------- Keyboard focus ---------- */
+.site-header a:focus-visible,.site-header summary:focus-visible,.site-header button:focus-visible,.breadcrumbs a:focus-visible{outline:2px solid var(--nav-accent);outline-offset:2px}
+
+/* ---------- Breadcrumbs (dark strip under the header) ---------- */
+.breadcrumbs{background:#0b1222;border-bottom:1px solid var(--nav-line)}
+.breadcrumbs ol{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0;padding:10px 0;list-style:none;color:var(--nav-muted);font-size:.82rem}
+.breadcrumbs li+li:before{content:"/";margin-right:6px;color:#475569}
+.breadcrumbs a{color:var(--nav-accent-ink);font-weight:600;text-decoration:none}
+.breadcrumbs a:hover{text-decoration:underline;text-underline-offset:3px}
+.breadcrumbs [aria-current]{max-width:52ch;overflow:hidden;color:#e2e8f0;text-overflow:ellipsis;white-space:nowrap}
+
+/* ---------- Mobile / tablet: hamburger + slide-in panel ---------- */
+.nav-toggle{display:none}
+.nav-backdrop{display:none}
+@media (max-width:980px){
+  /* backdrop-filter would make the fixed panel position relative to the header */
+  .js-nav .site-header{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgb(var(--nav-bg)/.97)}
+  .js-nav .site-header .nav-wrap{min-height:64px}
+  .js-nav .nav-toggle{position:relative;z-index:92;display:inline-flex;align-items:center;gap:10px;margin-left:auto;padding:9px 14px;border:1px solid rgba(148,163,184,.3);border-radius:999px;background:transparent;color:var(--nav-text);font:600 .9rem/1 inherit;cursor:pointer}
+  .nav-toggle-bars{position:relative;width:18px;height:12px}
+  .nav-toggle-bars span,.nav-toggle-bars:before,.nav-toggle-bars:after{content:"";position:absolute;left:0;width:100%;height:2px;border-radius:2px;background:currentColor;transition:transform .3s var(--nav-ease),opacity .2s ease,top .3s var(--nav-ease)}
+  .nav-toggle-bars:before{top:0}.nav-toggle-bars span{top:5px}.nav-toggle-bars:after{top:10px}
+  .nav-open .nav-toggle-bars:before{top:5px;transform:rotate(45deg)}
+  .nav-open .nav-toggle-bars span{opacity:0}
+  .nav-open .nav-toggle-bars:after{top:5px;transform:rotate(-45deg)}
+
+  .js-nav .site-header .nav{
+    position:fixed;top:0;right:0;z-index:91;display:flex;flex-direction:column;align-items:stretch;gap:4px;
+    width:min(88vw,380px);height:100vh;height:100dvh;padding:84px 18px 28px;overflow-y:auto;
+    background:rgb(var(--nav-bg));border-left:1px solid var(--nav-line);
+    transform:translateX(100%);visibility:hidden;
+    transition:transform .34s var(--nav-ease),visibility 0s linear .34s;
+  }
+  .nav-open .site-header .nav{transform:none;visibility:visible;box-shadow:-30px 0 60px -20px rgba(2,6,23,.8);transition:transform .34s var(--nav-ease),visibility 0s}
+  .js-nav .nav-backdrop{position:fixed;inset:0;z-index:90;display:block;background:rgba(2,6,23,.55);opacity:0;pointer-events:none;transition:opacity .3s ease}
+  .nav-open .nav-backdrop{opacity:1;pointer-events:auto}
+  .nav-open .site-header{z-index:95}               /* lift header (and its panel) above the backdrop */
+  .nav-open,.nav-open body{overflow:hidden}
+
+  .js-nav .site-header .nav-group summary{justify-content:space-between;padding:14px 12px;font-size:1.05rem;background-position:12px calc(100% - 6px)}
+  .js-nav .site-header .nav-panel,.js-nav .site-header .nav-panel.wide{position:static;width:auto;grid-template-columns:1fr;margin:0 0 6px;padding:2px 0 6px 8px;border:0;box-shadow:none;background:transparent;transform:none;animation:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .js-nav .site-header .nav-panel.wide .nav-panel-lead{border-bottom:0}
+  .js-nav .site-header .nav-cv,.js-nav .site-header .nav-cta{justify-content:center;margin:10px 0 0;padding:13px 16px;font-size:.95rem}
+
+  /* staggered reveal of panel items */
+  .nav-open .site-header .nav>*{animation:navItemIn .4s var(--nav-ease) both}
+  .nav-open .site-header .nav>*:nth-child(2){animation-delay:.04s}
+  .nav-open .site-header .nav>*:nth-child(3){animation-delay:.08s}
+  .nav-open .site-header .nav>*:nth-child(4){animation-delay:.12s}
+  .nav-open .site-header .nav>*:nth-child(n+5){animation-delay:.16s}
+}
+
+/* ---------- Motion ---------- */
+@keyframes navPanelIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@keyframes navPanelInCentered{from{opacity:0;transform:translate(-50%,-6px)}to{opacity:1;transform:translate(-50%,0)}}
+@keyframes navItemIn{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+@keyframes brandMarkIn{from{opacity:0;transform:scale(.6) rotate(-14deg)}60%{opacity:1;transform:scale(1.06) rotate(2deg)}to{transform:none}}
+@keyframes brandNameIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
+@keyframes brandShine{to{transform:translateX(120%)}}
+
+/* The logo intro runs once per visit (site.js sets .brand-intro on the first page view) */
+.brand-intro .brand-mark{animation:brandMarkIn .7s var(--nav-ease) both}
+.brand-intro .brand-mark:after{animation:brandShine 1s ease .55s both}
+.brand-intro .brand-name{animation:brandNameIn .6s var(--nav-ease) .18s both}
+
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  @view-transition{navigation:auto}           /* cross-page fade in supporting browsers */
+  ::view-transition-old(root),::view-transition-new(root){animation-duration:.22s}
+}
+@media (prefers-reduced-motion:reduce){
+  .site-header *,.nav-backdrop{animation:none!important;transition:none!important}
+}
+
+/* In-page anchors land below the sticky header */
+[id]{scroll-margin-top:calc(var(--nav-h) + 16px)}
+
+@media print{.site-header,.breadcrumbs,.nav-backdrop{display:none!important}}

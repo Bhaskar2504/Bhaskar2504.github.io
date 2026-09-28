@@ -9,9 +9,6 @@
   --paper:#fbf7ef;
   --ink:#0b1724;
 }
-
-/* Consistent navigation */
-.nav a[aria-current="page"]{background:var(--navy);color:#fff;box-shadow:0 7px 18px rgba(8,24,39,.16)}
 .logo-icon{width:22px;height:22px;object-fit:contain;display:block}
 .social-logo-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .social-logo-link{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(255,255,255,.07);color:#fff;text-decoration:none;font-size:.84rem;font-weight:600}
@@ -149,8 +146,6 @@
 
 /* CONTACT — intentionally sparse and dark */
 .page-contact{background:#071521}
-.page-contact .site-header{background:rgba(7,21,33,.88);border-bottom-color:rgba(255,255,255,.08)}
-.page-contact .brand{color:#fff}.page-contact .nav a{color:#b9c8cf}.page-contact .nav a:hover{background:rgba(255,255,255,.08);color:#fff}.page-contact .nav a[aria-current="page"]{background:#fff;color:#071521}
 .page-contact .article-hero{background:#071521;padding-bottom:34px}
 .page-contact .article-hero:before{opacity:.6}
 .page-contact .article-main{background:#071521}

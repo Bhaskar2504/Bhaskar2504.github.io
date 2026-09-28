@@ -1,9 +1,5 @@
 /* Homepage authority system — evidence first, restrained hierarchy */
 .page-home{--ink:#102431;--navy:#071722;--navy-2:#0b2230;--teal:#0f7d88;--teal-soft:#7ed7d1;--muted:#687a84;--line:#dbe5e7;--paper:#f6f8f8;--warm:#fff8f0;background:#07131d;color:#fff}
-.page-home .site-header{background:rgba(5,16,25,.9);border-bottom-color:rgba(255,255,255,.08);backdrop-filter:blur(18px) saturate(130%)}
-.page-home .brand{color:#fff}.page-home .nav a{color:#aebdc5}.page-home .nav a:hover{background:rgba(255,255,255,.08);color:#fff}.page-home .nav a[aria-current="page"]{background:#fff;color:#081827}
-.page-home .nav .nav-cta{background:#0f7d88!important;color:#fff!important;border:1px solid #2d9ca4!important;box-shadow:0 7px 18px rgba(15,125,136,.2)}
-.page-home .nav .nav-cta:hover{background:#12919c!important;color:#fff!important}
 
 /* Hero */
 .authority-hero{position:relative;isolation:isolate;overflow:hidden;padding-block:clamp(54px,6vw,82px);background:linear-gradient(128deg,#07131d 0%,#0a1e2b 58%,#0f343d 100%)}
