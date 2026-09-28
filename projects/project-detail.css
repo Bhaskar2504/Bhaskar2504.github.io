@@ -2,7 +2,10 @@
 
 /* Editorial infographic — flagship GenAI project */
 body:has(.project-status-bar) .page-intro{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:22px;align-items:start}
-body:has(.project-status-bar) .page-intro:after{content:"";grid-column:1/-1;display:block;width:100%;aspect-ratio:1200/670;margin-top:8px;border:1px solid #d9e4e7;border-radius:24px;background:#fff url('../assets/infographics/evidence-grounded-genai-workflow.webp') center/contain no-repeat;box-shadow:0 22px 64px rgba(8,24,39,.12)}
-body:has(.project-status-bar) .page-intro:before{content:"Evidence-grounded workflow · retrieval → constrained reasoning → validation → human review";grid-column:1/-1;grid-row:2;align-self:end;margin:0 16px -44px;z-index:2;padding:9px 12px;width:max-content;max-width:calc(100% - 32px);border-radius:10px;background:rgba(8,24,39,.88);color:#eaf5f5;font-size:.72rem;font-weight:700;letter-spacing:.02em}
+
+
 @media(max-width:900px){.architecture-flow,.metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.release-row{grid-template-columns:72px 1fr}body:has(.project-status-bar) .page-intro{grid-template-columns:1fr}}
-@media(max-width:600px){.architecture-flow,.metric-grid{grid-template-columns:1fr}.release-row{grid-template-columns:1fr;gap:5px}.architecture-step{min-height:0}body:has(.project-status-bar) .page-intro:after{border-radius:16px}body:has(.project-status-bar) .page-intro:before{display:none}}
+@media(max-width:600px){.architecture-flow,.metric-grid{grid-template-columns:1fr}.release-row{grid-template-columns:1fr;gap:5px}.architecture-step{min-height:0}}
+.project-figure{margin:22px 0 28px;overflow:hidden;border:1px solid #dce6e7;border-radius:20px;background:#fff;box-shadow:0 14px 40px rgba(8,24,39,.06)}.project-figure img{display:block;width:100%;height:auto}.project-figure figcaption{padding:10px 14px;border-top:1px solid #e1e9eb;background:#f7fafb;color:#52666e;font-size:.8rem}
+.article-hero .project-status-bar span{color:#d7ecec;border-color:rgba(126,215,209,.32)}
+.page-shell>.page-cta:first-child{margin-bottom:30px;padding-top:0;border-top:0}
