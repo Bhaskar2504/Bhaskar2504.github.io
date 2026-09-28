@@ -42,6 +42,12 @@
 
 .ri-atlas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}.ri-atlas div{position:relative;min-height:135px;padding:17px;border:1px solid #dfe7e8;border-radius:15px;background:linear-gradient(180deg,#fff,#fbfdfd);overflow:hidden}.ri-atlas div:after{content:"";position:absolute;right:-25px;bottom:-30px;width:70px;height:70px;border:12px solid rgba(13,119,128,.04);border-radius:50%}.ri-atlas small{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:7px;background:#e9f4f4;color:#0d7780;font-size:.65rem;font-weight:900}.ri-atlas strong{display:block;margin-top:8px;color:#223943;font-size:.82rem}.ri-atlas span{display:block;margin-top:5px;color:#6b7e86;font-size:.7rem;line-height:1.48}
 
+/* Professional technical-infographic replacement for the sensor case hero */
+.page-case-study .sensor-pro{position:relative!important;display:block!important;min-height:0!important;aspect-ratio:1400/860!important;padding:0!important;border:0!important;border-radius:26px!important;background:transparent!important;box-shadow:0 28px 80px rgba(0,0,0,.28)!important;overflow:hidden!important}
+.page-case-study .sensor-pro:before{display:none!important;content:none!important}
+.page-case-study .sensor-pro>*{display:none!important}
+.page-case-study .sensor-pro:after{content:""!important;display:block!important;position:absolute!important;inset:0!important;background:url('../assets/visuals/sensor-credibility-diagnostic.svg') center/contain no-repeat!important;border-radius:26px!important;pointer-events:none!important}
+
 @media(max-width:1000px){.ri-proof-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:900px){.ri-flow,.ri-atlas{grid-template-columns:1fr 1fr}.ri-flow-step:nth-child(2):after,.ri-flow-step:nth-child(4):after,.ri-flow-step:nth-child(6):after{display:none}.ri-case-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:650px){.ri-flow,.ri-case-grid,.ri-proof-grid,.ri-matrix,.ri-comparison,.ri-atlas{grid-template-columns:1fr}.ri-flow-step:after{display:none!important}.ri-event{grid-template-columns:1fr;gap:5px}.ri-timeline{padding-left:17px}.ri-event:before{left:-17px}.ri-section{margin:46px 0}}
+@media(max-width:650px){.ri-flow,.ri-case-grid,.ri-proof-grid,.ri-matrix,.ri-comparison,.ri-atlas{grid-template-columns:1fr}.ri-flow-step:after{display:none!important}.ri-event{grid-template-columns:1fr;gap:5px}.ri-timeline{padding-left:17px}.ri-event:before{left:-17px}.ri-section{margin:46px 0}.page-case-study .sensor-pro{border-radius:18px!important}}
