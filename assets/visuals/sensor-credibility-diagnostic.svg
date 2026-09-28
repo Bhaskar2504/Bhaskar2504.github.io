@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" role="img" aria-labelledby="title desc">
+<title id="title">Sensor credibility and independent mechanical evidence</title>
+<desc id="desc">A technical engineering illustration of a motor-coupling-pump train with bearing sensors, vibration paths, signal traces and an evidence-to-decision interpretation.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06141d"/><stop offset="0.55" stop-color="#0a2730"/><stop offset="1" stop-color="#0e3a40"/></linearGradient>
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#58d7d0" stop-opacity=".28"/><stop offset="1" stop-color="#58d7d0" stop-opacity="0"/></radialGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#607a84"/><stop offset=".18" stop-color="#dbe6e8"/><stop offset=".5" stop-color="#8da5ad"/><stop offset=".82" stop-color="#e7eef0"/><stop offset="1" stop-color="#536d76"/></linearGradient>
+  <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#244854"/><stop offset=".45" stop-color="#183842"/><stop offset="1" stop-color="#10252d"/></linearGradient>
+  <linearGradient id="bearing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f9ba63"/><stop offset=".55" stop-color="#d77d2d"/><stop offset="1" stop-color="#8d481f"/></linearGradient>
+  <linearGradient id="warn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9b8c"/><stop offset="1" stop-color="#c84a40"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000" flood-opacity=".35"/></filter>
+  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="10"/></filter>
+  <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#9bd6d2" stroke-opacity=".06" stroke-width="1"/></pattern>
+  <marker id="arrowA" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5 0 9Z" fill="#f3b46a"/></marker>
+  <marker id="arrowT" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5 0 9Z" fill="#64d9d1"/></marker>
+</defs>
+
+<rect width="1400" height="860" rx="34" fill="url(#bg)"/>
+<rect width="1400" height="860" rx="34" fill="url(#grid)"/>
+<ellipse cx="460" cy="360" rx="390" ry="290" fill="url(#glow)"/>
+<ellipse cx="1200" cy="170" rx="280" ry="220" fill="#3fc3ba" opacity=".06" filter="url(#soft)"/>
+
+<!-- title area -->
+<g font-family="Inter,Segoe UI,Arial,sans-serif">
+  <text x="62" y="70" fill="#75ddd6" font-size="16" font-weight="800" letter-spacing="3">ENGINEERING EVIDENCE MAP</text>
+  <text x="62" y="106" fill="#eef8f9" font-size="28" font-weight="700">Sensor credibility is one evidence stream — not the diagnosis.</text>
+  <text x="62" y="137" fill="#94adb5" font-size="15">Rotating asset · bearing condition · independent mechanical evidence · maintenance chronology</text>
+</g>
+
+<!-- machinery foundation -->
+<g filter="url(#shadow)">
+  <path d="M120 596H930L970 650H84Z" fill="#0b1d25" stroke="#27434b" stroke-width="2"/>
+  <rect x="154" y="563" width="706" height="30" rx="8" fill="#18313a" stroke="#35545e"/>
+
+  <!-- motor -->
+  <g>
+    <rect x="142" y="301" width="246" height="214" rx="44" fill="url(#body)" stroke="#52717b" stroke-width="3"/>
+    <path d="M166 320H364" stroke="#6f8b94" stroke-opacity=".42"/>
+    <path d="M166 350H364M166 380H364M166 410H364M166 440H364M166 470H364" stroke="#6f8b94" stroke-opacity=".22"/>
+    <rect x="176" y="272" width="130" height="43" rx="12" fill="#203d47" stroke="#5c7881"/>
+    <circle cx="170" cy="408" r="27" fill="#0a1e27" stroke="#7d9ba3" stroke-width="4"/>
+    <circle cx="360" cy="408" r="20" fill="#0a1e27" stroke="#7d9ba3" stroke-width="4"/>
+    <path d="M183 515l-28 48h92l-20-48zm145 0l-18 48h89l-27-48z" fill="#102832" stroke="#3d5d66"/>
+    <text x="265" y="544" fill="#7f9aa2" font-size="13" text-anchor="middle" font-family="Inter,Segoe UI,Arial">MOTOR</text>
+  </g>
+
+  <!-- shaft/coupling -->
+  <rect x="388" y="397" width="222" height="22" rx="11" fill="url(#metal)"/>
+  <g transform="translate(430 408)"><circle r="36" fill="#142f38" stroke="#8aa7ae" stroke-width="4"/><circle r="17" fill="#091a22" stroke="#dce7e9" stroke-width="3"/><path d="M-28 0H28M0-28V28" stroke="#4f6e76" stroke-width="3"/></g>
+  <g transform="translate(515 408)"><circle r="36" fill="#142f38" stroke="#8aa7ae" stroke-width="4"/><circle r="17" fill="#091a22" stroke="#dce7e9" stroke-width="3"/><path d="M-28 0H28M0-28V28" stroke="#4f6e76" stroke-width="3"/></g>
+  <path d="M466 408H479" stroke="#f3b46a" stroke-width="7"/>
+
+  <!-- bearing housing + pump -->
+  <g>
+    <path d="M598 337H670L697 369V492H581V369Z" fill="url(#body)" stroke="#52717b" stroke-width="3"/>
+    <circle cx="639" cy="408" r="49" fill="#10232b" stroke="#7fa0a8" stroke-width="4"/>
+    <circle cx="639" cy="408" r="33" fill="url(#bearing)" stroke="#ffd39a" stroke-width="2"/>
+    <circle cx="639" cy="408" r="12" fill="#091a22"/>
+    <path d="M588 492l-24 71h149l-23-71z" fill="#102832" stroke="#3d5d66"/>
+    <text x="639" y="544" fill="#7f9aa2" font-size="13" text-anchor="middle" font-family="Inter,Segoe UI,Arial">DRIVE-END BEARING</text>
+  </g>
+
+  <g>
+    <path d="M711 314C820 295 894 350 900 414c6 63-46 121-135 127l-37-52c57-4 87-37 84-74-3-39-39-68-99-61Z" fill="url(#body)" stroke="#52717b" stroke-width="3"/>
+    <circle cx="790" cy="414" r="63" fill="#0c222a" stroke="#77959d" stroke-width="4"/>
+    <path d="M790 414m-45 0c30-30 64-30 92 0-31 31-61 31-92 0Z" fill="#28616a" stroke="#8cc5c2" stroke-width="2"/>
+    <rect x="900" y="384" width="74" height="60" rx="10" fill="#18313a" stroke="#52717b"/>
+    <path d="M730 520l-18 43h150l-20-43z" fill="#102832" stroke="#3d5d66"/>
+    <text x="802" y="563" fill="#7f9aa2" font-size="13" text-anchor="middle" font-family="Inter,Segoe UI,Arial">PUMP</text>
+  </g>
+</g>
+
+<!-- sensor callouts -->
+<g font-family="Inter,Segoe UI,Arial,sans-serif">
+  <path d="M633 356C633 296 620 270 596 243" fill="none" stroke="#ff8c7b" stroke-width="2.6" stroke-dasharray="7 6"/>
+  <circle cx="633" cy="356" r="8" fill="#ff8c7b"/>
+  <circle cx="588" cy="230" r="25" fill="#3a2323" stroke="#ff8c7b" stroke-width="3"/>
+  <text x="588" y="235" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">T?</text>
+  <text x="548" y="190" fill="#ff9b8b" font-size="13" font-weight="800" letter-spacing="1.4">TEMPERATURE CHANNEL</text>
+  <text x="548" y="210" fill="#95aeb6" font-size="12">intermittent / low confidence</text>
+
+  <path d="M666 361C714 323 749 298 773 276" fill="none" stroke="#63d9d1" stroke-width="2.6"/>
+  <circle cx="666" cy="361" r="8" fill="#63d9d1"/>
+  <circle cx="788" cy="263" r="25" fill="#123840" stroke="#63d9d1" stroke-width="3"/>
+  <text x="788" y="268" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">V1</text>
+  <text x="815" y="250" fill="#72ded6" font-size="13" font-weight="800" letter-spacing="1.4">VIBRATION EVIDENCE</text>
+  <text x="815" y="270" fill="#95aeb6" font-size="12">independent symptom family</text>
+</g>
+
+<!-- live signal ribbons -->
+<g transform="translate(1010 180)" font-family="Inter,Segoe UI,Arial,sans-serif">
+  <text x="0" y="0" fill="#718d96" font-size="12" font-weight="800" letter-spacing="1.8">EVIDENCE STREAMS</text>
+
+  <g transform="translate(0 28)">
+    <text x="0" y="16" fill="#eaf4f5" font-size="14" font-weight="700">Sensor credibility</text>
+    <text x="314" y="16" text-anchor="end" fill="#ff9183" font-size="12" font-weight="800">LOW</text>
+    <path d="M0 47H314" stroke="#23444c" stroke-width="1"/>
+    <path d="M4 48L26 46 48 49 70 44 92 52 114 50 136 55 158 47 180 49 202 68 224 53 246 58 268 45 292 50 312 48" fill="none" stroke="#ff8d7e" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 9"/>
+    <circle cx="202" cy="68" r="6" fill="#ff8d7e"/>
+    <text x="0" y="84" fill="#7f9da5" font-size="11">quality drops intermittently; treat as uncertain evidence</text>
+  </g>
+
+  <g transform="translate(0 152)">
+    <text x="0" y="16" fill="#eaf4f5" font-size="14" font-weight="700">Mechanical vibration</text>
+    <text x="314" y="16" text-anchor="end" fill="#f5b55c" font-size="12" font-weight="800">RECURRING</text>
+    <path d="M0 47H314" stroke="#23444c" stroke-width="1"/>
+    <path d="M4 52L28 51 50 48 74 23 94 54 118 50 142 49 168 45 188 24 210 55 235 47 260 44 280 42 296 22 312 51" fill="none" stroke="#f3ad4b" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="74" cy="23" r="5" fill="#ffd08a"/><circle cx="188" cy="24" r="5" fill="#ffd08a"/><circle cx="296" cy="22" r="5" fill="#ffd08a"/>
+    <text x="0" y="84" fill="#7f9da5" font-size="11">repeat excursions persist outside the questionable channel</text>
+  </g>
+
+  <g transform="translate(0 276)">
+    <text x="0" y="16" fill="#eaf4f5" font-size="14" font-weight="700">Maintenance chronology</text>
+    <text x="314" y="16" text-anchor="end" fill="#72ded6" font-size="12" font-weight="800">LINKED</text>
+    <path d="M12 52H300" stroke="#365963" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="34" cy="52" r="10" fill="#65d9d1"/><circle cx="124" cy="52" r="10" fill="#f3ad4b"/><circle cx="214" cy="52" r="10" fill="#ff8d7e"/><circle cx="282" cy="52" r="10" fill="#f3ad4b"/>
+    <text x="34" y="78" text-anchor="middle" fill="#6e8992" font-size="9">symptom</text>
+    <text x="124" y="78" text-anchor="middle" fill="#6e8992" font-size="9">inspect</text>
+    <text x="214" y="78" text-anchor="middle" fill="#6e8992" font-size="9">event</text>
+    <text x="282" y="78" text-anchor="middle" fill="#6e8992" font-size="9">recurrence</text>
+  </g>
+</g>
+
+<!-- evidence fusion -->
+<g font-family="Inter,Segoe UI,Arial,sans-serif">
+  <path d="M925 576C1010 576 1040 540 1080 520" fill="none" stroke="#f3b46a" stroke-width="2.7" marker-end="url(#arrowA)"/>
+  <path d="M925 520C1010 488 1040 470 1080 458" fill="none" stroke="#64d9d1" stroke-width="2.7" marker-end="url(#arrowT)"/>
+  <text x="1004" y="610" fill="#78959d" font-size="11" text-anchor="middle">multiple independent streams converge</text>
+</g>
+
+<!-- decision band -->
+<g font-family="Inter,Segoe UI,Arial,sans-serif">
+  <rect x="72" y="704" width="1256" height="102" rx="24" fill="#102b33" stroke="#4c7477" stroke-width="1.5"/>
+  <rect x="72" y="704" width="12" height="102" rx="6" fill="#f3ad4b"/>
+  <circle cx="136" cy="755" r="28" fill="#f3ad4b"/>
+  <path d="M126 755h20M136 745v20" stroke="#2a241d" stroke-width="4" stroke-linecap="round"/>
+  <text x="188" y="740" fill="#f3b46a" font-size="13" font-weight="800" letter-spacing="1.8">ENGINEERING INTERPRETATION</text>
+  <text x="188" y="771" fill="#f4fbfb" font-size="20" font-weight="700">Low sensor confidence ≠ low equipment risk.</text>
+  <text x="650" y="771" fill="#a7bcc2" font-size="15">Verify the instrument, retain the mechanical hypothesis, and confirm repair effectiveness.</text>
+</g>
+</svg>
