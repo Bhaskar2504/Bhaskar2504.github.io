@@ -3,24 +3,68 @@
 <title>When the Sensor Is Unreliable but the Equipment Risk Is Real | Bhaskar Anand</title>
 <meta name="description" content="Public-safe reliability case on sensor credibility, rotating-equipment degradation, multi-signal evidence and engineering verification."/><meta property="og:type" content="article"/><meta property="og:title" content="When the Sensor Is Unreliable but the Equipment Risk Is Real | Bhaskar Anand"/><meta property="og:description" content="Bad measurement quality changes confidence. It does not make the equipment evidence disappear."/><meta property="og:url" content="https://bhaskar2504.github.io/case-studies/sensor-credibility-degradation.html"/><meta property="og:image" content="https://github.com/Bhaskar2504.png?size=1200"/><meta name="twitter:card" content="summary_large_image"/><link rel="canonical" href="https://bhaskar2504.github.io/case-studies/sensor-credibility-degradation.html"/>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081721'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial' font-size='30' font-weight='700' fill='%237ed7d1'%3EBA%3C/text%3E%3C/svg%3E"/>
-<link rel="stylesheet" href="../styles-v4.css?v=20260825g"/><link rel="stylesheet" href="../visual-refresh.css?v=20260829d"/><link rel="stylesheet" href="case-visuals.css?v=20260829a"/><link rel="stylesheet" href="reliability-intelligence.css?v=20260927a"/>
+<link rel="stylesheet" href="../styles-v4.css?v=20260825g"/><link rel="stylesheet" href="../visual-refresh.css?v=20260829d"/><link rel="stylesheet" href="case-visuals.css?v=20260829a"/><link rel="stylesheet" href="reliability-intelligence.css?v=20260928a"/>
+<style>
+.sensor-pro{position:relative;min-height:360px;overflow:hidden;border:1px solid rgba(126,215,209,.23);border-radius:26px;background:radial-gradient(circle at 78% 12%,rgba(67,201,193,.16),transparent 30%),linear-gradient(145deg,#0a1b24 0%,#0c2631 58%,#102f39 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 24px 70px rgba(0,0,0,.28)}
+.sensor-pro:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.032) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.032) 1px,transparent 1px);background-size:32px 32px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.72),rgba(0,0,0,.16));pointer-events:none}
+.sv-top{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:18px 20px 0;color:#91aab2;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sv-live{display:inline-flex;align-items:center;gap:7px;color:#8fe4db}.sv-live:before{content:"";width:7px;height:7px;border-radius:50%;background:#5ce0d4;box-shadow:0 0 0 5px rgba(92,224,212,.09)}
+.sv-body{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(190px,.92fr);gap:18px;padding:14px 20px 18px}.sv-machine{position:relative;min-height:250px;border:1px solid rgba(255,255,255,.08);border-radius:20px;background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.018));overflow:hidden}.sv-machine-label{position:absolute;left:16px;top:14px;color:#88a4ad;font-size:.62rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}.sv-machine svg{position:absolute;inset:34px 12px 12px;width:calc(100% - 24px);height:calc(100% - 46px)}
+.sv-signals{display:grid;gap:9px}.sv-signal{position:relative;overflow:hidden;min-height:72px;padding:11px 12px;border:1px solid rgba(255,255,255,.09);border-radius:14px;background:rgba(255,255,255,.04)}.sv-signal-top{display:flex;align-items:center;justify-content:space-between;gap:8px}.sv-signal strong{color:#edf7f7;font-size:.72rem}.sv-signal em{font-style:normal;font-size:.58rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.sv-signal.bad em{color:#ff9d8e}.sv-signal.warn em{color:#f8bd69}.sv-signal.good em{color:#86ddd6}.sv-signal svg{display:block;width:100%;height:28px;margin-top:5px}.sv-signal small{display:block;margin-top:2px;color:#7f9aa3;font-size:.56rem}.sv-decision{position:relative;z-index:2;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;margin:0 20px 20px;padding:12px 14px;border:1px solid rgba(245,158,11,.22);border-radius:15px;background:linear-gradient(90deg,rgba(245,158,11,.09),rgba(126,215,209,.055))}.sv-decision-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:#f2a94d;color:#2f241c;font-weight:900}.sv-decision small{display:block;color:#e5ad66;font-size:.57rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.sv-decision strong{display:block;margin-top:2px;color:#fff;font-size:.78rem;line-height:1.35}
+.credibility-map{position:relative;overflow:hidden;border:1px solid #d8e4e5;border-radius:22px;background:#fff;box-shadow:0 14px 40px rgba(8,24,39,.06)}.credibility-map svg{display:block;width:100%;height:auto}.case-summary-card{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.case-summary-card:hover{transform:translateY(-3px);border-color:#c7d9dc;box-shadow:0 14px 32px rgba(8,24,39,.08)}
+@media(max-width:900px){.sv-body{grid-template-columns:1fr}.sv-machine{min-height:230px}.sv-signals{grid-template-columns:repeat(3,1fr)}.sv-signal{min-height:88px}}
+@media(max-width:650px){.sv-signals{grid-template-columns:1fr}.sv-top{align-items:flex-start;gap:10px;flex-direction:column}.sv-decision{grid-template-columns:auto 1fr}.sensor-pro{min-height:0}}
+</style>
 </head><body class="page-case-study">
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav" aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../experience.html">Experience</a><a href="../projects.html" aria-current="page">Projects</a><a href="../expertise.html">Expertise</a><details class="nav-more"><summary>More</summary><div class="nav-more-menu"><a href="../insights/index.html">Insights</a><a href="../resources.html">Resources</a><a href="../research.html">Research</a></div></details><a class="nav-cv" href="../Bhaskar_Anand_Public_CV.pdf" download>CV</a><a class="nav-cta" href="../index.html#contact">Let's Talk</a></nav></div></header>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">Bhaskar Anand</a><nav class="nav" aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../experience.html">Experience</a><a href="../projects.html">Projects</a><a href="index.html" aria-current="page">Case Studies</a><a href="../expertise.html">Expertise</a><details class="nav-more"><summary>More</summary><div class="nav-more-menu"><a href="../insights/index.html">Insights</a><a href="../resources.html">Resources</a><a href="../research.html">Research</a></div></details><a class="nav-cv" href="../Bhaskar_Anand_Public_CV.pdf" download>CV</a><a class="nav-cta" href="../index.html#contact">Let's Talk</a></nav></div></header>
 <main>
 <section class="article-hero"><div class="container case-hero-grid">
 <div class="article-hero-inner"><p class="eyebrow">Instrumentation Credibility · Rotating Equipment</p><h1>When the sensor is unreliable but the equipment risk is real.</h1><p class="article-deck">A bad-quality measurement should reduce confidence in that channel—not erase the independent mechanical evidence around the asset.</p><div class="case-kicker"><span>Sensor quality</span><span>Vibration evidence</span><span>Bearing condition</span><span>Verification</span></div><div class="ri-safety-note"><strong>Composite public-safe case.</strong> Asset names, dates, counts, source systems, work-order identifiers and financial values have been removed or generalized.</div></div>
-<div class="case-hero-visual"><svg viewBox="0 0 560 330" role="img" aria-label="Pump bearing with unreliable sensor and independent vibration evidence">
-<defs><marker id="scArr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#f3b46a"/></marker></defs>
-<rect x="54" y="132" width="126" height="72" rx="16" fill="#18313b" stroke="#859aa1"/><text x="117" y="160" text-anchor="middle" fill="#fff" font-size="12">ROTATING ASSET</text><text x="117" y="180" text-anchor="middle" fill="#a8c2c7" font-size="10">bearing / shaft</text>
-<path d="M180 168 H245" stroke="#f3b46a" stroke-width="3" marker-end="url(#scArr)"/>
-<circle cx="295" cy="168" r="52" fill="#0f252e" stroke="#d6e2e5" stroke-width="5"/><circle cx="295" cy="168" r="12" fill="#f3b46a"/>
-<path d="M295 116 V68" stroke="#c73b32" stroke-width="4" stroke-dasharray="7 5"/><rect x="240" y="30" width="110" height="42" rx="11" fill="#3d2720" stroke="#ff8678"/><text x="295" y="56" text-anchor="middle" fill="#fff" font-size="11">SENSOR QUALITY ?</text>
-<path d="M345 168 H414" stroke="#f3b46a" stroke-width="3" marker-end="url(#scArr)"/>
-<rect x="425" y="78" width="96" height="48" rx="12" fill="#17303a" stroke="#7e929a"/><text x="473" y="107" text-anchor="middle" fill="#fff" font-size="11">VIBRATION</text>
-<rect x="425" y="145" width="96" height="48" rx="12" fill="#17303a" stroke="#7e929a"/><text x="473" y="174" text-anchor="middle" fill="#fff" font-size="11">TEMPERATURE</text>
-<rect x="425" y="212" width="96" height="48" rx="12" fill="#17303a" stroke="#7e929a"/><text x="473" y="241" text-anchor="middle" fill="#fff" font-size="11">HISTORY</text>
-<text x="286" y="298" text-anchor="middle" fill="#d7e3e7" font-size="12">question the sensor — not the whole diagnosis</text>
-</svg></div></div></section>
+<div class="sensor-pro" role="img" aria-label="Technical diagnostic dashboard showing a rotating asset, degraded temperature sensor confidence, recurring vibration evidence and maintenance-history recurrence">
+  <div class="sv-top"><span class="sv-live">Diagnostic evidence view</span><span>sensor credibility × independent evidence</span></div>
+  <div class="sv-body">
+    <div class="sv-machine">
+      <div class="sv-machine-label">Rotating asset · bearing system</div>
+      <svg viewBox="0 0 430 240" aria-hidden="true">
+        <defs>
+          <linearGradient id="mBody" x1="0" x2="1"><stop offset="0" stop-color="#29424b"/><stop offset="1" stop-color="#17303a"/></linearGradient>
+          <linearGradient id="shaft" x1="0" x2="1"><stop offset="0" stop-color="#88a3aa"/><stop offset=".5" stop-color="#d9e6e8"/><stop offset="1" stop-color="#76939b"/></linearGradient>
+          <radialGradient id="rotor" cx="40%" cy="35%"><stop offset="0" stop-color="#8fded7"/><stop offset=".35" stop-color="#3e8c8c"/><stop offset="1" stop-color="#183a43"/></radialGradient>
+          <filter id="soft"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#000" flood-opacity=".28"/></filter>
+        </defs>
+        <g filter="url(#soft)">
+          <rect x="52" y="107" width="326" height="18" rx="9" fill="url(#shaft)"/>
+          <circle cx="215" cy="116" r="58" fill="url(#rotor)" stroke="#8bc9c5" stroke-width="3"/>
+          <circle cx="215" cy="116" r="18" fill="#071c25" stroke="#d9e6e8" stroke-width="3"/>
+          <rect x="75" y="78" width="62" height="76" rx="15" fill="url(#mBody)" stroke="#617c84" stroke-width="2"/>
+          <rect x="293" y="78" width="62" height="76" rx="15" fill="url(#mBody)" stroke="#617c84" stroke-width="2"/>
+          <path d="M67 154 H145 L155 174 H57 Z" fill="#102932" stroke="#49636b"/>
+          <path d="M285 154 H363 L373 174 H275 Z" fill="#102932" stroke="#49636b"/>
+        </g>
+        <g>
+          <line x1="106" y1="76" x2="106" y2="39" stroke="#ff8f7c" stroke-width="2" stroke-dasharray="5 4"/>
+          <circle cx="106" cy="31" r="15" fill="#402527" stroke="#ff8f7c" stroke-width="2"/>
+          <text x="106" y="35" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">T?</text>
+          <text x="127" y="29" fill="#ffab9e" font-size="9">LOW CONFIDENCE</text>
+          <line x1="326" y1="77" x2="353" y2="45" stroke="#7ed7d1" stroke-width="2"/>
+          <circle cx="363" cy="36" r="15" fill="#113b42" stroke="#7ed7d1" stroke-width="2"/>
+          <text x="363" y="40" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">V1</text>
+          <line x1="326" y1="153" x2="354" y2="185" stroke="#f1b55d" stroke-width="2"/>
+          <circle cx="364" cy="195" r="15" fill="#3b3022" stroke="#f1b55d" stroke-width="2"/>
+          <text x="364" y="199" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">V2</text>
+        </g>
+        <path d="M74 201 C104 191 126 208 151 194 S199 205 224 188 S271 204 296 190 S341 198 367 183" fill="none" stroke="#f2b45b" stroke-width="3"/>
+        <circle cx="151" cy="194" r="4" fill="#f2b45b"/><circle cx="224" cy="188" r="4" fill="#f2b45b"/><circle cx="296" cy="190" r="4" fill="#f2b45b"/>
+        <text x="74" y="223" fill="#7f9aa3" font-size="9">recurring mechanical evidence across independent channels</text>
+      </svg>
+    </div>
+    <div class="sv-signals">
+      <div class="sv-signal bad"><div class="sv-signal-top"><strong>Temperature channel</strong><em>confidence low</em></div><svg viewBox="0 0 180 28" aria-hidden="true"><path d="M0 15 C15 15 18 13 28 14 S45 16 52 14 L66 14 M78 14 L89 13 M101 16 L112 12 M124 14 L137 14 M148 12 L160 15 L180 14" fill="none" stroke="#ff8f7c" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 5"/></svg><small>intermittent / questionable quality</small></div>
+      <div class="sv-signal warn"><div class="sv-signal-top"><strong>Vibration behaviour</strong><em>recurring</em></div><svg viewBox="0 0 180 28" aria-hidden="true"><path d="M0 20 L20 19 L34 18 L45 8 L52 19 L72 18 L90 17 L102 6 L110 18 L131 16 L148 15 L158 7 L166 17 L180 15" fill="none" stroke="#f2b45b" stroke-width="2.3" stroke-linejoin="round"/></svg><small>independent symptom family persists</small></div>
+      <div class="sv-signal good"><div class="sv-signal-top"><strong>Maintenance history</strong><em>linked</em></div><svg viewBox="0 0 180 28" aria-hidden="true"><line x1="5" y1="14" x2="175" y2="14" stroke="#42616a" stroke-width="2"/><circle cx="28" cy="14" r="5" fill="#6bd1c9"/><circle cx="82" cy="14" r="5" fill="#f2b45b"/><circle cx="131" cy="14" r="5" fill="#ff8f7c"/><circle cx="162" cy="14" r="5" fill="#f2b45b"/></svg><small>symptom → intervention → recurrence</small></div>
+    </div>
+  </div>
+  <div class="sv-decision"><div class="sv-decision-icon">≠</div><div><small>Engineering decision</small><strong>Low sensor confidence does not equal low equipment risk. Verify the instrument and keep the mechanical hypothesis open.</strong></div></div>
+</div></div></section>
 
 <section class="article-main case-main"><div class="container case-content">
 <div class="case-summary-grid">
@@ -42,14 +86,18 @@
 </div></section>
 
 <section class="case-visual-block"><div class="case-visual-head"><div><small>Credibility logic</small><h2>Bad data can coexist with real degradation.</h2><p>Sensor credibility and equipment condition are separate questions. A weak sensor can make diagnosis harder without making the asset healthy.</p></div></div>
-<div class="case-diagram"><svg viewBox="0 0 900 360" role="img" aria-label="Sensor credibility matrix showing bad sensor and independent mechanical evidence">
-<rect width="900" height="360" fill="#fff"/>
-<text x="120" y="42" fill="#725e55" font-size="12">MEASUREMENT CREDIBILITY</text><text x="40" y="200" fill="#725e55" font-size="12" transform="rotate(-90 40 200)">INDEPENDENT EQUIPMENT EVIDENCE</text>
-<line x1="170" y1="300" x2="830" y2="300" stroke="#d9cfc7"/><line x1="170" y1="300" x2="170" y2="70" stroke="#d9cfc7"/>
-<rect x="190" y="190" width="285" height="90" rx="18" fill="#fff7ef" stroke="#e4b68f"/><text x="332" y="220" text-anchor="middle" fill="#6d4c39" font-size="13">LOW SENSOR CREDIBILITY</text><text x="332" y="244" text-anchor="middle" fill="#9b4b15" font-size="12">+ LOW INDEPENDENT EVIDENCE</text><text x="332" y="265" text-anchor="middle" fill="#7b6a62" font-size="11">verify instrumentation first</text>
-<rect x="505" y="90" width="285" height="190" rx="18" fill="#fff0ed" stroke="#c73b32"/><text x="647" y="132" text-anchor="middle" fill="#7e2c27" font-size="13">LOW SENSOR CREDIBILITY</text><text x="647" y="156" text-anchor="middle" fill="#7e2c27" font-size="12">+ STRONG INDEPENDENT EVIDENCE</text><text x="647" y="195" text-anchor="middle" fill="#6d4c39" font-size="11">do not discard equipment risk</text><text x="647" y="218" text-anchor="middle" fill="#6d4c39" font-size="11">inspect / cross-check / trend peers</text><text x="647" y="241" text-anchor="middle" fill="#6d4c39" font-size="11">verify repair effectiveness</text>
-<circle cx="610" cy="120" r="8" fill="#c73b32"/>
-<text x="168" y="325" fill="#8a776d" font-size="11">lower</text><text x="790" y="325" fill="#8a776d" font-size="11">higher →</text>
+<div class="credibility-map"><svg viewBox="0 0 920 440" role="img" aria-label="Four-quadrant diagnostic map for measurement credibility and independent equipment evidence">
+<defs><linearGradient id="qLow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7fbfb"/><stop offset="1" stop-color="#edf5f5"/></linearGradient><linearGradient id="qRisk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff8ed"/><stop offset="1" stop-color="#fff0e9"/></linearGradient><filter id="dotGlow"><feGaussianBlur stdDeviation="7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect width="920" height="440" fill="#fff"/><rect x="150" y="56" width="680" height="300" rx="24" fill="#f9fbfb" stroke="#d6e3e5"/>
+<rect x="150" y="206" width="340" height="150" fill="url(#qLow)"/><rect x="490" y="56" width="340" height="300" fill="url(#qRisk)" opacity=".72"/>
+<line x1="490" y1="56" x2="490" y2="356" stroke="#d2dfe1" stroke-width="2"/><line x1="150" y1="206" x2="830" y2="206" stroke="#d2dfe1" stroke-width="2"/>
+<text x="490" y="32" text-anchor="middle" fill="#536b74" font-size="13" font-weight="700">MEASUREMENT CREDIBILITY →</text><text x="44" y="210" text-anchor="middle" fill="#536b74" font-size="13" font-weight="700" transform="rotate(-90 44 210)">INDEPENDENT EQUIPMENT EVIDENCE →</text>
+<text x="170" y="382" fill="#81939a" font-size="11">lower confidence</text><text x="748" y="382" fill="#81939a" font-size="11">higher confidence</text><text x="112" y="334" fill="#81939a" font-size="11">lower</text><text x="112" y="78" fill="#81939a" font-size="11">higher</text>
+<g><rect x="176" y="236" width="282" height="92" rx="18" fill="#fff" stroke="#d9e5e6"/><text x="197" y="263" fill="#26434d" font-size="13" font-weight="700">Verify instrumentation first</text><text x="197" y="287" fill="#6d8087" font-size="11">Weak sensor + weak independent evidence</text><text x="197" y="307" fill="#6d8087" font-size="11">→ avoid overdiagnosis</text></g>
+<g><rect x="520" y="86" width="282" height="112" rx="18" fill="#fff" stroke="#e9b39d"/><text x="542" y="114" fill="#7b332d" font-size="13" font-weight="700">Keep equipment risk open</text><text x="542" y="138" fill="#745e57" font-size="11">Weak sensor + strong independent evidence</text><text x="542" y="160" fill="#745e57" font-size="11">→ inspect, cross-check, verify repair</text><text x="542" y="181" fill="#745e57" font-size="11">→ do not let one bad channel suppress the story</text></g>
+<g filter="url(#dotGlow)"><circle cx="597" cy="128" r="11" fill="#d95446"/><circle cx="597" cy="128" r="21" fill="none" stroke="#d95446" stroke-opacity=".28" stroke-width="5"/></g><text x="624" y="133" fill="#9b3d34" font-size="11" font-weight="800">THIS CASE</text>
+<g><rect x="176" y="86" width="282" height="92" rx="18" fill="#fff" stroke="#d9e5e6"/><text x="197" y="113" fill="#26434d" font-size="13" font-weight="700">Independent evidence leads</text><text x="197" y="137" fill="#6d8087" font-size="11">Strong equipment evidence despite poor channel</text><text x="197" y="157" fill="#6d8087" font-size="11">→ verify both paths in parallel</text></g>
+<g><rect x="520" y="236" width="282" height="92" rx="18" fill="#fff" stroke="#c9dfdc"/><text x="542" y="263" fill="#24595b" font-size="13" font-weight="700">Monitor with confidence</text><text x="542" y="287" fill="#6d8087" font-size="11">Good sensor + low independent evidence</text><text x="542" y="307" fill="#6d8087" font-size="11">→ trend, compare peers, wait for corroboration</text></g>
 </svg></div></section>
 
 <div class="evidence-board">
