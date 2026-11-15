@@ -7,7 +7,7 @@ assert p.exists(), "dashboard page missing"
 s=p.read_text(encoding="utf-8")
 
 required=[
- "DEMO · SYNTHETIC DATA","01 · Plant status & KPI monitoring",
+ "DEMO · SYNTHETIC DATA","Plant status &amp; KPI monitoring",
  "02 · KPI flare & historical comparison","03 · Gap — one benchmark hierarchy",
  "04 · Prioritise","05 · Diagnose","06 · Act","07 · Verify",
  "Design / guarantee","Corrected expected","Normative / target","Actual",
