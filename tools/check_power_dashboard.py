@@ -7,30 +7,31 @@ assert p.exists(), "dashboard page missing"
 s=p.read_text(encoding="utf-8")
 
 required=[
- "DEMO · SYNTHETIC DATA","Plant status &amp; KPI monitoring",
- "02 · KPI flare & historical comparison","03 · Gap — one benchmark hierarchy",
- "04 · Prioritise","05 · Diagnose","06 · Act","07 · Verify",
+ "DEMO · SYNTHETIC DATA","Current performance","What needs attention","Performance workbench",
+ "Generation","PLF","PAFY","Gross heat rate","APC","SOC",
  "Design / guarantee","Corrected expected","Normative / target","Actual",
- "PAFM / PAFY","On-bar availability","Excess O₂","Condenser backpressure",
- "Equipment restriction","SLDC/RLDC below DC","Unit auxiliary power fingerprint",
- "Corrected-gap uncertainty","GCV","Coal ₹/t"
+ "On-bar availability","Excess O₂","Condenser backpressure",
+ "Equipment restriction","SLDC/RLDC below DC","Auxiliary power",
+ "Improvement actions","GCV kcal/kg","Coal ₹/t"
 ]
 missing=[x for x in required if x not in s]
 assert not missing, "missing dashboard requirements: "+", ".join(missing)
 
-# Known-case reconciliation from the dashboard assumptions.
+# Keep reliability/APM analytics out of the performance-monitoring product.
+for forbidden in ("MTBF","failure mode","predictive maintenance","asset health score"):
+    assert forbidden.casefold() not in s.casefold(), f"out-of-scope concept found: {forbidden}"
+
+# Known-case economic reconciliation.
 gap=40.5
 generation_mu=29323
 gcv=4000
 tonnes=gap*generation_mu*1_000_000/gcv/1000
 assert math.isclose(tonnes,296895.375,rel_tol=0,abs_tol=.001)
 
-# Controllable loss/action linking must exist.
-for loss in ("condenser","rh","apc"):
-    assert f'data-loss="{loss}"' in s
-assert 'data-loss="gcv"' in s and 'data-loss="load"' in s
+# Performance loss model must explicitly separate condition effects from controllable residuals.
+for key in ("load","cw","gcv","condenser","rh","fget","o2","loi"):
+    assert "key:'"+key+"'" in s
 
-# Syntax-check every inline JavaScript block that contains executable code.
 scripts=re.findall(r"<script(?:\\s[^>]*)?>(.*?)</script>",s,re.S)
 checked=0
 for code in scripts:
@@ -41,5 +42,5 @@ for code in scripts:
         f.write(code); name=f.name
     subprocess.run(["node","--check",name],check=True,capture_output=True,text=True)
     checked+=1
-assert checked>=2, "expected theme + dashboard inline scripts"
-print(f"PASS: dashboard structure, economics and {checked} inline scripts validated.")
+assert checked>=1, "expected dashboard JavaScript"
+print(f"PASS: performance scope, economics, benchmark hierarchy and {checked} script(s) validated.")
